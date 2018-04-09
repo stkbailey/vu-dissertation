@@ -1,6 +1,23 @@
 \chapter{Introduction}
 
-\section{Introductory material}
+\section{Overview}
+\begin{itemize}
+	\item \textbf{What don't we know?} What processes besides decoding / visual word form area change during reading acquisition and performance.
+	\item \textbf{Why do we care?} Understanding the sub-processes tha make reading unique will allow us to refine efforts to teach older readers and those who struggle with comprehension.
+	\item \textbf{How will we answer it?} By analyzing interactions between brain networks during language use and across different reading abilities, we will localize networks that may contribute a lot to reading 
+\end{itemize}
+
+\subsection{Abstract}
+
+We know that the single most essential function in reading is plugging visual stimuli into existing language circuitry, a process known as "decoding". But many children struggle to comprehend text even after becoming proficient decoders, and there are many differences between the modalities, including in the attention skills required, the language used and the absence of external cues. Therefore, decoding is not the only process that makes reading different from listening, but it is not clear which interactions between specific processes most differentiate reading from listening. 
+
+Disentangling the cognitive skills that most contribute to these differences during reading is difficult for behavioral researchers because they must rely on post-examination and domain-general tests. It is a question, however, that is well-suited to tightly controlled neuroimaging studies. In particular, connectomics methods, which can test interactions between sub-networks of the brain allow us to test which cognitive processes are the most likely to interact. 
+
+In this chapter, we present:
+\begin{itemize}
+	\item a framework for the cognitive skills utilized during reading
+	\item map them onto separate brain networks, presen
+\end{itemize}
 
 \subsection{JNDD introduction}
 Reading is a complex cognitive act. To read, individuals must precisely control visual attention, map symbols to phonological representations, extract meaning from words, update mental representations of the text, inhibit unimportant associations, and make appropriate inferences. Consequently, while the most explicit aim of reading instruction and intervention is to build fast and efficient orthographic-phonological mapping, reading difficulty can arise from many sources \cite{Pennington2009, vanderLely2010}. To further complicate matters, reading disability is often comorbid with other learning and developmental disorders, such as specific language impairment and attention deficit / hyperactivity disorder \cite{Pennington2006, Margari2013}.
@@ -10,6 +27,29 @@ In the past two decades, neuroimaging research has provided valuable insights in
 Connectivity-based neuroimaging methods provide an alternative framework to examine reading difficulties. Whereas traditional  approaches focus on identifying focal regions of deficit, many learning and psychiatric disorders are characterized, in part, by how brain networks behave and interact. In particular, \textit{connectomics} analyses have shown that the brain exhibits a network configuration which allows for high transferability of information at minimal cost, i.e. a “small-world” network architecture \cite{Bullmore2012}. Two attributes of brain organization have been of special interest: the presence of densely intra-connected \textit{modules}, often called resting-state networks (RSNs) \cite{Sporns2016}; and the existence of a core group of \textit{hub areas} that play an outsize role in conveying information between RSNs \cite{VandenHeuvel2011}. 
 
 Since reading requires rapid interaction and manipulation of disparate cognitive processes, the network framework is an appealing avenue of investigation in reading disorders. Previous research has suggested that the areas responsible for reading do not form a single network, but are instead distributed across multiple RSNs \cite{Vogel2013}. There is evidence that the constitution of these RSNs (e.g. the default mode network) could be predictive of disorders, including attention deficits \cite{Uddin2008}. Furthermore, damage to hub areas can cause devastating behavioral effects \cite{Warren2014} and may be degenerated in psychiatric and developmental disorders such as schizophrenia, Alzheimer's disease and ADHD \cite{Stam2014}. Graph theory measures of connectedness within and between RSNs may consequently be related to differences in reading skill. However, while a small number of papers indicate that they may be affected in dyslexia \cite{Qi2016, Finn2014}, its application in the reading domain has been relatively sparse, with few emergent themes thus far \cite{Cao2016}. This is surpising because connectomics data can be procured without using cognitive tasks (which represent a confounding variable) and because they provide a common neurobiological framework for understanding cognitive disorders.
+
+
+
+\subsection{Modality Framing}
+
+Previous analyses have investigated differences between reading and listening in terms of their activation of individual areas or the distribution of activity across the brain. Since comprehension is a "whole-brain" activity, we here look at the reorganization of resting-state networks - to see how attention, executive and sensory systems are interacting during reading.  These analyses are the most comprehensive investigation of network connctivity in reading and language, encompassing over a hundred subjects and 700 individual scan runs. 
+
+First, we validate modularity and participation coefficient metrics using univariate data, and test that language induces greater global integration, especially in higher-order networks (executive + default mode) compared to resting and attention baselines.
+
+Second, we test three hypotheses about how interactions between brain networks might might differ from speech.
+•	Reading and listening have a shifted sensory load: reading will be induce greater between-network connectivity in the visual network and listening will induce greater cross-network connectivity in the auditory network.  
+•	Reading, a self-directed activity that requires precise control of eye movement, will require greater attentional demands (connectivity between attention networks and sensory networks) than listening. 
+•	Hub areas, many of which reside in the fronto-parietal network, will increase during reading comprehension, which requires greater (and artifical) integration of visual and auditory information.
+Finally, we investigate whether these interactions change with experience, testing whether the reading and listening systems "merge" into a unified system or whether differences between reading and listening persist across development.
+
+
+
+
+
+\subsection{How the brain reconfigures (Cohen + Esposito)}
+A critical feature of the human brain that gives rise to complex cognition is its ability to reconfigure its network structure dynamically and adaptively in response to the environment. Existing research probing task-related reconfiguration of brain network structure has con-cluded that, although there are many similarities in network structure during an intrinsic, resting state and during the performance of a variety of cognitive tasks, there are meaningful differences as well. In this study, we related intrinsic, resting state network organization to reconfigured network organization during the performance of two tasks: a sequence tapping task, which is thought to probe motor execution and likely engages a single brain network, and an n-back task, which is thought to probe working memory and likely requires coordination across multiple networks. We implemented graph theoretical analyses using functional connectivity data from fMRI scans to calculate whole-brain measures of network organization in healthy young adults. We focused on quantifying measures of network segregation (modularity, system segregation, local efficiency, number of provincial hub nodes) and measures of network integration (global efficiency, number of connector hub nodes). Using these measures, we found converging evidence that local, within-network communication is critical for motor execution, whereas integrative, between-network communication is critical for working memory. These results confirm that the human brain has the remarkable ability to reconfigure its large-scale organization dynamically in response to current cognitive demands and that interpreting reconfiguration in terms of network segregation and integration may shed light on the optimal network structures underlying successful cognition.
+
+
 
 
 \subsection{VRN introduction}
