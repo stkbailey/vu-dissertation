@@ -7,6 +7,33 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "main.tex",
+			"settings":
+			{
+				"buffer_size": 6600,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "chapters/ch1.tex",
+			"settings":
+			{
+				"buffer_size": 34940,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 615,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -40,11 +67,11 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Stephen/Dropbox/Apps/ShareLaTeX/Dissertation_NetworkArchitecture",
-		"/C/Users/Stephen/Dropbox/Apps/ShareLaTeX/Dissertation_NetworkArchitecture/tables"
+		"/C/Users/Stephen/Documents/GitHub/vu-dissertation"
 	],
 	"file_history":
 	[
+		"/C/Users/Stephen/Documents/GitHub/vu-dissertation/README.md",
 		"/C/Users/Stephen/Dropbox/Apps/ShareLaTeX/Dissertation_NetworkArchitecture/dissertation.tex",
 		"/C/Users/Stephen/Dropbox/Apps/ShareLaTeX/Dissertation_NetworkArchitecture/tables/Ch3_Participants.tex",
 		"/C/Users/Stephen/Dropbox/Apps/ShareLaTeX/Dissertation_NetworkArchitecture/tables/Ch2_Participants.tex",
@@ -99,6 +126,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".sty",
+			"nomencla",
 			"PNG",
 			".ip",
 			"password"
@@ -119,8 +148,120 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "main.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6600,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1766,
+								1839
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 133.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "chapters/ch1.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 34940,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1242,
+								1242
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 4755,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 615,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								615,
+								615
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 2,
+								"count": 74,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
