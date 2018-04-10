@@ -7,15 +7,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "main.tex",
-			"settings":
-			{
-				"buffer_size": 6600,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -49,8 +40,8 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Stephen/Documents/GitHub/vu-dissertation",
-		"/C/Users/Stephen/Documents/GitHub/vu-dissertation/style"
+		"/C/Users/Stephen/Dropbox/Apps/ShareLaTeX/Dissertation_NetworkArchitecture",
+		"/C/Users/Stephen/Dropbox/Apps/ShareLaTeX/Dissertation_NetworkArchitecture/tables"
 	],
 	"file_history":
 	[
@@ -94,7 +85,7 @@
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -108,8 +99,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			".sty",
-			"nomencla",
 			"PNG",
 			".ip",
 			"password"
@@ -130,47 +119,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "main.tex",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6600,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								938,
-								938
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 82,
-								"count": 326,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
