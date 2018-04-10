@@ -52,8 +52,8 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 
 \usepackage{makecell}
 \usepackage{titletoc}
-\usepackage{sfchap}
-\usepackage{sfsection}
+\usepackage{style/sfchap}
+\usepackage{style/sfsection}
 \usepackage[authoryear]{natbib}
 %\usepackage{apacite}
 \usepackage{appendix}
@@ -194,15 +194,19 @@ I would also like the National Institutes of Health for their financial support 
 
 %% Input your chapter .tex files here.
 %% Each one should begin with a call to \chapter{TITLE}
-\input{ch1.tex}
-\input{ch2.tex}
-\input{ch3.tex}
-\input{ch4.tex}
-\input{ch5.tex}
-\input{ch6.tex}
-\input{misc1.tex}
-\input{misc2.tex}
-\input{nomenclature.tex}
+\input{chapters/ch1.tex}
+\input{chapters/ch2.tex}
+\input{chapters/ch3.tex}
+\input{chapters/ch4.tex}
+\input{chapters/ch5.tex}
+\input{chapters/ch6.tex}
+\input{chapters/misc1.tex}
+\input{chapters/misc2.tex}
+
+%% Read in nomenclature
+\input{chapters/nomenclature.tex}
+
+
 
 \singlespacing
 \bibliographystyle{apalike}
