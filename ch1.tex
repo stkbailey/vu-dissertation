@@ -30,24 +30,10 @@ Since reading requires rapid interaction and manipulation of disparate cognitive
 
 
 
-\subsection{Modality Framing}
-
-Previous analyses have investigated differences between reading and listening in terms of their activation of individual areas or the distribution of activity across the brain. Since comprehension is a "whole-brain" activity, we here look at the reorganization of resting-state networks - to see how attention, executive and sensory systems are interacting during reading.  These analyses are the most comprehensive investigation of network connctivity in reading and language, encompassing over a hundred subjects and 700 individual scan runs. 
-
-First, we validate modularity and participation coefficient metrics using univariate data, and test that language induces greater global integration, especially in higher-order networks (executive + default mode) compared to resting and attention baselines.
-
-Second, we test three hypotheses about how interactions between brain networks might might differ from speech.
-•	Reading and listening have a shifted sensory load: reading will be induce greater between-network connectivity in the visual network and listening will induce greater cross-network connectivity in the auditory network.  
-•	Reading, a self-directed activity that requires precise control of eye movement, will require greater attentional demands (connectivity between attention networks and sensory networks) than listening. 
-•	Hub areas, many of which reside in the fronto-parietal network, will increase during reading comprehension, which requires greater (and artifical) integration of visual and auditory information.
-Finally, we investigate whether these interactions change with experience, testing whether the reading and listening systems "merge" into a unified system or whether differences between reading and listening persist across development.
 
 
 
 
-
-\subsection{How the brain reconfigures (Cohen + Esposito)}
-A critical feature of the human brain that gives rise to complex cognition is its ability to reconfigure its network structure dynamically and adaptively in response to the environment. Existing research probing task-related reconfiguration of brain network structure has con-cluded that, although there are many similarities in network structure during an intrinsic, resting state and during the performance of a variety of cognitive tasks, there are meaningful differences as well. In this study, we related intrinsic, resting state network organization to reconfigured network organization during the performance of two tasks: a sequence tapping task, which is thought to probe motor execution and likely engages a single brain network, and an n-back task, which is thought to probe working memory and likely requires coordination across multiple networks. We implemented graph theoretical analyses using functional connectivity data from fMRI scans to calculate whole-brain measures of network organization in healthy young adults. We focused on quantifying measures of network segregation (modularity, system segregation, local efficiency, number of provincial hub nodes) and measures of network integration (global efficiency, number of connector hub nodes). Using these measures, we found converging evidence that local, within-network communication is critical for motor execution, whereas integrative, between-network communication is critical for working memory. These results confirm that the human brain has the remarkable ability to reconfigure its large-scale organization dynamically in response to current cognitive demands and that interpreting reconfiguration in terms of network segregation and integration may shed light on the optimal network structures underlying successful cognition.
 
 
 
@@ -144,6 +130,10 @@ To get measures of hubness across the brain, we used data from a connectomics st
 The distribution of participation coefficients across the 264 nodes was non-normal, with a large group of areas having low participation coefficients (i.e. affiliated with few RSNs) and a smaller hub-like group. Therefore, a Wilcoxon rank-sum test was performed on the participation coefficients for the two groups, which tests for the equivalence of two distributions in a non-parametric fashion.
 
 Across the three meta-analyses, 32 of the 264 nodes showed abnormal functioning in dyslexia. Figure 3 shows the node-by-node distribution of participation coefficients for the entire set. The median participation coefficient for unaffected nodes was 1.47; for dyslexia-related nodes it was 3.28. A Wilcoxon rank-sum test between the dyslexia and unaffected nodes showed that dyslexia affects brain areas with higher participation coefficients than would otherwise be expected ($U = 4946.0$, $p$ \textless $0.001$). 
+
+
+\subsection{How the brain reconfigures (Cohen + Esposito)}
+A critical feature of the human brain that gives rise to complex cognition is its ability to reconfigure its network structure dynamically and adaptively in response to the environment. Existing research probing task-related reconfiguration of brain network structure has con-cluded that, although there are many similarities in network structure during an intrinsic, resting state and during the performance of a variety of cognitive tasks, there are meaningful differences as well. In this study, we related intrinsic, resting state network organization to reconfigured network organization during the performance of two tasks: a sequence tapping task, which is thought to probe motor execution and likely engages a single brain network, and an n-back task, which is thought to probe working memory and likely requires coordination across multiple networks. We implemented graph theoretical analyses using functional connectivity data from fMRI scans to calculate whole-brain measures of network organization in healthy young adults. We focused on quantifying measures of network segregation (modularity, system segregation, local efficiency, number of provincial hub nodes) and measures of network integration (global efficiency, number of connector hub nodes). Using these measures, we found converging evidence that local, within-network communication is critical for motor execution, whereas integrative, between-network communication is critical for working memory. These results confirm that the human brain has the remarkable ability to reconfigure its large-scale organization dynamically in response to current cognitive demands and that interpreting reconfiguration in terms of network segregation and integration may shed light on the optimal network structures underlying successful cognition.
 
 
 \begin{figure}[h!]
