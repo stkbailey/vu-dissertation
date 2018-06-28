@@ -17,19 +17,10 @@
 			}
 		},
 		{
-			"file": "chapters/ch1.tex",
+			"file": "chapters/ch2.tex",
 			"settings":
 			{
-				"buffer_size": 34940,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "README.md",
-			"settings":
-			{
-				"buffer_size": 615,
+				"buffer_size": 21136,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -67,10 +58,12 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Stephen/Documents/GitHub/vu-dissertation"
+		"/C/Users/Stephen/Documents/GitHub/vu-dissertation",
+		"/C/Users/Stephen/Documents/GitHub/vu-dissertation/chapters"
 	],
 	"file_history":
 	[
+		"/C/Users/Stephen/Documents/GitHub/vu-dissertation/chapters/ch1.tex",
 		"/C/Users/Stephen/Documents/GitHub/vu-dissertation/README.md",
 		"/C/Users/Stephen/Dropbox/Apps/ShareLaTeX/Dissertation_NetworkArchitecture/dissertation.tex",
 		"/C/Users/Stephen/Dropbox/Apps/ShareLaTeX/Dissertation_NetworkArchitecture/tables/Ch3_Participants.tex",
@@ -112,7 +105,7 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
@@ -148,7 +141,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -164,15 +157,16 @@
 						"selection":
 						[
 							[
-								1766,
-								1839
+								5097,
+								5097
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": -1,
+								"changes": 0,
+								"count": 326,
 								"modified": false,
 								"selection": false,
 								"status": -1,
@@ -182,35 +176,35 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 133.0,
+						"translation.y": 2641.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "chapters/ch1.tex",
+					"file": "chapters/ch2.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 34940,
+						"buffer_size": 21136,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1242,
-								1242
+								10169,
+								10169
 							]
 						],
 						"settings":
 						{
 							"WordCount":
 							{
-								"changes": 0,
-								"count": 4755,
+								"changes": 373,
+								"count": 2891,
 								"modified": false,
 								"selection": false,
 								"status": -1,
@@ -219,44 +213,7 @@
 							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "README.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 615,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								615,
-								615
-							]
-						],
-						"settings":
-						{
-							"WordCount":
-							{
-								"changes": 2,
-								"count": 74,
-								"modified": false,
-								"selection": false,
-								"status": -1,
-								"syntax": "plain text"
-							},
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1767.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -267,7 +224,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -304,7 +261,7 @@
 	"project": "sublime-dissertation.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -318,12 +275,16 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"X:\\OneDrive_VU\\OneDrive - Vanderbilt 1 1\\JNDD_Review\\review.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
