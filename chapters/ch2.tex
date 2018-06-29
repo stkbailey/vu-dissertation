@@ -2,7 +2,7 @@
 
 \section{Overview}
 
-Previous analyses have investigated differences between reading and listening in terms of their activation of individual areas or the distribution of activity across the brain. Since comprehension is a "whole-brain" activity, we here look at the reorganization of resting-state networks - to see how attention, executive and sensory systems are interacting during reading.  These analyses are the most comprehensive investigation of network connctivity in reading and language, encompassing over a hundred subjects and 700 individual scan runs. 
+Previous analyses have investigated differences between reading and listening in terms of their activation of individual areas or the distribution of activity across the brain. Since comprehension is a "whole-brain" activity, we here look at the reorganization of resting-state networks - to see how attention, executifve and sensory systems are interacting during reading.  These analyses are the most comprehensive investigation of network connctivity in reading and language, encompassing over a hundred subjects and 700 individual scan runs. 
 
 First, we validate modularity and participation coefficient metrics using univariate data, and test that language induces greater global integration, especially in higher-order networks (executive + default mode) compared to resting and attention baselines.
 
@@ -46,35 +46,43 @@ The following methods detail the current study's protocol and analytical approac
 
 \subsection{Participants}
 
-We used MRI and behavioral data from 65 children who participated in the third and fourth waves of a larger, longitudinal study investigating the neurobiological bases of reading comprehension. There were 50 children involved in the third grade analyses (mean age ; XXX male), and 45 children in the fourth grade analyses (mean age XXX; XXX male). 30 children had usable data at both timepoints and were included in the primary analyses investigating the effects of age.
+Participants for the first study were drawn from the fourth wave of a larger, longitudinal study investigating the neurobiological bases of reading comprehension. 50 children completed scans for the current study, and 45 of these met the motion and attention thresholds described below. 
 
-All participants were native English speakers with normal hearing and normal or corrected vision, and no history of major psychiatric illness or traumatic brain injury/epilepsy. Subjects had no history of a developmental disability or contraindication to MRI.  Each participant gave written consent at the beginning of the study, with procedures carried out in accordance with Vanderbilt University’s Institutional Review Board.
-
-In total, XXX completed the scans. XXX were removed for motion and XXX were removed based on analysis of task data, and XXX were removed for . A total of 316 scan runs met the criteria for analysis in this study.
+All participants were native English speakers with normal hearing and normal or corrected vision, and no history of major psychiatric illness or traumatic brain injury/epilepsy. Subjects had no history of a developmental disability or contra-indication to MRI.  Each participant gave written consent at the beginning of the study, with procedures carried out in accordance with Vanderbilt University’s Institutional Review Board.
 
 \begin{table}
 	\scriptsize
 	\renewcommand{\tabcolsep}{0.09cm}
 	\centering
 	\input{tables/Ch2_Participants.tex}
-	\caption{Participant demographics.}
+	\caption{Participant demographics for Study 1.}
 	\label{table:Ch2_Participants}
 \end{table}
 
 \subsection{Behavioral measures}
-Each participant completed a battery of behavioral assessments and developmental questionnaires. For this study, we were interested on the effect of reading-specific and general language skills on brain processing. For each timepoint, we performed principal component decomposition to obtain these covariates. For reading skill, we used the Test of Word Reading Efficiency – Phonemic Decoding subtest, the Woodcock-Johnson Word Attack subtest (cite), and the XXX . For language skill, we used the Peabody Picture Vocabulary test and the Gates-MacGinities RC test. 
+Each participant completed a battery of behavioral assessments and developmental questionnaires. For this study, we were interested on the effect of reading-specific and general language skills on brain processing. 
 
-\subsection{Task design}
+\subsection{Functional MRI Task}
 
-For each visit (Grades 3 and 4), subjects performed up to 4 runs of the comprehension task. All subjects were trained on the task in a mock scanner prior to the actual scan. 
+We designed an fMRI task in which participants either read or listened to a passage of text. The passage was split into two paragraphs and interspersed with a simple attention task. At the end of the task, there was an approximately three minute long resting-state block. Across runs, conditions were presented in the same order, although durations varied slightly. Condition order was: comprehension block (paragraph 1), sensory baseline (set 1), comprehension block (paragraph 2), sensory baseline, and resting baseline. See \ref{fig:ch2_task-design} for a schematic.
 
-Each run contained three conditions: passage comprehension (written or spoken), sensory baseline (symbols or tones), and a resting baseline.  Across runs, conditions were presented in the same order, although durations varied slightly. Condition order was: comprehension block (paragraph 1), sensory baseline (set 1), comprehension block (paragraph 2), sensory baseline, and resting baseline. 
+\begin{figure}[tp]
+	\centering
+	\includegraphics[width=5in]{Ch2_Task-Design}
+	    \caption[Schematic of the reading comprehension task.}
+	\label{fig:ch2_task-design}
+\end{figure}
 
-To create a more naturalistic reading experience than single word presentation \cite{Rayner1986}, passages were presented in syntactic phrases ranging from 1-7 words in length. Although not used in this study, the interval between each stimulus was jittered to allow for event-related analyses (range: 275 – 4000 ms). 
+To create a more naturalistic reading experience than single word presentation \cite{Rayner1986}, passages were presented in syntactic phrases ranging from 1-7 words in length. Although not used in this study, the interval between each stimulus was jittered to allow for event-related analyses (range: 275 – 4000 ms).
 
 The sensory baseline condition was altered according to modality. For the reading runs, three non-alphanumeric symbols were displayed horizontally (two types), and their presentation time was matched to the passage phrases. Spacing between symbols was randomly alternated to replicate the variable phrase lengths in the passage condition. For the listening runs, three tones (two frequencies) were played in sequence, with a new set of tones beginning at the same intervals as the corresponding passage presentation. 
 
-To monitor attention, 4 – 8 percent of the stimuli within each task block were randomly repeated on two consecutive screens.  Participants pressed a button with their right thumb when they detected a repeated phrase, symbol or tone configuration. Additionally, at the conclusion of each passage, a picture was presented on the screen, and subjects were asked to identify whether the picture had any relationship to the passage (e.g., a picture of a mushroom for a passage about fungi). 
+To monitor attention, 4 – 8 percent of the stimuli within each passage or attention block were randomly repeated on two consecutive screens.  Participants pressed a button with their right thumb when they detected a repeated phrase, symbol or tone configuration. Additionally, at the conclusion of each passage, a picture was presented on the screen, and subjects were asked to identify whether the picture had any relationship to the passage (e.g., a picture of a mushroom for a passage about fungi). 
+
+To assess performance, we analyzed three measures: in-scanner attention, calculated using the D-Prime stat
+
+In total, there were 4 passages (2 listening, 2 reading), each leveled to a 3\textsupercript{rd} grade difficulty and balanced word measures such as concreteness and cohesiveness.  All subjects were trained on the task in a mock scanner prior to the actual scan. 
+
 
 \subsection{MRI acquisition}
 
@@ -100,6 +108,9 @@ Graph theory methods were used to investigate changes in global and local networ
 Two sets of analyses were performed: a contrast between both comprehension tasks and resting state, and a direct contrast between reading comprehension and listening comprehension. For the contrast between modalities, local metrics were also explored.
 
 \section{Behavior results}
+
+\section{Task results}
+
 
 
 \section{Activation results}
