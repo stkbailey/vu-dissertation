@@ -7,6 +7,7 @@ Previous analyses have investigated differences between reading and listening in
 First, we validate modularity and participation coefficient metrics using univariate data, and test that language induces greater global integration, especially in higher-order networks (executive + default mode) compared to resting and attention baselines.
 
 Second, we test three hypotheses about how interactions between brain networks might differ from speech.
+
 \begin{itemize}
 	\item Reading and listening have a shifted sensory load: reading will be induce greater between-network connectivity in the visual network and listening will induce greater cross-network connectivity in the auditory network.  
 	\item Reading, a self-directed activity that requires precise control of eye movement, will require greater attentional demands (connectivity between attention networks and sensory networks) than listening. 
@@ -39,6 +40,9 @@ In this study, we sought to ascertain what differences existed between reading a
 
 We also go beyond univariate methods, and test this hypothesis using multivariate and connectivity analyses. Univariate methods are biased towards discovering modular differences in the data, and may be one reason why much discourse has focused on finding single supramodal areas. Multivariate and connectivity methods, on the other hand, may illuminate the influences one or more areas may have on the processing in these language areas. 
 
+Comprehending extended text requires more than just sensory and linguistic processes. It also requires executive processes such as attention, working memory and inference. Therefore, we investigated whole-brain patterns of connectivity between different areas. 
+
+
 
 \section{Methods}
 
@@ -60,7 +64,7 @@ All participants were native English speakers with normal hearing and normal or 
 \end{table}
 
 \subsection{Behavioral measures}
-Each participant completed a battery of behavioral assessments and developmental questionnaires. For this study, we were interested on the effect of reading-specific and general language skills on brain processing. 
+Each participant completed a battery of behavioral assessments and developmental questionnaires. For the present study, we were interested on the effect of reading-specific and general language skills on brain processing. 
 
 \subsection{Functional MRI Task}
 
@@ -73,47 +77,48 @@ We designed an fMRI task in which participants either read or listened to a pass
 	\label{fig:ch2_task-design}
 \end{figure}
 
-To create a more naturalistic reading experience than single word presentation \cite{Rayner1986}, passages were presented in syntactic phrases ranging from 1-7 words in length. Although not used in this study, the interval between each stimulus was jittered to allow for event-related analyses (range: 275 – 4000 ms).
+To create a more naturalistic reading experience than single word presentation \cite{Rayner1986}, passages were presented in syntactic phrases ranging from 1-7 words in length. The interval between each stimulus was jittered to allow for event-related analyses (range: 275 – 4000 ms), although these effects were not examined here.
 
 The sensory baseline condition was altered according to modality. For the reading runs, three non-alphanumeric symbols were displayed horizontally (two types), and their presentation time was matched to the passage phrases. Spacing between symbols was randomly alternated to replicate the variable phrase lengths in the passage condition. For the listening runs, three tones (two frequencies) were played in sequence, with a new set of tones beginning at the same intervals as the corresponding passage presentation. 
 
 To monitor attention, 4 – 8 percent of the stimuli within each passage or attention block were randomly repeated on two consecutive screens.  Participants pressed a button with their right thumb when they detected a repeated phrase, symbol or tone configuration. Additionally, at the conclusion of each passage, a picture was presented on the screen, and subjects were asked to identify whether the picture had any relationship to the passage (e.g., a picture of a mushroom for a passage about fungi). 
 
-To assess performance, we analyzed three measures: in-scanner attention, calculated using the D-Prime stat
+To assess performance, we analyzed three measures: in-scanner attention, in-scanner comprehension, and post-scan recall. To assess attention, we calculated the D` statistic ($Z(true\ positive) - Z(false\ positive)$) for the "repeated stimulus" task. The in-scanner comprehension measure was the number (0,1,2) of questions correclty answered. To assess recall, each child was asked to recite as much of the passage as they could remember, and their answers were mapped to actual phrases present in the chapter.
 
 In total, there were 4 passages (2 listening, 2 reading), each leveled to a 3\textsupercript{rd} grade difficulty and balanced word measures such as concreteness and cohesiveness.  All subjects were trained on the task in a mock scanner prior to the actual scan. 
 
 
 \subsection{MRI acquisition}
 
-Imaging was performed on a Philips Achieva 3T MR scanner with an 32-channel head coil. Functional images were acquired using a gradient echo planar imaging sequence with 40 (3 mm thick) slices with no gap and consisted of 2 runs (duration of each run = 550 seconds; 250 dynamics per run). Slices were parallel to the anterior-posterior commissure plane. Imaging parameters for functional images included: TE = 30 ms; FOV = 240 x 240 x 120 mm\textsuperscript{3}; flip angle = 75\degree; TR = 2200 ms; and 3 mm\textsuperscript{3} isotropic voxels.
+Imaging was performed on a Philips Achieva 3T MR scanner with a 32-channel head coil. Functional images were acquired using a gradient echo planar imaging sequence with 40 (3 mm thick) slices with no gap. Each run of the task (up to four) consisted of 250 volumes. Slices were parallel to the anterior-posterior commissure plane. Imaging parameters for functional images included: TE = 30 ms; FOV = 240 x 240 x 120 mm\textsuperscript{3}; flip angle = 75\degree; TR = 2200 ms; and 3 mm\textsuperscript{3} isotropic voxels.
 
 \subsection{Activation analyses}
 
-Whole-brain fMRI analyses were performed using tools from the FMRIB Software Library (version 5.0.9). For each session, the following pre-processing steps were performed using FSL’s Enhanced Analysis Toolbox:  slice-time correction, motion correction to the initial fMRI volume, high-pass filtering at 0.08 Hz, boundary-based registration to the structural image and normalization to 2 mm MNI 152 standard space. To mitigate the effects of motion on our analyses, we used the standard continuous motion parameters (x, y, z, rx, ry, rz), and scrubbed out outlier volumes. We defined an outlier volume as any in which the root-mean-square framewise displacement exceeded 0.7 mm. 
+Whole-brain fMRI analyses were performed using tools from the FMRIB Software Library (version 5.0.9). For each session, the following pre-processing steps were performed:  slice-time correction, motion correction to the initial fMRI volume, high-pass filtering at 0.08 Hz, boundary-based registration to the subject's structural image, and normalization to 2 mm MNI 152 standard space. To mitigate the effects of motion on our analyses, we regressed out 6 continuous motion parameters and scrubbed out outlier volumes. We defined an outlier volume as any in which the root-mean-square framewise displacement exceeded 0.7 mm. 
 
-The task was entered as an event-related design to account for the variable amounts of jitter between each phrase presentation. All conditions were convolved with the double-gamma hemodynamic response function to generate design matrices for each fMRI run (see Supplementary Figure __ for an example.) Two first-level contrasts were of interest: the effect of passage comprehension vs. the resting baseline (“pass vs. rest”), and the effect of passage comprehension vs. the sensory baseline (“pass vs. line”). All other effects were modeled out.
+All task conditions were convolved with the double-gamma hemodynamic response function to generate design matrices for each fMRI run. Two first-level contrasts were of interest: the main effect of passage comprehension (“pass vs. rest”), and the contrast of passage comprehension vs. the sensory baseline (“pass vs. attn”). Repeated stimuli and the picture comprehension task were modelled out.
 
-After generating contrasts for each scan, modality effects (and, if applicable, year effects) were summarized within each subject for each grade, and if they participated in both years, across grades, using a fixed-effects analysis. 
-
-Group-level analyses were done using non-parametric methods implemented in FSL’s randomise tool, with threshold-free cluster enhancement. Non-parametric methods present many advantages for neuroimaging research, bypassing many of the assumptions and decision points otherwise required (e.g. height and cluster extent thresholds). For each group analysis, we performed 10,000 permutations and report results with p < 0.05. 
+Modality effects (Shared Effect of Listening and Reading, Contrast of Listening and Reading) were estimated at the subject-level using fixed effects analysis. These were carried over into group-level analyses using non-parametric methods implemented in FSL’s \textit{randomise} tool with threshold-free cluster enhancement. For each group-level analysis, we performed 10,000 permutations and report results with \textit{p} \textless 0.05. 
 
 \subsection{Connectivity analyses}
 
-Comprehending extended text requires more than just sensory and linguistic processes. It also requires executive processes such as attention, working memory and inference. Therefore, we investigated whole-brain patterns of connectivity between different areas. To do this in as unbiased a manner as possible, we used 264 regions of interest from an influential previous paper (Powers et al., 2011). These ROIs have proven useful because of their involvement in a variety of cognitive tasks, their diversity of location and the reliability of their network estimation. 
-Connectivity analyses were performed in the Conn Toolbox (version 17b) for Matlab (Neito-Castanon…). Briefly, time-series from each ROI were extracted for each scan session. Data were denoised via the aCompCorr method, which relies on white matter and cerebrospinal fluid timeseries, then high-pass filtered at 0.01 Hz. 12 continuous measures of motion (3 translation + derviatives, 3 rotation + derivatives) were included, and volumes with a frame-wise displacement greater than 0.7mm were scrubbed out. 
+To investigate whole-brain patterns of connectivity without biasing our results towards our task, we selected 264 nodes \textit{a priori} whose connectivity properties have been extensively analyzed \cite{Power2011}. This nodeset samples the entire brain and are involved in a diversity of cognitive tasks. Each node was assigned to one of 13 RSNs based on previous literature \cite{Power2013}. Approximately 10 percent of the nodes fell did not have a stable assignment in the original paper; for the present analyses, these nodes were excluded from graph theory calculations. A description of the 13 networks, their size, and their overlap with the 2011 Yeo parcellation is provided in \ref{table_power_nodes}. 
 
-Graph theory methods were used to investigate changes in global and local network topology. The major variables of interest were global efficiency (the inverse of the average length between two nodes in the network) and the clustering co-efficient (how closely a node is nested within a sub-network). Both of these metrics relate to how much information is passing between a variety of brain areas: high efficiency and low clustering would indicate that information can pass more “easily” between different networks. 
+Network estimation was performed in the Conn: Functional Connectivity Toolbox (version 17f) \cite{Nieto-castanon}. For each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions ("pass", "attn", "rest"). The timeseries was then high-pass filtered at 0.01 Hz.
 
-Two sets of analyses were performed: a contrast between both comprehension tasks and resting state, and a direct contrast between reading comprehension and listening comprehension. For the contrast between modalities, local metrics were also explored.
+Whole-brain connectomes for each condition were created by estimating the functional connectivity between each node using a weighted general linear model. For connection-level analyses, these values were compared directly across subjects and conditions. For graph theory analyses, the array of all node connections was thresholded to keep the top 5 percent of connections, resulting in a much sparser representation. This threshold was also tested at ranges from 2 percent to 10 percent.
 
-\section{Behavior results}
+The metrics of interest were network \textit{modularity} and \textit{participation coefficient}. Modularity is high in networks where nodes within the same RSN are highly connected to each other but not elsewhere. The participation coefficient, on the other hand, is high when many nodes are connected to several different RSNs. Both of these metrics relate to the integration of information between RSNs. These properties, and their changes within our task, were investigated at the connectome-, RSN- and node-level. 
 
-\section{Task results}
+\section{Results}
+
+\subsection{Behavior}
+
+\subsection{Task results}
 
 
 
-\section{Activation results}
+\subsection{Activation results}
 
 A broad range of language-related areas were activated for both reading and listening comprehension (Figure 1). Compared to the corresponding sensory baselines, we saw activation spanning the inferior frontal gyrus, angular gyrus, premotor cortex, middle temporal gyrus and the superior frontal gyrus. We also found significant activation in key nodes of the default mode network: posterior cingulate, angular gyrus, and the orbitofrontal cortex. Activation patterns were robustly present on both hemispheres, but had greater intensity and extent on the left hemisphere. 
 
@@ -137,7 +142,7 @@ Covariate analyses in Grade 3 revealed significant correlations between the ling
 
 Findings were highly conserved across years and within-subject. No significant age-related differences were found when treating the subjects cross-sectionally (Grade 3 Group vs. Grade 4 Group) or as paired t-test (n = 30). Intersection analyses revealed that a high percentage of voxels that exhibited significant main effects in Grade 3 were also significant in Grade 4 (___ percent for supra-modal effects, ___ percent for uni-modal effects).
 
-\section{Connectivity results}
+\subsection{Connectivity results}
 
 
 \subsection{Global graph theory metrics}
@@ -145,8 +150,6 @@ Because minor changes to network-forming thresholds can influence these properti
 
 Passages vs. Rest: Across the whole-brain network, reading increased the global efficiency (t = ___, p = ____) and ____ the clustering coefficient decreased (t = ___, p < 0.001).
 Listening vs. Reading: Across the whole-brain network, reading increased the global efficiency compared to listening (t = -3.167, p = 0.0013). No global changes were found for the clustering coefficient. However, at the regional level, areas which were associated with high modality-specific effects in reading also exhibited decreased clustering coefficients (G3, p < 0.001; G4, p < 0.001) (Figure 5). This effect was seen predominantly in nodes that were, at rest, involved in the visual network, suggesting that during reading a large portion of the visual network becomes more externally connected to other areas. This may be the key driver of the overall increase in global efficiency.
-
-\subsection{Rewiring changes}
 
 
 
