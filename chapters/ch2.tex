@@ -33,7 +33,7 @@ These modality-specific influences – sometimes termed “fingerprints” – o
 	\item \textbf{Modality-bound differences:} Speech contains overt clues about the speaker, such as tone and prosody, and these can convey additional non-linguistic meaning for the listener. Reading, on the other hand, might be considered a more purely linguistic act, especially with computer-printed text. Reading may thus allow more room for self-generated situation models and more independent direction of thought. Furthermore, modality-specific aspects of the stimulus may influence the overall comprehension process; reading requires a level of spatial awareness -where one is at on a page, what happened in preceding paragraphs – and allows for the re-treading of information. Listening, meanwhile, requires the extraction of input from competing noises and sometimes the tracking of changing volume. 
 \end{itemize}
 
-Our central argument is that, just because language possesses supra-modal processing areas does not indicate that language is entirely supra-modal. Just as there is considerable evidence for supra-modal processing, there is also evidence for modality fingerprints on language comprehension. These influences may arise from the intrinsic organization of the brain, which is strongly tied to sensory and motor processing: a recent study found that areas activated by reading comprehension overlap to a significant degree with auditory, somatosensory and visual topographic maps (Sood \& Sereno, 2016). … Visual imagery… 
+Our central argument is that, just because language possesses supra-modal processing areas does not indicate that language is entirely supra-modal. Just as there is considerable evidence for supra-modal processing, there is also evidence for modality fingerprints on language comprehension. These influences may arise from the intrinsic organization of the brain, which is strongly tied to sensory and motor processing: a recent study found that areas activated by reading comprehension overlap to a significant degree with auditory, somatosensory and visual topographic maps (Sood and Sereno, 2016). … Visual imagery… 
 
 Divorcing “language comprehension” from modality has serious implications. It means that reading instruction does not often continue into later grades, even as students are asked to read longer and more complex texts. It may also over-simplify the comprehension process. 
 In this study, we sought to ascertain what differences existed between reading and listening comprehension of passages. We employ closely matched texts, large sample size, longitudinal sampling, and behavioral covariates. 
@@ -50,7 +50,7 @@ The following methods detail the current study's protocol and analytical approac
 
 \subsection{Participants}
 
-Participants for the first study were drawn from the fourth wave of a larger, longitudinal study investigating the neurobiological bases of reading comprehension. 50 children completed scans for the current study, and 45 of these met the motion and attention thresholds described below. 
+Participants for the first study were drawn from the fourth wave of a larger, longitudinal study investigating the neurobiological bases of reading comprehension. 50 children completed scans for the current study, and 42 of these met the motion and attention thresholds described below. See Table \ref{table:ch2-participants} for demographics. 
 
 All participants were native English speakers with normal hearing and normal or corrected vision, and no history of major psychiatric illness or traumatic brain injury/epilepsy. Subjects had no history of a developmental disability or contra-indication to MRI.  Each participant gave written consent at the beginning of the study, with procedures carried out in accordance with Vanderbilt University’s Institutional Review Board.
 
@@ -58,21 +58,21 @@ All participants were native English speakers with normal hearing and normal or 
 	\scriptsize
 	\renewcommand{\tabcolsep}{0.09cm}
 	\centering
-	\input{tables/Ch2_Participants.tex}
+	\input{tables/ch2-participants.tex}
 	\caption{Participant demographics for Study 1.}
-	\label{table:Ch2_Participants}
+	\label{table:ch2-participants}
 \end{table}
 
 
 \subsection{Functional MRI Task}
 
-We designed an fMRI task in which participants either read or listened to a passage of text. The passage was split into two paragraphs and interspersed with a simple attention task. At the end of the task, there was an approximately three minute long resting-state block. Across runs, conditions were presented in the same order, although durations varied slightly. Condition order was: comprehension block (paragraph 1), sensory baseline (set 1), comprehension block (paragraph 2), sensory baseline, and resting baseline. See Fig. \ref{fig2:task-design} for a schematic.
+We designed an fMRI task in which participants either read or listened to a passage of text. The passage was split into two paragraphs and interspersed with a simple attention task. At the end of the task, there was an approximately three minute long resting-state block. Across runs, conditions were presented in the same order, although durations varied slightly. Condition order was: comprehension block (paragraph 1), sensory baseline (set 1), comprehension block (paragraph 2), sensory baseline, and resting baseline. See Fig. \ref{fig:ch2-task-design} for a schematic.
 
 \begin{figure}[tp]
 	\centering
-	\includegraphics[width=5in]{Ch2_Task-Design}
+	\includegraphics[width=5in]{ch2-task-design}
 	    \caption[Schematic of the reading comprehension task.}
-	\label{fig:ch2_task-design}
+	\label{fig:ch2-task-design}
 \end{figure}
 
 To create a more naturalistic reading experience than single word presentation \cite{Rayner1986}, passages were presented in syntactic phrases ranging from 1-7 words in length. The interval between each stimulus was jittered to allow for event-related analyses (range: 275 – 4000 ms), although these effects were not examined here.
@@ -92,7 +92,7 @@ Imaging was performed on a Philips Achieva 3T MR scanner with a 32-channel head 
 
 \subsection{Activation analyses}
 
-Whole-brain fMRI analyses were performed using tools from the FMRIB Software Library (version 5.0.9). For each session, the following pre-processing steps were performed:  slice-time correction, motion correction to the initial fMRI volume, high-pass filtering at 0.08 Hz, boundary-based registration to the subject's structural image, and normalization to 2 mm MNI 152 standard space. To mitigate the effects of motion on our analyses, we regressed out 6 continuous motion parameters and scrubbed out outlier volumes. We defined an outlier volume as any in which the root-mean-square framewise displacement exceeded 0.7 mm. For a scan to be eligible for analysis, no more than 20 percent of the fMRI volumes could be considered outliers.
+Whole-brain fMRI analyses were performed using tools from the FMRIB Software Library (version 5.0.9). For each session, the following pre-processing steps were performed:  slice-time correction, motion correction to the initial fMRI volume, high-pass filtering at 0.08 Hz, boundary-based registration to the subject's structural image, and normalization to 2 mm MNI 152 standard space. To mitigate the effects of motion on our analyses, we regressed out 6 continuous motion parameters and scrubbed out outlier volumes. We defined an outlier volume as any in which the root-mean-square framewise displacement exceeded 0.7 mm. Because head motion can be a major confound for connectivity analyses, we removed scan runs where more than 10 percent of the fMRI volumes were outliers.
 
 All task conditions were convolved with the double-gamma hemodynamic response function to generate design matrices for each fMRI run. Two first-level contrasts were of interest: the main effect of passage comprehension (“PASS vs. REST”), and the contrast of passage comprehension vs. the sensory baseline ("PASS vs. ATTN"). Repeated stimuli and the picture comprehension task were modelled out.
 
@@ -100,7 +100,7 @@ Modality effects (Shared Effect of Listening and Reading, Contrast of Listening 
 
 \subsection{Connectivity analyses}
 
-To investigate whole-brain patterns of connectivity without biasing our results towards our task, we selected 264 nodes \textit{a priori} whose connectivity properties have been extensively analyzed \cite{Power2011}. This nodeset samples the entire brain and are involved in a diversity of cognitive tasks. Each node was assigned to one of 13 RSNs based on previous literature \cite{Power2013}. Approximately 10 percent of the nodes fell did not have a stable assignment in the original paper; for the present analyses, these nodes were excluded from graph theory calculations. A description of the 13 networks, their size, and their overlap with the 2011 Yeo parcellation is provided in \ref{tab2:power_nodes}. 
+To investigate whole-brain patterns of connectivity without biasing our results towards our task, we selected 264 nodes \textit{a priori} whose connectivity properties have been extensively analyzed \cite{Power2011}. This nodeset samples the entire brain and are involved in a diversity of cognitive tasks. Each node was assigned to one of 13 RSNs based on previous literature \cite{Power2013}. Approximately 10 percent of the nodes fell did not have a stable assignment in the original paper; for the present analyses, these nodes were excluded from graph theory calculations. A description of the 13 networks, their size, and their overlap with the 2011 Yeo parcellation is provided in \ref{table:ch2-power-nodes}. 
 
 Network estimation was performed in the Conn: Functional Connectivity Toolbox (version 17f) \cite{Nieto-castanon}. For each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions ("pass", "attn", "rest"). The timeseries was then high-pass filtered at 0.01 Hz.
 
@@ -108,32 +108,54 @@ Whole-brain connectomes for each condition were created by estimating the functi
 
 The metrics of interest were network \textit{modularity} and \textit{participation coefficient}. Modularity is high in networks where nodes within the same RSN are highly connected to each other but not elsewhere. The participation coefficient, on the other hand, is high when many nodes are connected to several different RSNs. Both of these metrics relate to the integration of information between RSNs. These properties, and their changes within our task, were investigated at the connectome-, RSN- and node-level. 
 
+\begin{table}
+	\scriptsize
+	\renewcommand{\tabcolsep}{0.09cm}
+	\centering
+	\input{tables/ch2-power-nodes.tex}
+	\caption{Summary of nodes used in connectivity analyses.}
+	\label{table:ch2-power-nodes}
+\end{table}
+
 \section{Results}
 
-\subsection{Behavior and motion}
+\subsection{Task and motion}
 
-The a
-
-\subsection{Task results}
-
-\subsection{Activation results}
-
-A range of language-related areas were activated for both reading and listening comprehension (Fig. \ref{fig2:passages}). Compared to the corresponding sensory baselines, we saw activation spanning the inferior frontal gyrus, angular gyrus, premotor cortex, middle temporal gyrus and the superior frontal gyrus. Activation patterns were robustly present on both hemispheres, but had greater intensity and extent on the left hemisphere. 
+35 subjects (116 scan runs) met the attention and motion criteria to be included in the analysis. (17 subjects and 87 individual scan runs were filtered.) Attention and comprehension measures were not related to modality of stimulus presentation (see Figs. \ref{fig:ch2-eprime-recall} and \ref{fig:ch2-eprime-comprehension}). There was no difference in median FDRMS between scan modalities (paired t-test, $t = 1.09$, $p = 0.279$).  
 
 \begin{figure}[tp]
 	\centering
-	\includegraphics[width=5in]{Ch2_ActivationPassagesY4}
+	\includegraphics[width=5in]{ch2-eprime-recall}
+    \caption[Post-scanner recall was not related to modality.]{}
+	\label{fig:ch2-eprime-recall}
+\end{figure}
+
+\begin{figure}[tp]
+	\centering
+	\includegraphics[width=5in]{ch2-eprime-comprehension}
+    \caption[In-scanner comprehension performance did not differ by modality.]{}
+	\label{fig:ch2-eprime-comprehension}
+\end{figure}
+
+
+\subsection{Activation results}
+
+A range of language-related areas were activated for both reading and listening comprehension (Fig. \ref{fig:ch2-passages-activation-attn}). Compared to the corresponding sensory baselines, activation spanned the inferior frontal gyrus, angular gyrus, premotor cortex, middle temporal gyrus and the superior frontal gyrus. Activation patterns were robustly present on both hemispheres, but had greater intensity and extent on the left hemisphere. 
+
+\begin{figure}[tp]
+	\centering
+	\includegraphics[width=5in]{ch2-passages-activation-attn}
     \caption[There is significant overlap between the areas used in listening and reading.]{A widespread set of brain areas are utilized during listening and reading, including auditory, default mode and attention areas.}
-	\label{fig2:passages}
+	\label{fig:ch2-passages-activation-attn}
 \end{figure}
 
 Differences related to modality fell into three categories: sensory processing areas, including the insula, superior temporal gyrus, and secondary visual processing areas; and hetero-modal association areas, most notably the inferior frontal gyrus and angular gyrus; and somato-motor regions, including the premotor cortex and lateral geniculate nucleus of the thalamus (Figure 2). Areas related to listening were focused on primary auditory cortex and the dorsal attention network. 
 
 \begin{figure}[!b]
 	\centering
-	\includegraphics[width=5in]{Ch2_ActivationModalityY4}
+	\includegraphics[width=5in]{ch2-modality-differences-attn}
     \caption[Modality differences center on primary sensory and integration areas.]{Modality differences center on primary sensory and integration areas.}
-	\label{fig2:modality}
+	\label{fig:ch2-modality-differences-attn}
 \end{figure}
 
 \subsection{Connectivity results}
