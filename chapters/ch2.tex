@@ -1,22 +1,37 @@
 \chapter{Reorganization of network architecture during reading and listening}
 
+\epigraph{Language is a complex code; reading a simple cipher.}{Alvin Liberman}
+
+\epigraph{It is commonly held that reading is parallel to listening... but parasitic.}{Ken...}
+
 \section{Motivation}
 
-Complicated cognitive tasks such as reading and listening comprehension require rapid coordination between different networks, but how they transiently reorganize during language use has not been well-described. Such a line of investigation is particularly valuable in the context of developing readers, who are mapping visual systems onto existing language circuitry: identifying differences between reading and listening comprehension may elucidate which systems uniquely support reading comprehension. In this study, I use graph theory and functional data from listening and reading tasks to describe the local and global reorganization of the brain in children aged 9 to 11.
+The clearest difference between reading and listening is that of decoding, or mapping letter sounds to words. Decoding is a concrete skill that can be taught, maps to a specific area (or set of areas), and is amenable to education. This makes it an excellent target for investigation. Comprehension, on the other hand, requires coordination between many different skills, with the load varying throughout a passage, may be performed with many different strategies, and is hard to define and measure. However, it is the actual goal of all language activity. 
 
-My central argument is that, just because language possesses supra-modal processing areas does not indicate that language is entirely supra-modal. Just as there is considerable evidence for supra-modal processing, there is also evidence for modality fingerprints on language comprehension. These influences may arise from the intrinsic organization of the brain, which is strongly tied to sensory and motor processing: a recent study found that areas activated by reading comprehension overlap to a significant degree with auditory, somatosensory and visual topographic maps \cite{Sood2016}. 
+Neuroanatomical models of language, shown in Fig. \ref{ch2-price-language-model}, illustrate that language is distributed throughout much of the brain. This model is linear, however: there is a circuit from input to output. It also lacks any coordination: the roles of attention and executive function are not elaborated.
+
+\begin{figure}[tp]
+	\centering
+	\includegraphics[width=5in]{images/ch2-price-language-model.jpg}
+	\caption[Schematics of skills and brain areas used in reading.]
+	\label{fig:ch2-price-language-model}
+\end{figure}
+
+Neuroimaging may be usefuldifferent networks, but how they transiently reorganize during language use has not been well-described. Such a line of investigation is particularly valuable in the context of developing readers, who are mapping visual systems onto existing language circuitry: identifying differences between reading and listening comprehension may elucidate which systems uniquely support reading comprehension. In this study, I use graph theory and functional data from listening and reading tasks to describe the local and global reorganization of the brain in children aged 9 to 11.
+
+Word recognition and oral language comprehension are strong predictors of reading comprehension skill \cite{Gough1989}. Furthermore, many of the most dramatic changes associated with reading acquisition are linked to the reorganization of visual or phonological systems, areas not directly related to semantic or comprehension processes \cite{Schlaggar2006, Dahaene2015}. Substantial evidence from two decades of neuroimaging suggests that inputs, from auditory or visual domains are fed up into higher-order association areas that sequence, encode articulatory plans, and extract semantic information \cite{Price2012}. These processes localize onto the similar areas regardless of language and writing system \cite{Rueckl2016}, and may even extend to inputs from somatosensory or non-linguistic domains \cite{Xu2005}. This supra-modal language core is largely left-lateralized and centers on the inferior frontal gyrus, anterior and posterior middle temporal gyrus and the angular gyrus. 
+
+However, there is evidence that comprehending written and spoken language are not equivalent. There is a subset of students who, despite adequate word decoding skills and vocabulary skills, struggle with reading comprehension\citep{Nation2010, Spencer2011}. More on SRCD. From a neurobiological perspective, expected differences in primary visual (for reading) and primary auditory (for listening) represent the different input systems, with ventral occipito-temporal systems also activating \cite{Jobard2007}. However, differences in core language systems are also observed: additional activation in left posterior temporal and parietal areas in reading modality (Constable et al., 2015), as well increased bi-laterality especially in children \cite{Berl2010}. 
 
 Divorcing “language comprehension” from modality has serious implications. It means that reading instruction does not often continue into later grades, even as students are asked to read longer and more complex texts. It may also over-simplify the comprehension process. 
 
-In this study, we sought to ascertain what differences existed between reading and listening comprehension of passages. We employ closely matched texts, large sample size, longitudinal sampling, and behavioral covariates. 
+Most current cognitive models suggest that language comprehension requires the construction of a mental representation includes textual information and associated background knowledge, connected by some conscious and some unconscious executive processes \cite{Kendou2014}. Thus, while there may be a core set of systems for manipulating and extracting meaning from language, it is quite possible that there are modality-specific influences on these systems 
 
-We also go beyond univariate methods, and test this hypothesis using multivariate and connectivity analyses. Univariate methods are biased towards discovering modular differences in the data, and may be one reason why much discourse has focused on finding single supramodal areas. Multivariate and connectivity methods, on the other hand, may illuminate the influences one or more areas may have on the processing in these language areas. 
-
-Comprehending extended text requires more than just sensory and linguistic processes. It also requires executive processes such as attention, working memory and inference. Therefore, we investigated whole-brain patterns of connectivity between different areas. 
-
-Previous analyses have investigated differences between reading and listening in terms of their activation of individual areas or the distribution of activity across the brain. Since comprehension is a "whole-brain" activity, we here look at the reorganization of resting-state networks - to see how attention, executifve and sensory systems are interacting during reading.
+In this study, we sought to ascertain what differences existed between reading and listening comprehension of passages. We employ closely matched texts, large sample size, longitudinal sampling, and behavioral covariates. Comprehending extended text requires more than just sensory and linguistic processes. It also requires executive processes such as attention, working memory and inference. Therefore, we investigated whole-brain patterns of connectivity between different areas. 
 
 With regards to network architecutre, we see three possible lines of investigation. These are not exclusive; one or more of them may be true.
+
+My central argument is that, just because language possesses supra-modal processing areas does not indicate that language is entirely supra-modal. Just as there is considerable evidence for supra-modal processing, there is also evidence for modality fingerprints on language comprehension. These influences may arise from the intrinsic organization of the brain, which is strongly tied to sensory and motor processing: a recent study found that areas activated by reading comprehension overlap to a significant degree with auditory, somatosensory and visual topographic maps \cite{Sood2016}. 
 
 \begin{itemize}
 	\item Reading and listening have a shifted sensory load. That is, reading will be induce greater between-network connectivity in the visual network, while listening will induce greater cross-network connectivity in the auditory network.  
@@ -24,27 +39,10 @@ With regards to network architecutre, we see three possible lines of investigati
 	\item Hub areas, many of which reside in the fronto-parietal network, will increase during reading comprehension, which requires greater integration of visual and auditory information.
 \end{itemize}
 
-\subsection{Reading plugs into language systems}
-Most current cognitive models suggest that language comprehension requires the construction of a mental representation includes textual information and associated background knowledge, connected by some conscious and some unconscious executive processes \cite{Kendou2014}. Thus, while there may be a core set of systems for manipulating and extracting meaning from language, it is quite possible that there are modality-specific influences on these systems 
-
-Word recognition and oral language comprehension are strong predictors of reading comprehension skill \cite{Gough1989}. Furthermore, many of the most dramatic changes associated with reading acquisition are linked to the reorganization of visual or phonological systems, areas not directly related to semantic or comprehension processes \cite{Schlaggar2006, Dahaene2015}. Substantial evidence from two decades of neuroimaging suggests that inputs, from auditory or visual domains are fed up into higher-order association areas that sequence, encode articulatory plans, and extract semantic information \cite{Price2012}. These processes localize onto the similar areas regardless of language and writing system \cite{Rueckl2016}, and may even extend to inputs from somatosensory or non-linguistic domains \cite{Xu2005}. This supra-modal language core is largely left-lateralized and centers on the inferior frontal gyrus, anterior and posterior middle temporal gyrus and the angular gyrus. 
-
-However, there is evidence that comprehending written and spoken language are not equivalent. There is a subset of students who, despite adequate word decoding skills and vocabulary skills, struggle with reading comprehension\citep{Nation2010, Spencer2011}. More on SRCD. From a neurobiological perspective, expected differences in primary visual (for reading) and primary auditory (for listening) represent the different input systems, with ventral occipito-temporal systems also activating \cite{Jobard2007}. However, differences in core language systems are also observed: additional activation in left posterior temporal and parietal areas in reading modality (Constable et al., 2015), as well increased bi-laterality especially in children \cite{Berl2010}. 
-
-These modality-specific influences – sometimes termed “fingerprints” – on behavior and brain activity may arise from a few different sources: subject, linguistic and innate differences. 
-
-\begin{itemize}
-	\item \textbf{Subject-Dependent Differences:} As disussed above, reading is a learned skill with may component processes. It requires thousands of hours of experience to master and entails a reorganization of cortical resources. Environmental and biological factors thus exert a greater influence on an individual’s reading proficiency than they might on more intrinsic processes such as speech comprehension. This is particularly dramatic in individuals with dyslexia, who have persistent difficulty with reading. Children with dyslexia exhibit less activation in reading-related areas compared to typically developing children \cite{Pugh2000}, but greater activation in right hemisphere homologues, suggesting that lateralization and activation of the reading circuit are associated with better reading. Development period also has an effect, with children exhibiting less activation in frontal areas but more in posterior areas, possibly reflecting a shift in “resource load” from uni-modal to supramodal areas \cite{Berl2010}. This shift may not be necessary in listening, or occur much earlier. Thus, with increasing expertise and development, there may be a “shift” from relying on fusiform processing areas. towards using multi-modal areas more like speech \cite{Monzalvo}. 
-
-	\item \textbf{Language-Dependent Differences:} People speak differently than they write. Reading often relies on more complicated syntax, and even for skilled readers, longer words and sentences can strain executive systems more than they might if being spoken to. Although these properties are often controlled for in scientific studies, they represent a major difference between “natural” reading and listening. Because of these differences, reading may place a greater load on executive function skills. Executive functions such as working memory and planning and organizing may be particularly important for reading \cite{Cain}.  
-	
-	\item \textbf{Modality-bound differences:} Speech contains overt clues about the speaker, such as tone and prosody, and these can convey additional non-linguistic meaning for the listener. Reading, on the other hand, might be considered a more purely linguistic act, especially with computer-printed text. Reading may thus allow more room for self-generated situation models and more independent direction of thought. Furthermore, modality-specific aspects of the stimulus may influence the overall comprehension process; reading requires a level of spatial awareness -where one is at on a page, what happened in preceding paragraphs – and allows for the re-treading of information. Listening, meanwhile, requires the extraction of input from competing noises and sometimes the tracking of changing volume. 
-\end{itemize}
-
-
-\subsection{Approach}
+This study pushes further than previous studies have by investigating differences between reading and listening in terms of their activation of individual areas or the distribution of activity across the brain. Since comprehension is a "whole-brain" activity, we here look at the reorganization of resting-state networks - to see how attention, executifve and sensory systems are interacting during reading.
 
 First, we validate modularity and participation coefficient metrics using univariate data, and test that language induces greater global integration, especially in higher-order networks (executive + default mode) compared to resting and attention baselines. Second, we test three hypotheses about how interactions between brain networks might differ from speech. Finally, we investigate whether these interactions change with experience, testing whether the reading and listening systems "merge" into a unified system or whether differences between reading and listening persist across development.
+
 
 \section{Methods}
 
@@ -166,3 +164,15 @@ Differences related to modality fell into three categories: sensory processing a
 
 
 \section{Discussion}
+
+
+
+These modality-specific influences on behavior and brain activity may arise from a few different sources: subject, linguistic and innate differences. 
+
+\begin{itemize}
+	\item \textbf{Subject-Dependent Differences:} As disussed above, reading is a learned skill with may component processes. It requires thousands of hours of experience to master and entails a reorganization of cortical resources. Environmental and biological factors thus exert a greater influence on an individual’s reading proficiency than they might on more intrinsic processes such as speech comprehension. This is particularly dramatic in individuals with dyslexia, who have persistent difficulty with reading. Children with dyslexia exhibit less activation in reading-related areas compared to typically developing children \cite{Pugh2000}, but greater activation in right hemisphere homologues, suggesting that lateralization and activation of the reading circuit are associated with better reading. Development period also has an effect, with children exhibiting less activation in frontal areas but more in posterior areas, possibly reflecting a shift in “resource load” from uni-modal to supramodal areas \cite{Berl2010}. This shift may not be necessary in listening, or occur much earlier. Thus, with increasing expertise and development, there may be a “shift” from relying on fusiform processing areas. towards using multi-modal areas more like speech \cite{Monzalvo}. 
+
+	\item \textbf{Language-Dependent Differences:} People speak differently than they write. Reading often relies on more complicated syntax, and even for skilled readers, longer words and sentences can strain executive systems more than they might if being spoken to. Although these properties are often controlled for in scientific studies, they represent a major difference between “natural” reading and listening. Because of these differences, reading may place a greater load on executive function skills. Executive functions such as working memory and planning and organizing may be particularly important for reading \cite{Cain}.  
+	
+	\item \textbf{Modality-bound differences:} Speech contains overt clues about the speaker, such as tone and prosody, and these can convey additional non-linguistic meaning for the listener. Reading, on the other hand, might be considered a more purely linguistic act, especially with computer-printed text. Reading may thus allow more room for self-generated situation models and more independent direction of thought. Furthermore, modality-specific aspects of the stimulus may influence the overall comprehension process; reading requires a level of spatial awareness -where one is at on a page, what happened in preceding paragraphs – and allows for the re-treading of information. Listening, meanwhile, requires the extraction of input from competing noises and sometimes the tracking of changing volume. 
+\end{itemize}
