@@ -4,7 +4,7 @@
 
 \section{Motivation}
 
-In the first chapter, we established that reading utilizes a variety of cognitive skills whose neural substrates are distributed throughout the brain. But being able to comprehend speech is a pre-requisite to reading, and it is similarly complex. It begs the question: in what ways is reading unique from listening?
+In the first chapter, we established that reading utilizes a variety of cognitive skills whose neural substrates are distributed throughout the brain. But being able to comprehend speech is a pre-requisite to reading, and it is similarly complex. This begs the question: in what ways is reading unique from listening?
 
 The most widely-held view is that reading and listening share the same core linguistic processes and differ primarily in the sensory processes that feed into supra-model linguistic systems \citep{Mattingly1972, Price2012}. One popular model, the \textit{Simple View of Reading} makes the model testable by stating that reading comprehension is the product of listening comprehension and decoding skills \citep{Gough1988}. This view has received support from large behavioral studies \citep{Kirby2006} and neuroimaging investigations: many of the literacy-related changesare linked to visual or phonological systems, areas not directly related to semantic or comprehension processes \citep{Schlaggar2006, Dahaene2015}. These findings support a model in which inputs from auditory or visual domains are fed up into higher-order association areas that sequence, encode articulatory plans, and extract semantic information \citep{Price2012}. These processes localize onto the similar areas regardless of language and writing system \citep{Rueckl2016}, and may even extend to inputs from somatosensory domains \citep{Xu2005, Sood2015}. This supra-modal language core is largely left-lateralized and centers on the inferior frontal gyrus, anterior and posterior middle temporal gyrus and the angular gyrus. Neuroanatomical models of language, shown in Fig. \ref{ch2-price-language-models}, illustrate that language is distributed throughout much of the brain. 
 
@@ -19,7 +19,8 @@ Despite the clear overlap between reading and listening, there is also evidence 
 
 Most current cognitive models suggest that language comprehension requires the construction of a mental representation includes textual information and associated background knowledge, connected by some conscious and some unconscious executive processes \citep{Kendou2014}. The parallel model shown in Fig. \ref{fig:ch2-price-language-models} is linear: it moves from sensation to action. During comprehension, however, the relationship between areas is dynamic and constantly being re-evaluated. The roles of attention and executive systems are likely to play an important role. Thus, while there may be a core set of systems for manipulating and extracting meaning from language, it is likely that differences in modality would modulate these processes. 
 
-The pioneering researcher Alvin Liberman suggested that reading, instead of being parallel to listening, is actually parasitic: it requires an awareness of the act that is not required in listening. Brain activation studies may not capture these differences: it could very well be the interactions of different functional systems that are changed, rather than the uoverall "engagement" of an individual brain area. Additionally, the fact that reading integrates in an additinoal modality could be a source of difference, especially in emerging readers. 
+The pioneering researcher Alvin Liberman suggested that reading, instead of being parallel to listening, is actually parasitic: it requires an 
+textit{awareness} of the linguistic act that is not required in listening. Brain activation studies may not capture these differences: it could very well be the interactions of different functional systems that are changed, rather than the overall "engagement" of an individual brain area. Additionally, the fact that reading integrates in an additinoal modality could be a source of difference, especially in emerging readers. 
 
 In this study, we pursue three hypothesized ways reading might differ from listening. These are not exclusive; one or more of them may be true. The overarching aim is to test whether reading is simply listening skills
 
@@ -38,7 +39,7 @@ The following methods detail the current study's protocol and analytical approac
 
 \subsection{Participants}
 
-Participants for the first study were drawn from the fourth wave of a larger, longitudinal study investigating the neurobiological bases of reading comprehension. 50 children completed scans for the current study, and a subset of these met the motion and attention thresholds described below. See Table \ref{table:ch2-participants} for demographics. 
+Participants for the first study were drawn from the fourth wave of a larger, longitudinal study investigating the neurobiological bases of reading comprehension. 52 children completed scans for the current study and a subset of these met the motion and attention thresholds described below. See Table \ref{table:ch2-participants} for demographics. 
 
 All participants were native English speakers with normal hearing and normal or corrected vision, and no history of major psychiatric illness or traumatic brain injury/epilepsy. Subjects had no history of a developmental disability or contra-indication to MRI.  Each participant gave written consent at the beginning of the study, with procedures carried out in accordance with Vanderbilt University’s Institutional Review Board.
 
@@ -81,7 +82,7 @@ Imaging was performed on a Philips Achieva 3T MR scanner with a 32-channel head 
 
 Whole-brain fMRI analyses were performed using tools from the FMRIB Software Library (version 5.0.9). For each session, the following pre-processing steps were performed:  slice-time correction, motion correction to the initial fMRI volume, high-pass filtering at 0.08 Hz, boundary-based registration to the subject's structural image, and normalization to 2 mm MNI 152 standard space. To mitigate the effects of motion on our analyses, we regressed out 6 continuous motion parameters and scrubbed out outlier volumes. We defined an outlier volume as any in which the root-mean-square framewise displacement exceeded 0.7 mm. Because head motion can be a major confound for connectivity analyses, we removed scan runs where more than 10 percent of the fMRI volumes were outliers.
 
-All task conditions were convolved with the double-gamma hemodynamic response function to generate design matrices for each fMRI run. Two first-level contrasts were of interest: the main effect of passage comprehension (“PASS vs. REST”), and the contrast of passage comprehension vs. the sensory baseline ("pass vs. attn."). Repeated stimuli and the picture comprehension task were modelled out.
+All task conditions were convolved with the double-gamma hemodynamic response function to generate design matrices for each fMRI run. Two first-level contrasts were of interest: the main effect of passage comprehension (“pass vs. rest), and the contrast of passage comprehension vs. the sensory baseline ("pass vs. attn."). Repeated stimuli and the picture comprehension task were modelled out.
 
 Modality effects (Shared Effect of Listening and Reading, Contrast of Listening and Reading) were estimated at the subject-level using fixed effects analysis. These were carried over into group-level analyses using non-parametric methods implemented in FSL’s \textit{randomise} tool with threshold-free cluster enhancement. For each group-level analysis, we performed 10,000 permutations and report results with \textit{p} \textless 0.05. 
 
@@ -108,7 +109,7 @@ The metrics of interest were network \textit{modularity} and \textit{participati
 
 \subsection{Behavioral results}
 
-35 subjects (116 scan runs) met the attention and motion criteria to be included in the analysis. (17 subjects and 87 individual scan runs were filtered out.) Attention and comprehension measures were not related to modality of stimulus presentation (see Figs. \ref{fig:ch2-eprime-recall} and \ref{fig:ch2-eprime-comprehension}). There was no difference in median FDRMS between scan modalities (paired t-test, $t = 1.09$, $p = 0.279$).  
+42 subjects (142 scan runs) met the attention and motion criteria to be included in the analysis. (10 subjects and 61 individual scan runs were filtered out.) Attention and comprehension measures were not related to modality of stimulus presentation (see Figs. \ref{fig:ch2-eprime-recall} and \ref{fig:ch2-eprime-comprehension}). There was a trend towards difference in median FDRMS between scan modalities (paired t-test, $t = 1.94$, $p = 0.059$), so we also replicated analyses with a stricter motion threshold (no more than 10 percent outliers in a scan run), and analysis results were generally consistent.
 
 \begin{figure}[t]
 	\centering
