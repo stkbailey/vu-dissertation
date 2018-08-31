@@ -19,10 +19,9 @@ Despite the clear overlap between reading and listening, there is also evidence 
 
 Most current cognitive models suggest that language comprehension requires the construction of a mental representation includes textual information and associated background knowledge, connected by some conscious and some unconscious executive processes \citep{Kendou2014}. The parallel model shown in Fig. \ref{fig:ch2-price-language-models} is linear: it moves from sensation to action. During comprehension, however, the relationship between areas is dynamic and constantly being re-evaluated. The roles of attention and executive systems are likely to play an important role. Thus, while there may be a core set of systems for manipulating and extracting meaning from language, it is likely that differences in modality would modulate these processes. 
 
-The pioneering researcher Alvin Liberman suggested that reading, instead of being parallel to listening, is actually parasitic: it requires an 
-textit{awareness} of the linguistic act that is not required in listening. Brain activation studies may not capture these differences: it could very well be the interactions of different functional systems that are changed, rather than the overall "engagement" of an individual brain area. Additionally, the fact that reading integrates in an additinoal modality could be a source of difference, especially in emerging readers. 
+The pioneering researcher Alvin Liberman suggested that reading, instead of being parallel to listening, is actually parasitic: it requires an textit{awareness} of the linguistic act that is not required in listening. Brain activation studies may not capture these differences: it could very well be the interactions of different functional systems that are changed, rather than the overall "engagement" of an individual brain area. Additionally, the fact that reading integrates in an additinoal modality could be a source of difference, especially in emerging readers. 
 
-In this study, we pursue three hypothesized ways reading might differ from listening. These are not exclusive; one or more of them may be true. The overarching aim is to test whether reading is simply listening skills
+In this study, we pursue three hypothesized ways reading might differ from listening. These are not exclusive; one or more of them may be true. The overarching aim is to test whether reading and listening differ only, or primarily, in their 
 
 \begin{itemize}
 	\item Reading will require a greater "global" reorganization of resting-state networks than listening. This network will also be more highly integrated than that of listening. 
@@ -30,12 +29,12 @@ In this study, we pursue three hypothesized ways reading might differ from liste
 	\item Reading will make greater demands on attention systems than listening. That is, areas in the frontal and attention systems will be activated to a greater degree during reading than listening.
 \end{itemize}
 
-First, we validate modularity and participation coefficient metrics using univariate data, and test that language induces greater global integration, especially in higher-order networks (executive + default mode) compared to resting and attention baselines. Second, we test three hypotheses about how interactions between brain networks might differ from speech. Finally, we investigate whether these interactions change with experience, testing whether the reading and listening systems "merge" into a unified system or whether differences between reading and listening persist across development.
+First, we validate modularity and participation coefficient metrics using univariate data, and test that language induces greater global integration, especially in higher-order networks (executive and attention) compared to resting and attention baselines. Second, we test three hypotheses about how interactions between brain networks might differ from speech.
 
 
 \section{Methods}
 
-The following methods detail the current study's protocol and analytical approach. Many of these methods will be used in future studies and are explained in detail here. 
+The following methods detail the current study's protocol and analytical approach. The following chapters borrow heavily from the methods described below, so they are explained here in detail. 
 
 \subsection{Participants}
 
@@ -50,7 +49,6 @@ All participants were native English speakers with normal hearing and normal or 
 	\caption[Participant demographics for Study 1.]
 	\label{table:ch2-participants}
 \end{table}
-
 
 \subsection{Functional MRI Task}
 
@@ -98,31 +96,26 @@ To investigate whole-brain patterns of connectivity without biasing our results 
 	\label{table:ch2-power-nodes}
 \end{table}
 
-Network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{Nieto-castanon}. For each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions ("pass", "attn", "rest"). The timeseries was then high-pass filtered at 0.01 Hz.
+To understand our univariate results as a function of RSN activation, we cast the activations into connectome space and reviewed each contrast according to the network affiliation of the corresponding nodes.
+
+For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{Nieto-castanon}. For each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions ("pass", "attn", "rest"). The timeseries was then high-pass filtered at 0.01 Hz.
 
 Whole-brain connectomes for each condition were created by estimating the functional connectivity between each node using a weighted general linear model. For connection-level analyses, these values were compared directly across subjects and conditions. For graph theory analyses, the array of all node connections was thresholded to keep the top 5 percent of connections, resulting in a much sparser representation. This threshold was also tested at ranges from 2 percent to 10 percent.
 
-The metrics of interest were network \textit{modularity} and \textit{participation coefficient}. Modularity is high in networks where nodes within the same RSN are highly connected to each other but not elsewhere. The participation coefficient, on the other hand, is high when many nodes are connected to several different RSNs. Both of these metrics relate to the integration of information between RSNs. These properties, and their changes within our task, were investigated at the level of connectomes, RSNs and nodes. 
+The metrics of interest were network \textit{modularity}, \textit{participation coefficient} and \textit{path length}. Modularity is high in networks where nodes within the same RSN are highly connected to each other but not elsewhere. The participation coefficient, on the other hand, is high when many nodes are connected to several different RSNs. Both of these metrics relate to the integration of information between RSNs. Path length, on the other hand, describes the distance between any two nodes on the graph. This was calculated between every node, then summed up by RSN to create a measure of network distance. These properties, and their changes within our task, were investigated at the level of connectomes, RSNs and nodes. 
 
 
 \section{Results}
 
 \subsection{Behavioral results}
 
-42 subjects (142 scan runs) met the attention and motion criteria to be included in the analysis. (10 subjects and 61 individual scan runs were filtered out.) Attention and comprehension measures were not related to modality of stimulus presentation (see Figs. \ref{fig:ch2-eprime-recall} and \ref{fig:ch2-eprime-comprehension}). There was a trend towards difference in median FDRMS between scan modalities (paired t-test, $t = 1.94$, $p = 0.059$), so we also replicated analyses with a stricter motion threshold (no more than 10 percent outliers in a scan run), and analysis results were generally consistent.
+42 subjects (142 scan runs) met the attention and motion criteria to be included in the analysis. (10 subjects and 61 individual scan runs were filtered out.) Attention and comprehension measures were not related to modality of stimulus presentation (see Fig. \ref{fig:ch2-task-performance}). There was a trend towards difference in median FDRMS between scan modalities (paired t-test, $t = 1.94$, $p = 0.059$), so we also replicated analyses with a stricter motion threshold (no more than 10 percent outliers in a scan run). The main results from analysis of this 35 subject (116 scan runs) cohort were broadly consistent.
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[height=3in]{ch2-eprime-recall}
-    \caption[Out-of-scanner pasage recall was unrelated to modality.]{}
-	\label{fig:ch2-eprime-recall}
-\end{figure}
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch2-eprime-comprehension}
-    \caption[In-scanner comprehension performance did not differ by modality.]{}
-	\label{fig:ch2-eprime-comprehension}
+	\includegraphics[height=3in]{ch2-task-performance}
+    \caption[Behavioral metrics of passage performance were unrelated to modality.]{Both the in-scanner comprehension question and out-of-scanner recall questionnaire were unrelated to the modality of presentation.}
+	\label{fig:ch2-task-performance}
 \end{figure}
 
 \subsection{Activation results}
