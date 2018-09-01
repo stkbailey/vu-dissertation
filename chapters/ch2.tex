@@ -6,7 +6,7 @@
 
 In the first chapter, we established that reading utilizes a variety of cognitive skills whose neural substrates are distributed throughout the brain. But being able to comprehend speech is a pre-requisite to reading, and it is similarly complex. This begs the question: in what ways is reading unique from listening?
 
-The most widely-held view is that reading and listening share the same core linguistic processes and differ primarily in the sensory processes that feed into supra-model linguistic systems \citep{Mattingly1972, Price2012}. One popular model, the \textit{Simple View of Reading} makes the model testable by stating that reading comprehension is the product of listening comprehension and decoding skills \citep{Gough1988}. This view has received support from large behavioral studies \citep{Kirby2006} and neuroimaging investigations: many of the literacy-related changesare linked to visual or phonological systems, areas not directly related to semantic or comprehension processes \citep{Schlaggar2006, Dahaene2015}. These findings support a model in which inputs from auditory or visual domains are fed up into higher-order association areas that sequence, encode articulatory plans, and extract semantic information \citep{Price2012}. These processes localize onto the similar areas regardless of language and writing system \citep{Rueckl2016}, and may even extend to inputs from somatosensory domains \citep{Xu2005, Sood2015}. This supra-modal language core is largely left-lateralized and centers on the inferior frontal gyrus, anterior and posterior middle temporal gyrus and the angular gyrus. Neuroanatomical models of language, shown in Fig. \ref{ch2-price-language-models}, illustrate that language is distributed throughout much of the brain. 
+The most widely-held view is that reading and listening share the same core linguistic processes and differ primarily in the sensory processes that feed into supra-model linguistic systems \citep{Mattingly1972, Price2012}. One popular model, the \textit{Simple View of Reading} states that reading comprehension is the product of listening comprehension and decoding skills \citep{Gough1988}. This view has received support from large behavioral studies \citep{Kirby2006} and neuroimaging investigations: many of the literacy-related changesare linked to visual or phonological systems, areas not directly related to semantic or comprehension processes \citep{Schlaggar2006, Dahaene2015}. These findings support a model in which inputs from auditory or visual domains are fed up into higher-order association areas that sequence, encode articulatory plans, and extract semantic information \citep{Price2012}. These processes localize onto the similar areas regardless of language and writing system \citep{Rueckl2016}, and may even extend to inputs from somatosensory domains \citep{Xu2005, Sood2015}. This supra-modal language core is largely left-lateralized and centers on the inferior frontal gyrus, anterior and posterior middle temporal gyrus and the angular gyrus. Neuroanatomical models of language, shown in Fig. \ref{ch2-price-language-models}, illustrate that language is distributed throughout much of the brain. 
 
 \begin{figure}[t]
 	\centering
@@ -100,7 +100,7 @@ To understand our univariate results as a function of RSN activation, we cast th
 
 For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{Nieto-castanon}. For each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions ("pass", "attn", "rest"). The timeseries was then high-pass filtered at 0.01 Hz.
 
-Whole-brain connectomes for each condition were created by estimating the functional connectivity between each node using a weighted general linear model. For connection-level analyses, these values were compared directly across subjects and conditions. For graph theory analyses, the array of all node connections was thresholded to keep the top 5 percent of connections, resulting in a much sparser representation. This threshold was also tested at ranges from 2 percent to 10 percent.
+Whole-brain connectomes for each condition were created by estimating the functional connectivity between each node using a weighted general linear model. For connection-level analyses, these values were compared directly across subjects and conditions. For graph theory analyses, the array of all node connections was thresholded to keep the top 5 percent of connections, resulting in a much sparser representation. This threshold was also tested at ranges from 2 percent to 10 percent, and all reported results were significant at the reported level in at least 7 of the 9 tested thresholds.
 
 The metrics of interest were network \textit{modularity}, \textit{participation coefficient} and \textit{path length}. Modularity is high in networks where nodes within the same RSN are highly connected to each other but not elsewhere. The participation coefficient, on the other hand, is high when many nodes are connected to several different RSNs. Both of these metrics relate to the integration of information between RSNs. Path length, on the other hand, describes the distance between any two nodes on the graph. This was calculated between every node, then summed up by RSN to create a measure of network distance. These properties, and their changes within our task, were investigated at the level of connectomes, RSNs and nodes. 
 
@@ -129,16 +129,16 @@ A range of language-related areas were activated for both reading and listening 
 	\label{fig:ch2-passages-activation-attn}
 \end{figure}
 
-Differences related to modality fell into three categories: sensory processing areas, including the insula, superior temporal gyrus, and secondary visual processing areas; and hetero-modal association areas, most notably the inferior frontal gyrus and angular gyrus; and somato-motor regions, including the premotor cortex and lateral geniculate nucleus of the thalamus (Figure 2). Areas showing greater activation in listening were focused on primary auditory cortex and the dorsal attention network. 
+Differences related to modality fell into three categories: sensory processing areas, including the insula, superior temporal gyrus, and secondary visual processing areas; and hetero-modal association areas, most notably the inferior frontal gyrus and angular gyrus; and somato-motor regions, including the premotor cortex and lateral geniculate nucleus of the thalamus (Fig. \ref{fig:ch2-modality-differences-attn}). Areas showing greater activation in listening were focused on primary auditory cortex and the dorsal attention network.
 
-\begin{figure}[!b]
+\begin{figure}[t]
 	\centering
 	\includegraphics[height=3in]{ch2-modality-differences-attn}
-    \caption[Modality differences center on primary sensory and integration areas.]{Modality differences center on primary sensory and integration areas.}
+    \caption[Modality differences center on primary sensory and integration areas.]{Visual and sensory association areas were higher in reading, while listening showed increased activity in auditory and dorsal attention network areas.}
 	\label{fig:ch2-modality-differences-attn}
 \end{figure}
 
-Overall, there was a high degree of similarity between the areas that were activated in reading and in listening, reflecting the common language core. When the statistics for each node in the connectome were plotted against each other, there was a very high correlation coefficient ($r = ___$), as seen in Fig. \ref{fig:ch2-listening-reading-connectome-activations}.
+We also examined these contrast results when projected onto the 264-node connectome. There was a high degree of similarity between the areas that were activated in reading and in listening, reflecting the common language core. Fig. \ref{fig:ch2-listening-reading-connectome-activations} shows the activation statistics for each node, relative to rest, plotted against each other. There was a very high correlation coefficient ($r = 0.00$), reflecting the high degree of shared activity patterns between listening and reading.
 
 \begin{figure}[t]
 	\centering
@@ -147,21 +147,28 @@ Overall, there was a high degree of similarity between the areas that were activ
 	\label{fig:ch2-listening-reading-connectome-activations}
 \end{figure}
 
+Comparing the modality difference statistics within each network revealed that the visual RSN is much more active during reading than listening, but that some, but that the dorsal attention network was more active during listening.
 
-\subsection{Connectome results}
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch2-modality-stripplot-connectome}
+	\caption[Modality differences show RSN-level trends.]{}
+	\label{fig:ch2-modality-stripplot-connectome}
+\end{figure}[t]
 
-Relative to rest, both listening and reading reduced the global modularity and increased the participation coefficient (Fig. \ref{fig:ch2-comprehension-graph-theory}. Compared to the baseline attention task, there were  trends towards an increased participation coefficient, but they were not significant. 
+
+\subsection{Graph theory results}
+
+Next, we examined changes to the globaly graph theory measures. Figure \ref{fig:ch2-comprehension-graph-theory} displays the changes in modularity and participation coefficient at the subject-level. Relative to rest, both listening and reading reduced the global modularity and increased the participation coefficient. Compared to the baseline attention task, there was  a trend towards an increased participation coefficient, but it was not significant. 
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[height=3in]{ch2-comprehension-graph-theory}
-    \caption[Language induces more integrated global network architecture.]{}
+    \caption[Language induces more integrated global network architecture.]{Compared to rest and baseline attention tasks, reading and listening increase measures related to global RSN integration.}
 	\label{fig:ch2-comprehension-graph-theory}
 \end{figure}
 
-Comparing listening to reading showed that reading induced a more integrated network architecture than listening, both in terms of reduced modularity and increased participation coefficient (Fig. \ref{fig:ch2-modality-graph-theory}).  
-
-Digging into the network-level measures provides additional insight. For example, the visual network is driving many of the changes... When comparing comprehension differences to rest, for example, we can see that globally connectivity increases (Fig. \ref{fig:ch2-comprehension-reorganization}. During rest, however, there is increased connectivity within default mode network and visual networks.
+A direct comparison of listening to reading showed that reading induced a more integrated network architecture than listening, both in terms of reduced modularity and increased participation coefficient (Fig. \ref{fig:ch2-modality-graph-theory}).
 
 \begin{figure}[t]
 	\centering
@@ -169,6 +176,10 @@ Digging into the network-level measures provides additional insight. For example
     \caption[Reading is more integrated than listening.]{}
 	\label{fig:ch2-modality-graph-theory}
 \end{figure}
+
+Investigating these graph theory measures at the level of RSN provides  insight as to which networks are driving the changes in integration. When comparing comprehension differences to rest, for example, we can see that globally connectivity increases (Fig. \ref{fig:ch2-comprehension-reorganization}. During rest, however, there is increased connectivity within default mode network and visual networks.
+
+As would be expected, the visual network undergoes large changes in reading: specifically, there is a large decrease in visual-visual connectivity. 
 
 To investigate interactions between networks, rather than simply general behavior of the networks, we summarized the average shortest path length between each network. This provides a gross measure of how close any two networks are. 
 
@@ -201,15 +212,21 @@ For the modality contrast, One of the main takeaways is that there is greater ac
 
 \section{Discussion}
 
-This study pushes further than previous studies have by investigating differences between reading and listening in terms of their activation of individual areas or the distribution of activity across the brain. We employ closely matched texts, large sample size, longitudinal sampling, and behavioral covariates. Comprehending extended text requires more than just sensory and linguistic processes. It also requires executive processes such as attention, working memory and inference. Since comprehension is a "whole-brain" activity, we here look at the reorganization of resting-state networks - to see how attention, executive and sensory systems are interacting during reading.
+This study investigates the differences between reading and listening in terms of their activation of individual areas or the distribution of activity across the brain. We employ closely matched texts, large sample size, longitudinal sampling, and behavioral covariates. Comprehending extended text requires more than just sensory and linguistic processes. It also requires executive processes such as attention, working memory and inference. Since comprehension is a "whole-brain" activity, we here look at the reorganization of resting-state networks - to see how attention, executive and sensory systems are interacting during reading.
 
-We tested three hypotheses related to global reorganization, sensory system changes, and interactions between executive and attention systems and sensory systems.
+The results make clear that differences in reading are not isolated solely to sensory systems, although the visual system is the major driver. We tested three hypotheses related to global reorganization, sensory system changes, and interactions between executive and attention systems and sensory systems.
 
-These modality-specific influences on behavior and brain activity may arise from a few different sources: subject, linguistic and innate differences. 
-
-There are also differences in what is encoded in speech and text. The reading sciences pioneer Alvin Liberman noted that "speech is a complex code, while reading is a simple cipher" \cite{Mattingly1972}. Speech contains overt clues about the speaker, such as tone and prosody, and these can convey additional non-linguistic meaning for the listener. Reading, on the other hand, might be considered a more purely linguistic act, especially with computer-printed text. Reading may thus allow more room for self-generated situation models and more independent direction of thought. Furthermore, modality-specific aspects of the stimulus may influence the overall comprehension process; reading requires a level of spatial awareness -where one is at on a page, what happened in preceding paragraphs – and allows for the re-treading of information. Listening, meanwhile, requires the extraction of input from competing noises and sometimes the tracking of changing volume. 
+These modality-specific influences on behavior and brain activity may arise from a few different sources: subject, linguistic and innate differences. For example, there are also differences in what is encoded in speech and text. The reading sciences pioneer Alvin Liberman noted that "speech is a complex code, while reading is a simple cipher" \cite{Mattingly1972}. Speech contains overt clues about the speaker, such as tone and prosody, and these can convey additional non-linguistic meaning for the listener. Reading, on the other hand, might be considered a more purely linguistic act, especially with computer-printed text. Reading may thus allow more room for self-generated situation models and more independent direction of thought. Furthermore, modality-specific aspects of the stimulus may influence the overall comprehension process; reading requires a level of spatial awareness -where one is at on a page, what happened in preceding paragraphs – and allows for the re-treading of information. Listening, meanwhile, requires the extraction of input from competing noises and sometimes the tracking of changing volume. 
 
 People speak differently than they write. Reading often relies on more complicated syntax, and even for skilled readers, longer words and sentences can strain executive systems more than they might if being spoken to. Although these properties are often controlled for in scientific studies, they represent a major difference between “natural” reading and listening. Because of these differences, reading may place a greater load on executive function skills. Executive functions such as working memory and planning and organizing may be particularly important for reading \citep{Cain}.  
+
+\begin{table}
+	\renewcommand{\tabcolsep}{0.09cm}
+	\centering
+	\input{tables/ch2-results.tex}
+	\caption[Summary of findings for Study 1.]
+	\label{table:ch2-results}
+\end{table}
 
 The last set of differences is particularly interesting because knowing how the differences in reading interact with these modality differences. Reading is a learned skill with may component processes. It requires thousands of hours of experience to master and entails a reorganization of cortical resources. Environmental and biological factors thus exert a greater influence on an individual’s reading proficiency than they might on more intrinsic processes such as speech comprehension. This is particularly dramatic in individuals with dyslexia, who have persistent difficulty with reading. Children with dyslexia exhibit less activation in reading-related areas compared to typically developing children \citep{Pugh2000}, but greater activation in right hemisphere homologues, suggesting that lateralization and activation of the reading circuit are associated with better reading. Development period also has an effect, with children exhibiting less activation in frontal areas but more in posterior areas, possibly reflecting a shift in “resource load” from uni-modal to supramodal areas \citep{Berl2010}. This shift may not be necessary in listening, or occur much earlier. Thus, with increasing expertise and development, there may be a “shift” from relying on fusiform processing areas. towards using multi-modal areas more like speech \citep{Monzalvo}. 
 
