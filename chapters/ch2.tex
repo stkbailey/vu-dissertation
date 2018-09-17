@@ -1,236 +1,53 @@
-\chapter{Reorganization of network architecture during reading and listening}
+\chapter{Relationship between Reading and Functional Network Architecture at Rest}
 
-\epigraph{Reading is parasitic on language... [It] is seen not as a parallel activity in the visual mode to speech perception in the auditory mode: there are differences... [that] can be explained only if we regard reading as a deliberately acquired, language-based skill, dependent up on the speaker-hearer's awareness of certain aspects of primary linguistic activity.}{I. Mattingly, 1972 \citep{Mattingly1972}}
+\section{motivation}
 
-\section{Motivation}
-
-In the first chapter, we established that reading utilizes a variety of cognitive skills whose neural substrates are distributed throughout the brain. But being able to comprehend speech is a pre-requisite to reading, and it is similarly complex. This begs the question: in what ways is reading unique from listening?
-
-The most widely-held view is that reading and listening share the same core linguistic processes and differ primarily in the sensory processes that feed into supra-model linguistic systems \citep{Mattingly1972, Price2012}. One popular model, the \textit{Simple View of Reading} states that reading comprehension is the product of listening comprehension and decoding skills \citep{Gough1988}. This view has received support from large behavioral studies \citep{Kirby2006} and neuroimaging investigations: many of the literacy-related changesare linked to visual or phonological systems, areas not directly related to semantic or comprehension processes \citep{Schlaggar2006, Dahaene2015}. These findings support a model in which inputs from auditory or visual domains are fed up into higher-order association areas that sequence, encode articulatory plans, and extract semantic information \citep{Price2012}. These processes localize onto the similar areas regardless of language and writing system \citep{Rueckl2016}, and may even extend to inputs from somatosensory domains \citep{Xu2005, Sood2015}. This supra-modal language core is largely left-lateralized and centers on the inferior frontal gyrus, anterior and posterior middle temporal gyrus and the angular gyrus. Neuroanatomical models of language, shown in Fig. \ref{ch2-price-language-models}, illustrate that language is distributed throughout much of the brain. 
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{images/ch2-price-language-models.jpg}
-	\caption[Schematics of skills and brain areas used in reading.]{Models of reading typically focus on a common linguistic core that is responsible for comprehension and production of language. In this model, differences in modality affect input pathways to this core.}
-	\label{fig:ch2-price-language-models}
-\end{figure}
-
-Despite the clear overlap between reading and listening, there is also evidence that the two skills are not directly equivalent. There is a subset of students who, despite adequate word decoding skills and vocabulary skills, struggle with reading comprehension\citep{Nation2010, Spencer2011}. From a neurobiological perspective, expected differences in primary visual (for reading) and primary auditory (for listening) represent the different input systems, with ventral occipito-temporal systems also activating \citep{Jobard2007}. However, differences in core language systems are also observed: additional activation in left posterior temporal and parietal areas in reading modality \citep{Constable2015}, as well increased bi-laterality especially in children \citep{Berl2010}. 
-
-Most current cognitive models suggest that language comprehension requires the construction of a mental representation includes textual information and associated background knowledge, connected by some conscious and some unconscious executive processes \citep{Kendou2014}. The parallel model shown in Fig. \ref{fig:ch2-price-language-models} is linear: it moves from sensation to action. During comprehension, however, the relationship between areas is dynamic and constantly being re-evaluated. The roles of attention and executive systems are likely to play an important role. Thus, while there may be a core set of systems for manipulating and extracting meaning from language, it is likely that differences in modality would modulate these processes. 
-
-The pioneering researcher Alvin Liberman suggested that reading, instead of being parallel to listening, is actually parasitic: it requires an textit{awareness} of the linguistic act that is not required in listening. Brain activation studies may not capture these differences: it could very well be the interactions of different functional systems that are changed, rather than the overall "engagement" of an individual brain area. Additionally, the fact that reading integrates in an additinoal modality could be a source of difference, especially in emerging readers. 
-
-% \subsection{How the brain reconfigures (Cohen + Esposito)}
-% A critical feature of the human brain that gives rise to complex cognition is its ability to reconfigure its network structure dynamically and adaptively in response to the environment. Existing research probing task-related reconfiguration of brain network structure has con-cluded that, although there are many similarities in network structure during an intrinsic, resting state and during the performance of a variety of cognitive tasks, there are meaningful differences as well. In this study, we related intrinsic, resting state network organization to reconfigured network organization during the performance of two tasks: a sequence tapping task, which is thought to probe motor execution and likely engages a single brain network, and an n-back task, which is thought to probe working memory and likely requires coordination across multiple networks. We implemented graph theoretical analyses using functional connectivity data from fMRI scans to calculate whole-brain measures of network organization in healthy young adults. We focused on quantifying measures of network segregation (modularity, system segregation, local efficiency, number of provincial hub nodes) and measures of network integration (global efficiency, number of connector hub nodes). Using these measures, we found converging evidence that local, within-network communication is critical for motor execution, whereas integrative, between-network communication is critical for working memory. These results confirm that the human brain has the remarkable ability to reconfigure its large-scale organization dynamically in response to current cognitive demands and that interpreting reconfiguration in terms of network segregation and integration may shed light on the optimal network structures underlying successful cognition.
-
-In this study, we pursue three hypothesized ways reading might differ from listening. These are not exclusive; one or more of them may be true. The overarching aim is to test whether reading and listening differ only, or primarily, in their 
-
-\begin{itemize}
-	\item Reading will require a greater "global" reorganization of resting-state networks than listening. This network will also be more highly integrated than that of listening. 
-	\item Reading will reduce the modularity within the sensory system of interest. That is, visual areas will become less internally connected during reading, while auditory areas will be less internally connected during listening.
-	\item Reading will make greater demands on attention systems than listening. That is, areas in the frontal and attention systems will be activated to a greater degree during reading than listening.
-\end{itemize}
-
-First, we validate modularity and participation coefficient metrics using univariate data, and test that language induces greater global integration, especially in higher-order networks (executive and attention) compared to resting and attention baselines. Second, we test three hypotheses about how interactions between brain networks might differ from speech.
+Finally, we turn to the question of whether some individuals are better equipped to handle the additional complexity of reading. In particular, we are interested in whether this  might be apparent through resting-state fMRI, which can be performed before children even start reading. As shown in the literature, we expect to see increases in "intrinsic" connectivity between secondary visual processing areas and language areas; however, the "parasitic" model would suggest that there would also be increased connectivity between the visual network and other systems throughout development and in better readers. 
 
 
-\section{Methods}
+%% In Task Data
+\subsection{Relationship between brain modularity and reading skill}
+Original data for the modularity analyses were drawn from the third and fourth waves of a larger longitudinal study (NICHD R01 HD067254, 140 children at first wave). Participants completed out-of-scanner cognitive tests and an in-scanner language task. The fMRI task also included an extensive resting-state baseline in each run, which was the primary target of analysis here. Further information about the aims of this grant can also be found elsewhere \citep{Aboud2016, Wendelken2017}.
 
-The following methods detail the current study's protocol and analytical approach. The following chapters borrow heavily from the methods described below, so they are explained here in detail. 
+\emph{Participants:} Participants were scanned in the summer and fall following completion of third or fourth grade (ages 8-11). All participants met the following criteria: native English speakers; normal hearing; normal or corrected-to-normal vision; no history of major psychiatric illness or traumatic brain injury/epilepsy; and no contraindication to MRI. Participants and their parents gave written consent to participate at the beginning of the study, with procedures carried out in accordance with Vanderbilt University’s Institutional Review Board (IRB). 
 
-\subsection{Participants}
-
-Participants for the first study were drawn from the fourth wave of a larger, longitudinal study investigating the neurobiological bases of reading comprehension. 52 children completed scans for the current study and a subset of these met the motion and attention thresholds described below. See Table \ref{table:ch2-participants} for demographics. 
-
-All participants were native English speakers with normal hearing and normal or corrected vision, and no history of major psychiatric illness or traumatic brain injury/epilepsy. Subjects had no history of a developmental disability or contra-indication to MRI.  Each participant gave written consent at the beginning of the study, with procedures carried out in accordance with Vanderbilt University’s Institutional Review Board.
+Participants completed cognitive tests, including the Wechsler Abbreviated Scale of Intelligence (WASI) \citep{Kaplan1999} and the Test of Word Reading Efficiency (TOWRE) \citep{Torgesen2012}. Demographics and test data are summarized in Table 1. 
 
 \begin{table}
-	\renewcommand{\tabcolsep}{0.09cm}
-	\centering
-	\input{tables/ch2-participants.tex}
-	\caption[Participant demographics for Study 1.]{}
-	\label{table:ch2-participants}
+    \renewcommand{\tabcolsep}{0.09cm}
+    \centering
+    \input{tables/ch4-participants.tex}
+    \caption{Participant demographics.}
+    \label{table:ch4-participants}
 \end{table}
 
-\subsection{Functional MRI Task}
+\emph{Functional MRI data:} In the MRI scanner, participants performed up to four runs of a language comprehension task, which was crossed on two conditions: the modality of presentation (listening or reading) and the passage genre (expository or narrative).  Each fMRI run had two baseline conditions: a modality-specific baseline task and a resting-state block with a fixation cross. The order and duration for each block varied slightly across runs but was approximately: paragraph 1 (70 s), baseline 1 (70 s), paragraph 2 (70 s), baseline 2 (70 s), and resting-state (270 s). Total scan time was 550 s for all runs, and the average amount of resting-state baseline was 272 s (4 m, 32 s) per run.
 
-We designed an fMRI task in which participants either read or listened to a passage of text. The passage was split into two paragraphs and interspersed with a simple attention task. At the end of the task, there was an approximately three minute long resting-state block. Across runs, conditions were presented in the same order, although durations varied slightly. Condition order was: comprehension block (paragraph 1), sensory baseline (set 1), comprehension block (paragraph 2), sensory baseline, and resting baseline. See Fig. \ref{fig:ch2-task-design} for a schematic.
+A scan run was included in the analysis only if a participant had both listening and reading scans in the same genre (e.g. auditory-expository and reading-expository). Therefore, for each year, a participant had data from either 2 or 4 scan runs (about 9 or 18 minutes of resting-state scan time, respectively). A scan session was excluded based on the following parameters: high-motion volumes exceeding 20 percent; poor task performance; and absence of a paired modality scan. In total, resting-state data from 50 children in the third wave (152 scans) and 45 children in the fourth wave (162 scans) met inclusion criteria. 
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{images/ch2-eprime-recall.png}
-	\caption[Schematic of the reading comprehension task.]{}
-	\label{fig:ch2-task-design}
-\end{figure}
+\emph{Imaging acquisition and preprocessing: } All fMRI scans were acquired at Vanderbilt University Institute of Imaging Sciences on one of two Philips Achieva 3T MR scanners with a 32-channel head coil. Functional images were acquired using a gradient echo planar imaging sequence with 40 slices acquired parallel to the anterior-posterior commissure plane. Additional imaging parameters for functional images were: 250 dynamics; TR = 2200 ms; TE = 30 ms; FOV = 240*240*120 mm; flip angle = 75 degrees; voxel size = 3 * 3 * 3.2 mm\textsuperscript{3}.
 
-To create a more naturalistic reading experience than single word presentation \citep{Rayner1986}, passages were presented in syntactic phrases ranging from 1-7 words in length. The interval between each stimulus was jittered to allow for event-related analyses (range: 275 – 4000 ms), although these effects were not examined here.
+All scans were first preprocessed using a standard pipeline in FSL (version 5.0.9) \citep{Jenkinson2012}, and connectivity analysis was performed in the CONN toolbox \citep{WhitfieldGabrieli2012}. fMRI data were high-pass filtered at 0.008 Hz, motion-corrected, co-registered to a structural image, normalized to MNI space and smoothed by a 5 mm FWHM spherical kernel. Outlier volumes were identified as individual fMRI volumes in which the RMS framewise-displacement exceeded 0.7. fMRI timeseries were corrected using anatCompCorr methods, which uses signal from white matter tissue and cerebrospinal fluid areas to reduce noise not related to brain activity \citep{Chai2012}. Other covariates of no interest included six rigid motion parameters, six derivative motion parameters, and outlier volumes. Finally, we used a weighted general linear model (GLM) to model the resting block and averaged within-subject across scan sessions to get a de-noised resting-state timeseries.
 
-The sensory baseline condition was altered according to modality. For the reading runs, three non-alphanumeric symbols were displayed horizontally (two types), and their presentation time was matched to the passage phrases. Spacing between symbols was randomly alternated to replicate the variable phrase lengths in the passage condition. For the listening runs, three tones (two frequencies) were played in sequence, with a new set of tones beginning at the same intervals as the corresponding passage presentation. 
-
-To monitor attention, 4 to 8 percent of the stimuli within each passage or attention block were randomly repeated on two consecutive screens.  Participants pressed a button with their right thumb when they detected a repeated phrase, symbol or tone configuration. Additionally, at the conclusion of each passage, a picture was presented on the screen, and subjects were asked to identify whether the picture had any relationship to the passage (e.g., a picture of a mushroom for a passage about fungi). 
-
-To assess performance, we analyzed three measures: in-scanner attention, in-scanner comprehension, and post-scan recall. To assess attention, we calculated the $D`$ statistic ($Z(true\ positive) - Z(false\ positive)$) for the "repeated stimulus" task. The in-scanner comprehension measure was the number (0,1,2) of questions correclty answered. To assess recall, each child was asked to recite as much of the passage as they could remember, and their answers were mapped to actual phrases present in the chapter. Individual scan runs with a $D`$ value less than 2 were excluded from analysis.
-
-In total, there were 4 passages (2 listening, 2 reading), each leveled to a 3\textsuperscript{rd} grade difficulty and balanced on word measures such as concreteness and cohesiveness.  All subjects were trained on the task in a mock scanner prior to the actual scan. 
+\emph{Network definition:} To build off of previous work, we created networks using 264 nodes originally published by Power and colleagues (2011) \citep{Power2011}. The node set covers the entire brain, including subcortical areas, and has been extensively used in graph theory analyses since its publication (e.g. \citep{Cole2014, Godwin2015, Mattar2015}). Suggested RSN assignments for each node, totaling 13 unique networks, are also available and were used to partition the network into different RSNs. fMRI timeseries correlations were calculated between each of the the 264 nodes, resulting in a single connectivity array for each subject at each time point. Matrices were then thresholded into binary maps at $r$ = 0.15. (To confirm that this particular threshold did not unduly influence results, we also tested thresholds at $r$ = 0.05, 0.10 and 0.20. No significant effect on the results was found.)
 
 
-\subsection{MRI acquisition}
+\emph{Network analysis:} \textit{Global modularity} ($Q$) quantifies how well the whole-brain network segregates into component RSNs. High modularity indicates that the network has much higher connectivity within RSNs compared to between RSNs; low modularity suggests that nodes do not cluster into RSNs well. For undirected and binary networks, each connection in the array is given a positive value if it links nodes in the same module, and it is then weighted based on the degree of each node and the total network. (For a detailed treatment, see \citep{Rubinov2010}.) Connection-level values were aggregated to get node-by-node and global measures of modularity for each individual, which were then mean-centered and scaled to unit variance. 
 
-Imaging was performed on a Philips Achieva 3T MR scanner with a 32-channel head coil. Functional images were acquired using a gradient echo planar imaging sequence with 40 (3 mm thick) slices with no gap. Each run of the task (up to four) consisted of 250 volumes. Slices were parallel to the anterior-posterior commissure plane. Imaging parameters for functional images included: TE = 30 ms; FOV = 240 x 240 x 120 mm\textsuperscript{3}; flip angle = 75\degree; TR = 2200 ms; and 3 mm\textsuperscript{3} isotropic voxels.
+A GLM was used to determine the relationship between global modularity and individual performance on the TOWRE (total word efficiency, standard score). If subject data was available at multiple timepoints (n = 30), it was averaged together to produce a single value. Multiple supplementary analyses were also completed to ensure that effects were not driven by cohort or motion confounds: models were also analyzed for Grades 3 and 4 separately, and also when including a measure of subject motion (mean global signal change). We also examined whether there were differences in the modularity relationship between TOWRE subtests (sight word efficiency (SWE) and phonemic decoding efficiency (PDE)).
 
-\subsection{Activation analyses}
+To test whether there was an RSN-level trend in the modularity-to-reading relationships, node modularity values were also investigated. For the set of nodes comprising each RSN, a one-sample $t$-test was performed to see whether the RSN average was significantly greater than the global node average. 
 
-Whole-brain fMRI analyses were performed using tools from the FMRIB Software Library (version 5.0.9). For each session, the following pre-processing steps were performed:  slice-time correction, motion correction to the initial fMRI volume, high-pass filtering at 0.08 Hz, boundary-based registration to the subject's structural image, and normalization to 2 mm MNI 152 standard space. To mitigate the effects of motion on our analyses, we regressed out 6 continuous motion parameters and scrubbed out outlier volumes. We defined an outlier volume as any in which the root-mean-square framewise displacement exceeded 0.7 mm. Because head motion can be a major confound for connectivity analyses, we removed scan runs where more than 10 percent of the fMRI volumes were outliers.
+\emph{Results:} Individual differences in global modularity were predictive of TOWRE - Total Word Efficiency standard scores (Fig. 2A). Modularity had a significant positive relationship with out-of-scanner reading metrics (for all subjects: $r = 0.299$, $p = 0.013$). This effect was also significant when data was analyzed separately by grade ($r_{G3} = 0.333$, $p = 0.014$; $r_{G4} = 0.359$, $p = 0.012$). The two subtests that constitute the TOWRE both showed a positive relationship with global modularity, as well ($r_{PDE} = 0.314$, $p = 0.009$; $r_{SWE} = 0.251$, $p = 0.039$). 
 
-All task conditions were convolved with the double-gamma hemodynamic response function to generate design matrices for each fMRI run. Two first-level contrasts were of interest: the main effect of passage comprehension (“pass vs. rest), and the contrast of passage comprehension vs. the sensory baseline ("pass vs. attn."). Repeated stimuli and the picture comprehension task were modelled out.
-
-Modality effects (Shared Effect of Listening and Reading, Contrast of Listening and Reading) were estimated at the subject-level using fixed effects analysis. These were carried over into group-level analyses using non-parametric methods implemented in FSL’s \textit{randomise} tool with threshold-free cluster enhancement. For each group-level analysis, we performed 10,000 permutations and report results with \textit{p} \textless 0.05. 
-
-\subsection{Connectome analyses}
-
-To investigate whole-brain patterns of connectivity without biasing our results towards our task, we selected 264 nodes \textit{a priori} whose connectivity properties have been extensively analyzed \citep{Power2011}. This node set samples the entire brain and are involved in a diversity of cognitive tasks. Each node was assigned to one of 13 RSNs based on previous literature \citep{Power2013}. Approximately 10 percent of the nodes did not have a stable assignment in the original paper; for the present analyses, these nodes were excluded from graph theory calculations. A description of the 13 networks, their size, and their overlap with the 2011 Yeo parcellation is provided in \ref{table:ch2-power-nodes}. 
-
-\begin{table}
-	\renewcommand{\tabcolsep}{0.09cm}
-	\centering
-	\input{tables/ch2-power-nodes.tex}
-	\caption{Networks used in connectivity analyses.}
-	\label{table:ch2-power-nodes}
-\end{table}
-
-To understand our univariate results as a function of RSN activation, we cast the activations into connectome space and reviewed each contrast according to the network affiliation of the corresponding nodes.
-
-For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{Nieto-castanon}. For each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions ("pass", "attn", "rest"). The timeseries was then high-pass filtered at 0.01 Hz.
-
-Whole-brain connectomes for each condition were created by estimating the functional connectivity between each node using a weighted general linear model. For connection-level analyses, these values were compared directly across subjects and conditions. For graph theory analyses, the array of all node connections was thresholded to keep the top 5 percent of connections, resulting in a much sparser representation. This threshold was also tested at ranges from 2 percent to 10 percent, and all reported results were significant at the reported level in at least 7 of the 9 tested thresholds.
-
-The metrics of interest were network \textit{modularity}, \textit{participation coefficient} and \textit{path length}. Modularity is high in networks where nodes within the same RSN are highly connected to each other but not elsewhere. The participation coefficient, on the other hand, is high when many nodes are connected to several different RSNs. Both of these metrics relate to the integration of information between RSNs. Path length, on the other hand, describes the distance between any two nodes on the graph. This was calculated between every node, then summed up by RSN to create a measure of network distance. These properties, and their changes within our task, were investigated at the level of connectomes, RSNs and nodes. 
+When examined at the individual node level, the average correlation between modularity and TOWRE scores was 0.134. Three RSNs had average node correlations that were significantly higher than this global network mean: the default mode ($r = 0.183$, $p$ \textless $0.001$), visual ($r = 0.183$, $p = 0.004$) and cingulo-opercular networks ($r = 0.224$, $p$ \textless $0.001$) (Fig. 2B). 
 
 
-\section{Results}
-
-\subsection{Behavioral results}
-
-42 subjects (142 scan runs) met the attention and motion criteria to be included in the analysis. (10 subjects and 61 individual scan runs were filtered out.) Attention and comprehension measures were not related to modality of stimulus presentation (see Fig. \ref{fig:ch2-task-performance}). There was a trend towards difference in median FDRMS between scan modalities (paired t-test, $t = 1.94$, $p = 0.059$), so we also replicated analyses with a stricter motion threshold (no more than 10 percent outliers in a scan run). The main results from analysis of this 35 subject (116 scan runs) cohort were broadly consistent.
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch2-task-performance}
-    \caption[Behavioral metrics of passage performance were unrelated to modality.]{Both the in-scanner comprehension question and out-of-scanner recall questionnaire were unrelated to the modality of presentation.}
-	\label{fig:ch2-task-performance}
-\end{figure}
-
-\subsection{Activation results}
-
-A range of language-related areas were activated for both reading and listening comprehension (Fig. \ref{fig:ch2-passages-activation-attn}). Compared to the corresponding sensory baselines, activation spanned the inferior frontal gyrus, angular gyrus, premotor cortex, middle temporal gyrus and the superior frontal gyrus. Activation patterns were robustly present on both hemispheres, but had greater intensity and extent on the left hemisphere. 
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch2-passages-activation-attn}
-    \caption[There is significant overlap between the areas used in listening and reading.]{A widespread set of brain areas are utilized during listening and reading, including auditory, default mode and attention areas.}
-	\label{fig:ch2-passages-activation-attn}
-\end{figure}
-
-Differences related to modality fell into three categories: sensory processing areas, including the insula, superior temporal gyrus, and secondary visual processing areas; and hetero-modal association areas, most notably the inferior frontal gyrus and angular gyrus; and somato-motor regions, including the premotor cortex and lateral geniculate nucleus of the thalamus (Fig. \ref{fig:ch2-modality-differences-attn}). Areas showing greater activation in listening were focused on primary auditory cortex and the dorsal attention network.
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch2-modality-differences-attn}
-    \caption[Modality differences center on primary sensory and integration areas.]{Visual and sensory association areas were higher in reading, while listening showed increased activity in auditory and dorsal attention network areas.}
-	\label{fig:ch2-modality-differences-attn}
-\end{figure}
-
-We also examined these contrast results when projected onto the 264-node connectome. There was a high degree of similarity between the areas that were activated in reading and in listening, reflecting the common language core. Fig. \ref{fig:ch2-listening-reading-connectome-activations} shows the activation statistics for each node, relative to rest, plotted against each other. There was a very high correlation coefficient ($r = 0.00$), reflecting the high degree of shared activity patterns between listening and reading.
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch2-listening-reading-connectome-activations}
-    \caption[There is significant overlap between the areas used in listening and reading.]{A widespread set of brain areas are utilized during listening and reading, including auditory, default mode and attention areas.}
-	\label{fig:ch2-listening-reading-connectome-activations}
-\end{figure}
-
-Comparing the modality difference statistics within each network revealed that the visual RSN is much more active during reading than listening, but that some, but that the dorsal attention network was more active during listening.
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch2-modality-stripplot-connectome}
-	\caption[Modality differences show RSN-level trends.]{}
-	\label{fig:ch2-modality-stripplot-connectome}
-\end{figure}[t]
-
-
-\subsection{Graph theory results}
-
-Next, we examined changes to the global graph theory measures. Figure \ref{fig:ch2-comprehension-graph-theory} displays the changes in modularity and participation coefficient at the subject-level. Relative to rest, both listening and reading reduced the global modularity and increased the participation coefficient. Compared to the baseline attention task, there was  a trend towards an increased participation coefficient, but it was not significant. 
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch2-comprehension-graph-theory}
-    \caption[Language induces more integrated global network architecture.]{Compared to rest and baseline attention tasks, reading and listening increase measures related to global RSN integration.}
-	\label{fig:ch2-comprehension-graph-theory}
-\end{figure}
-
-A direct comparison of listening to reading showed that reading induced a more integrated network architecture than listening, both in terms of reduced modularity and increased participation coefficient (Fig. \ref{fig:ch2-modality-graph-theory}).
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch2-modality-graph-theory}
-    \caption[Reading is more integrated than listening.]{}
-	\label{fig:ch2-modality-graph-theory}
-\end{figure}
-
-Investigating these graph theory measures at the level of RSN provides  insight as to which networks are driving the changes in integration. When comparing comprehension differences to rest, for example, we can see that globally connectivity increases (Fig. \ref{fig:ch2-comprehension-reorganization}. During rest, however, there is increased connectivity within default mode network and visual networks.
-
-As would be expected, the visual network undergoes large changes in reading: specifically, there is a large decrease in visual-visual connectivity. 
-
-To investigate interactions between networks, rather than simply general behavior of the networks, we summarized the average shortest path length between each network. This provides a gross measure of how close any two networks are. 
-
-In the case of comprehension, we found that there was lower path length within modules during rest, while there were decreases in between-network connectivity during language.
-
-For the modality contrast, One of the main takeaways is that there is greater access between auditory and other areas during reading -- this runs counter to our hypothesis that there would be less access to these areas. Visual areas, on the other hand, show less internal connectivity, reflecting the de-clustering of these areas during reading. 
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch2-modality-node-distance}
-    \caption[Summary of the change in distance between nodes during reading and listening.]{}
-	\label{fig:ch2-comprehension-reorganization}
-\end{figure}
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch2-comprehension-reorganization}
-    \caption[Language increases between-network connectivity.]{}
-	\label{fig:ch2-comprehension-reorganization}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=5in]{ch4-modularity-reading.png}
+\caption[Modularity metrics at rest predict reading skill.] {Global modularity, the degree to which a whole-brain network separates into RSNs, was positively related to reading skill across all subjects ($N = 65$). Modularity for individual nodes was also positive overall ($r_{avg} = 0.134$), but was significantly higher for nodes in the visual, default mode and cingulo-opercular RSNs ($p < 0.01$). RSN colors correspond to the dominant Yeo RSN displayed in Fig. 1.}
+\label{fig:texlogo}
 \end{figure}
 
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch2-modality-reorganization}
-    \caption[Reading decreases connectivity within visual and dorsal attention networks.]{}
-	\label{fig:ch2-modality-reorganization}
-\end{figure}
-
-
-\section{Discussion}
-
-This study investigates the differences between reading and listening in terms of their activation of individual areas or the distribution of activity across the brain. We employ closely matched texts, large sample size, longitudinal sampling, and behavioral covariates. Comprehending extended text requires more than just sensory and linguistic processes. It also requires executive processes such as attention, working memory and inference. Since comprehension is a "whole-brain" activity, we here look at the reorganization of resting-state networks - to see how attention, executive and sensory systems are interacting during reading.
-
-The results make clear that differences in reading are not isolated solely to sensory systems, although the visual system is the major driver. We tested three hypotheses related to global reorganization, sensory system changes, and interactions between executive and attention systems and sensory systems.
-
-These modality-specific influences on behavior and brain activity may arise from a few different sources: subject, linguistic and innate differences. For example, there are also differences in what is encoded in speech and text. The reading sciences pioneer Alvin Liberman noted that "speech is a complex code, while reading is a simple cipher" \cite{Mattingly1972}. Speech contains overt clues about the speaker, such as tone and prosody, and these can convey additional non-linguistic meaning for the listener. Reading, on the other hand, might be considered a more purely linguistic act, especially with computer-printed text. Reading may thus allow more room for self-generated situation models and more independent direction of thought. Furthermore, modality-specific aspects of the stimulus may influence the overall comprehension process; reading requires a level of spatial awareness -where one is at on a page, what happened in preceding paragraphs – and allows for the re-treading of information. Listening, meanwhile, requires the extraction of input from competing noises and sometimes the tracking of changing volume. 
-
-People speak differently than they write. Reading often relies on more complicated syntax, and even for skilled readers, longer words and sentences can strain executive systems more than they might if being spoken to. Although these properties are often controlled for in scientific studies, they represent a major difference between “natural” reading and listening. Because of these differences, reading may place a greater load on executive function skills. Executive functions such as working memory and planning and organizing may be particularly important for reading \citep{Cain}.  
-
-\begin{table}
-	\renewcommand{\tabcolsep}{0.09cm}
-	\centering
-	\input{tables/ch2-results.tex}
-	\caption[Summary of findings for Study 1.]{}
-	\label{table:ch2-results}
-\end{table}
-
-The last set of differences is particularly interesting because knowing how the differences in reading interact with these modality differences. Reading is a learned skill with may component processes. It requires thousands of hours of experience to master and entails a reorganization of cortical resources. Environmental and biological factors thus exert a greater influence on an individual’s reading proficiency than they might on more intrinsic processes such as speech comprehension. This is particularly dramatic in individuals with dyslexia, who have persistent difficulty with reading. Children with dyslexia exhibit less activation in reading-related areas compared to typically developing children \citep{Pugh2000}, but greater activation in right hemisphere homologues, suggesting that lateralization and activation of the reading circuit are associated with better reading. Development period also has an effect, with children exhibiting less activation in frontal areas but more in posterior areas, possibly reflecting a shift in “resource load” from uni-modal to supramodal areas \citep{Berl2010}. This shift may not be necessary in listening, or occur much earlier. Thus, with increasing expertise and development, there may be a “shift” from relying on fusiform processing areas. towards using multi-modal areas more like speech \citep{Monzalvo}. 
-
-This interaction between reading activation and individual differences in maturity and reading skill will be the subject of the next chapter.
