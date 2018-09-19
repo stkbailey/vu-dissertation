@@ -1,17 +1,27 @@
-\chapter{Relationship between Reading and Functional Network Architecture at Rest}
+\chapter{Read and rest: }
 
-\section{motivation}
+\section{Motivation}
 
-Finally, we turn to the question of whether some individuals are better equipped to handle the additional complexity of reading. In particular, we are interested in whether this  might be apparent through resting-state fMRI, which can be performed before children even start reading. As shown in the literature, we expect to see increases in "intrinsic" connectivity between secondary visual processing areas and language areas; however, the "parasitic" model would suggest that there would also be increased connectivity between the visual network and other systems throughout development and in better readers. 
+First, we turn to the question of whether some individuals are better equipped to handle the additional complexity of reading. In particular, we are interested in whether this  might be apparent through resting-state fMRI, which can be performed before children even start reading. As shown in the literature, we expect to see increases in "intrinsic" connectivity between secondary visual processing areas and language areas; however, the "parasitic" model would suggest that there would also be increased connectivity between the visual network and other systems throughout development and in better readers. 
 
+\begin{itemize}
+    \item 0. Is there a small-world architecture in these subjects? (Validate different thresholds w/ parcellation)
+    \item 1. Are global metrics related to reading?
+    \item 2. Are resting-state network specifics related to reading?
+    \item 3. Are specific hub bands / regions related to reading?
+    \item 4. Are specific nodes related to reading?
+\end{itemize}
 
-%% In Task Data
-\subsection{Relationship between brain modularity and reading skill}
-Original data for the modularity analyses were drawn from the third and fourth waves of a larger longitudinal study (NICHD R01 HD067254, 140 children at first wave). Participants completed out-of-scanner cognitive tests and an in-scanner language task. The fMRI task also included an extensive resting-state baseline in each run, which was the primary target of analysis here. Further information about the aims of this grant can also be found elsewhere \citep{Aboud2016, Wendelken2017}.
+\section{Methods}
 
-\emph{Participants:} Participants were scanned in the summer and fall following completion of third or fourth grade (ages 8-11). All participants met the following criteria: native English speakers; normal hearing; normal or corrected-to-normal vision; no history of major psychiatric illness or traumatic brain injury/epilepsy; and no contraindication to MRI. Participants and their parents gave written consent to participate at the beginning of the study, with procedures carried out in accordance with Vanderbilt University’s Institutional Review Board (IRB). 
+The following methods detail the current study's protocol and analytic approach. The following chapters borrow heavily from the methods described below, so they are explained here in detail. 
 
-Participants completed cognitive tests, including the Wechsler Abbreviated Scale of Intelligence (WASI) \citep{Kaplan1999} and the Test of Word Reading Efficiency (TOWRE) \citep{Torgesen2012}. Demographics and test data are summarized in Table 1. 
+\subsection{Participants}
+
+Participants for the first study were drawn from the fourth wave of a larger, longitudinal study investigating the neurobiological bases of reading comprehension. 52 children completed scans for the current study and a subset of these met the motion and attention thresholds described below. See Table \ref{table:ch3-participants} for demographics. 
+
+All participants were native English speakers with normal hearing and normal or corrected vision, and no history of major psychiatric illness or traumatic brain injury/epilepsy. Subjects had no history of a developmental disability or contra-indication to MRI.  Each participant gave written consent at the beginning of the study, with procedures carried out in accordance with Vanderbilt University’s Institutional Review Board.
+
 
 \begin{table}
     \renewcommand{\tabcolsep}{0.09cm}
@@ -21,16 +31,13 @@ Participants completed cognitive tests, including the Wechsler Abbreviated Scale
     \label{table:ch2-participants}
 \end{table}
 
+In addition to having an MRI scan, participants completed cognitive tests, including the Wechsler Abbreviated Scale of Intelligence (WASI) \citep{Kaplan1999} and the Test of Word Reading Efficiency (TOWRE) \citep{Torgesen2012}. Demographics and selected test data are summarized in Table \ref{table:ch2-participants}. 
 
+\subsection{MRI acquisition and preprocessing}
 
-\emph{Functional MRI data:} In the MRI scanner, participants performed up to four runs of a language comprehension task, which was crossed on two conditions: the modality of presentation (listening or reading) and the passage genre (expository or narrative).  Each fMRI run had two baseline conditions: a modality-specific baseline task and a resting-state block with a fixation cross. The order and duration for each block varied slightly across runs but was approximately: paragraph 1 (70 s), baseline 1 (70 s), paragraph 2 (70 s), baseline 2 (70 s), and resting-state (270 s). Total scan time was 550 s for all runs, and the average amount of resting-state baseline was 272 s (4 m, 32 s) per run.
+Imaging was performed on a Philips Achieva 3T MR scanner with a 32-channel head coil. Functional images were acquired using a gradient echo planar imaging sequence with 40 (3 mm thick) slices with no gap. Resting-state fMRI scans consisted of 150 dynamic volumes. Slices were parallel to the anterior-posterior commissure plane. Imaging parameters for functional images included: TE = 30 ms; FOV = 240 x 240 x 120 mm\textsuperscript{3}; flip angle = 75\degree; TR = 2200 ms; and 3 mm\textsuperscript{3} isotropic voxels.
 
-A scan run was included in the analysis only if a participant had both listening and reading scans in the same genre (e.g. auditory-expository and reading-expository). Therefore, for each year, a participant had data from either 2 or 4 scan runs (about 9 or 18 minutes of resting-state scan time, respectively). A scan session was excluded based on the following parameters: high-motion volumes exceeding 20 percent; poor task performance; and absence of a paired modality scan. In total, resting-state data from 50 children in the third wave (152 scans) and 45 children in the fourth wave (162 scans) met inclusion criteria. 
-
-\emph{Imaging acquisition and preprocessing: } All fMRI scans were acquired at Vanderbilt University Institute of Imaging Sciences on one of two Philips Achieva 3T MR scanners with a 32-channel head coil. Functional images were acquired using a gradient echo planar imaging sequence with 40 slices acquired parallel to the anterior-posterior commissure plane. Additional imaging parameters for functional images were: 250 dynamics; TR = 2200 ms; TE = 30 ms; FOV = 240*240*120 mm; flip angle = 75 degrees; voxel size = 3 * 3 * 3.2 mm\textsuperscript{3}.
-
-All scans were first preprocessed using a standard pipeline in FSL (version 5.0.9) \citep{Jenkinson2012}, and connectivity analysis was performed in the CONN toolbox \citep{WhitfieldGabrieli2012}. fMRI data were high-pass filtered at 0.008 Hz, motion-corrected, co-registered to a structural image, normalized to MNI space and smoothed by a 5 mm FWHM spherical kernel. Outlier volumes were identified as individual fMRI volumes in which the RMS framewise-displacement exceeded 0.7. fMRI timeseries were corrected using anatCompCorr methods, which uses signal from white matter tissue and cerebrospinal fluid areas to reduce noise not related to brain activity \citep{Chai2012}. Other covariates of no interest included six rigid motion parameters, six derivative motion parameters, and outlier volumes. Finally, we used a weighted general linear model (GLM) to model the resting block and averaged within-subject across scan sessions to get a de-noised resting-state timeseries.
-
+Whole-brain fMRI analyses were performed using tools from the FMRIB Software Library (version 5.0.9). For each session, the following pre-processing steps were performed:  slice-time correction, motion correction to the initial fMRI volume, high-pass filtering at 0.08 Hz, boundary-based registration to the subject's structural image, and normalization to 2 mm MNI 152 standard space. To mitigate the effects of motion on our analyses, we regressed out 6 continuous motion parameters and scrubbed out outlier volumes. We defined an outlier volume as any in which the root-mean-square framewise displacement exceeded 0.7 mm. Because head motion can be a major confound for connectivity analyses, we removed scan runs where more than 10 percent of the fMRI volumes were outliers.
 
 \subsection{Connectome analyses}
 
@@ -43,6 +50,8 @@ To investigate whole-brain patterns of connectivity without biasing our results 
 	\caption{Networks used in connectivity analyses.}
 	\label{table:ch2-power-nodes}
 \end{table}
+
+Connectivity analysis was performed in the CONN toolbox \citep{WhitfieldGabrieli2012}. fMRI data were high-pass filtered at 0.008 Hz, motion-corrected, co-registered to a structural image, normalized to MNI space and smoothed by a 5 mm FWHM spherical kernel. Outlier volumes were identified as individual fMRI volumes in which the RMS framewise-displacement exceeded 0.7. fMRI timeseries were corrected using anatCompCorr methods, which uses signal from white matter tissue and cerebrospinal fluid areas to reduce noise not related to brain activity \citep{Chai2012}. Other covariates of no interest included six rigid motion parameters, six derivative motion parameters, and outlier volumes. Finally, we used a weighted general linear model (GLM) to model the resting block and averaged within-subject across scan sessions to get a de-noised resting-state timeseries.
 
 For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{Nieto-castanon}. For each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions ("pass", "attn", "rest"). The timeseries was then high-pass filtered at 0.01 Hz .fMRI timeseries correlations were calculated between each of the the 264 nodes, resulting in a single connectivity array for each subject at each time point. Matrices were then thresholded into binary maps at $r$ = 0.15. (To confirm that this particular threshold did not unduly influence results, we also tested thresholds at $r$ = 0.05, 0.10 and 0.20. No significant effect on the results was found.)
 
@@ -66,4 +75,6 @@ When examined at the individual node level, the average correlation between modu
 \label{fig:texlogo}
 \end{figure}
 
+\section{Discussion}
 
+Bla bla bla.
