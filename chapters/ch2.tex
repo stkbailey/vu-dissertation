@@ -1,16 +1,17 @@
-\chapter{Read and rest: }
+\chapter{Individual differences in reading and their relationship to intrinsic network architecture}
 
 \section{Motivation}
 
-First, we turn to the question of whether some individuals are better equipped to handle the additional complexity of reading. In particular, we are interested in whether this  might be apparent through resting-state fMRI, which can be performed before children even start reading. As shown in the literature, we expect to see increases in "intrinsic" connectivity between secondary visual processing areas and language areas; however, the "parasitic" model would suggest that there would also be increased connectivity between the visual network and other systems throughout development and in better readers. 
+First, we would like to establish what, if any, relationship intrinsic network architecture has with individual differences in reading. There is clear support for this idea in the literature: whole-brain measures of architecture have correlated with intelligence and psychiatric disorders. However, reading presents a unique opportunity to focus on a variety of skills. 
+
+In particular, we are interested in whether this might be apparent through resting-state fMRI, which can be performed before children even start reading. As shown in the literature, we expect to see increases in "intrinsic" connectivity between secondary visual processing areas and language areas; however, the ``parasitic'' model would suggest that there would also be increased connectivity between the visual network and other systems throughout development and in better readers. 
 
 \begin{itemize}
-    \item 0. Is there a small-world architecture in these subjects? (Validate different thresholds w/ parcellation)
-    \item 1. Are global metrics related to reading?
-    \item 2. Are resting-state network specifics related to reading?
-    \item 3. Are specific hub bands / regions related to reading?
-    \item 4. Are specific nodes related to reading?
+    \item First, we validate the existence of a small-world architecture in these subjects, and that the network parcellation is appropriate for them.
+    \item Second, we determine whether global measures of interconnectedness, including modularity, participation coefficient and path length, are related to reading skill.
+    \item Finally, we investigate which resting-state networks or brain regions drive the relationship between connectivity and reading skill.
 \end{itemize}
+
 
 \section{Methods}
 
@@ -18,10 +19,9 @@ The following methods detail the current study's protocol and analytic approach.
 
 \subsection{Participants}
 
-Participants for the first study were drawn from the fourth wave of a larger, longitudinal study investigating the neurobiological bases of reading comprehension. 52 children completed scans for the current study and a subset of these met the motion and attention thresholds described below. See Table \ref{table:ch3-participants} for demographics. 
+Participants were drawn from the fourth wave of a larger, longitudinal study investigating the neurobiological bases of reading comprehension. 52 children completed scans and a subset of these met the motion and attention thresholds described below. See Table \ref{table:ch2-participants} for a breakdown of demographic information. 
 
 All participants were native English speakers with normal hearing and normal or corrected vision, and no history of major psychiatric illness or traumatic brain injury/epilepsy. Subjects had no history of a developmental disability or contra-indication to MRI.  Each participant gave written consent at the beginning of the study, with procedures carried out in accordance with Vanderbilt University’s Institutional Review Board.
-
 
 \begin{table}
     \renewcommand{\tabcolsep}{0.09cm}
@@ -51,9 +51,9 @@ To investigate whole-brain patterns of connectivity without biasing our results 
 	\label{table:ch2-power-nodes}
 \end{table}
 
-Connectivity analysis was performed in the CONN toolbox \citep{WhitfieldGabrieli2012}. fMRI data were high-pass filtered at 0.008 Hz, motion-corrected, co-registered to a structural image, normalized to MNI space and smoothed by a 5 mm FWHM spherical kernel. Outlier volumes were identified as individual fMRI volumes in which the RMS framewise-displacement exceeded 0.7. fMRI timeseries were corrected using anatCompCorr methods, which uses signal from white matter tissue and cerebrospinal fluid areas to reduce noise not related to brain activity \citep{Chai2012}. Other covariates of no interest included six rigid motion parameters, six derivative motion parameters, and outlier volumes. Finally, we used a weighted general linear model (GLM) to model the resting block and averaged within-subject across scan sessions to get a de-noised resting-state timeseries.
+Connectivity analysis was performed in the CONN toolbox \citep{WhitfieldGabrieli2012}. fMRI data were high-pass filtered at 0.008 Hz, motion-corrected, co-registered to a structural image, normalized to MNI space and smoothed by a 5 mm FWHM spherical kernel. Outlier volumes were identified as individual fMRI volumes in which the RMS framewise-displacement exceeded 0.7. fMRI timeseries were corrected using anatCompCorr methods, which uses signal from white matter tissue and cerebrospinal fluid areas to reduce noise not related to brain activity \citep{Chai2012}. Other covariates of no interest included six rigid motion parameters, six derivative motion parameters, and outlier volumes. 
 
-For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{Nieto-castanon}. For each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions ("pass", "attn", "rest"). The timeseries was then high-pass filtered at 0.01 Hz .fMRI timeseries correlations were calculated between each of the the 264 nodes, resulting in a single connectivity array for each subject at each time point. Matrices were then thresholded into binary maps at $r$ = 0.15. (To confirm that this particular threshold did not unduly influence results, we also tested thresholds at $r$ = 0.05, 0.10 and 0.20. No significant effect on the results was found.)
+For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{WhitfieldGabrieli2012}. For each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included and all outlier timepoints. The timeseries was then high-pass filtered at 0.01 Hz. fMRI timeseries correlations were calculated between each of the the 264 nodes, resulting in a single connectivity array for each subject at each time point. Matrices were then thresholded into binary maps by keeping the top 5 percent of connections. (To confirm that this particular threshold did not unduly influence results, we swept results between thresholds at the top 2 percent to the top 10 percent of connections. No significant effect on the results was found.)
 
 The metrics of interest were network \textit{modularity}, \textit{participation coefficient} and \textit{path length}. Modularity is high in networks where nodes within the same RSN are highly connected to each other but not elsewhere. The participation coefficient, on the other hand, is high when many nodes are connected to several different RSNs. Both of these metrics relate to the integration of information between RSNs. Path length, on the other hand, describes the distance between any two nodes on the graph. This was calculated between every node, then summed up by RSN to create a measure of network distance. These properties, and their changes within our task, were investigated at the level of connectomes, RSNs and nodes. 
 
