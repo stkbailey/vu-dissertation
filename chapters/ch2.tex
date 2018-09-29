@@ -66,23 +66,14 @@ For graph theory analyses, network estimation was performed in the \textit{Conn:
 
 The metrics of interest were network \textit{modularity}, \textit{participation coefficient} and \textit{path length}. Modularity is high in networks where nodes within the same RSN are highly connected to each other but not elsewhere. The participation coefficient, on the other hand, is high when many nodes are connected to several different RSNs. Both of these metrics relate to the integration of information between RSNs. Path length, on the other hand, describes the distance between any two nodes on the graph. This was calculated between every node, then summed up by RSN to create a measure of network distance. These properties, and their changes within our task, were investigated at the level of connectomes, RSNs and nodes. 
 
-First, we establish the validity of the parcellation in our sample by showing that the properties we expect to see - modularity, participation coefficient and we show the relationship between global participation coefficients, modularity and path length. Then, we describe the distribution of these measures across our sample at a threshold retaining the top 10 percent of connections, and across multiple thresholds. 
-
 \begin{figure}[t]
     \centering
-    \includegraphics[height=3in]{ch2-global-graph-theory-descriptions}
-    \caption[Relationships between global graph theory measures.]{Participation coefficient, modularity and path length all reflect the efficiency of information transfer between regions of the connectome, but each contains independent information.}
+    \includegraphics[width=5in]{ch2-global-graph-theory-descriptions}
+    \caption[Distribution and correlations between global graph theory measures.]{Modularity, participation coefficient and path length all reflect the efficiency of information transfer between regions of the connectome, but each contains independent information.}
     \label{fig:ch2-global-graph-theory-descriptions}
 \end{figure}
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[height=3in]{ch2-network-graph-theory-descriptions}
-    \caption[Relationships between network-level graph theory measures.]{Each RSN plays a unique role in bridging areas of the brain. Shown above are the network-level distributions of the graph theory measures when it is thresholded for the top 10 percent of connections (top row), and the network means as the network-forming thresholds are swept from 2 percent to 10 percent.}
-    \label{fig:ch2-network-graph-theory-descriptions}
-\end{figure}
-
-To determine the relationship between network measures and individual performance on the TOWRE (total word efficiency, standard score), we input each global metric into a general linear model. Supplementary analyses were also completed to ensure that effects were not driven by motion confounds by including a measure of subject motion (mean global signal change). We also examined whether there were differences in the modularity relationship between TOWRE subtests (sight word efficiency (SWE) and phonemic decoding efficiency (PDE)).
+First, we establish the validity of the parcellation in our sample by showing that the properties we expect to see - modularity, participation coefficient and we show the relationship between global participation coefficients, modularity and path length. Then, we describe the distribution of these measures across our sample at a threshold retaining the top 10 percent of connections, and across multiple thresholds. 
 
 \begin{table}
 	\renewcommand{\tabcolsep}{0.09cm}
@@ -91,6 +82,14 @@ To determine the relationship between network measures and individual performanc
 	\caption{Results for analyses comparing global graph theory metrics to reading skill.}
 	\label{table:ch2-global-glm-results}
 \end{table}
+
+To determine the relationship between network measures and individual performance on the TOWRE (total word efficiency, standard score), we input each global metric into a general linear model. Supplementary analyses were also completed to ensure that effects were not driven by motion confounds by including a measure of subject motion (mean global signal change). We also examined whether there were differences in the modularity relationship between TOWRE subtests (sight word efficiency (SWE) and phonemic decoding efficiency (PDE)).
+
+\begin{figure}[t]
+    \includegraphics[width=6.25in]{ch2-network-graph-theory-descriptions}
+    \caption[Relationships between network-level graph theory measures.]{Each RSN plays a unique role in bridging areas of the brain. Shown above are the network-level distributions of the graph theory measures when it is thresholded for the top 10 percent of connections (top row), and the network means as the network-forming thresholds are swept from 2 percent to 10 percent (bottom row).}
+    \label{fig:ch2-network-graph-theory-descriptions}
+\end{figure}
 
 To test whether there was an RSN-level trend in the modularity-to-reading relationship, network-level modularity values were also investigated. For each node, a correlation was calculated between its modularity contribution and TOWRE scores. For the set of nodes comprising each RSN, a one-sample $t$-test was performed to see whether the RSN average was significantly greater than the global node average. 
 
