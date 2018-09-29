@@ -57,8 +57,8 @@ For graph theory analyses, network estimation was performed in the \textit{Conn:
 
 \begin{figure}[t]
     \centering
-    \includegraphics[height=3in]{ch2-connectome-methods}
-    \caption[Schematic for connectome construction.]{Connectomes are constructed from resting-state fMRI in the following steps: slice-timing correction, rigid-body motion correction, boundary-based registration to a T1-weighted anatomical image, and normalization to MNI 152 template. The timseries for 264 nodes are then extracted and denoised using signal from non-neural tissue, continuous motion parameters and outliers. A pair-wise connectivity matrix is then calculated and thresholded at multiple different thresholds, then analyzed.}
+    \includegraphics[width=6.5in]{ch2-connectome-methods}
+    \caption[Schematic for connectome construction.]{Connectomes are constructed from resting-state fMRI in the following steps: slice-timing correction, rigid-body motion correction, boundary-based registration to a T1-weighted anatomical image, and normalization to MNI 152 template. The timseries for 264 nodes are then extracted and denoised using signal from non-neural tissue, continuous motion parameters and outliers. A pair-wise connectivity matrix is then calculated and thresholded at multiple different thresholds, then analyzed. Figure adapted from \citep{Yang2018}.}
     \label{fig:ch2-connectome-methods}
 \end{figure}
 
@@ -94,7 +94,7 @@ To determine the relationship between network measures and individual performanc
 
 To test whether there was an RSN-level trend in the modularity-to-reading relationship, network-level modularity values were also investigated. For each node, a correlation was calculated between its modularity contribution and TOWRE scores. For the set of nodes comprising each RSN, a one-sample $t$-test was performed to see whether the RSN average was significantly greater than the global node average. 
 
-\begin{figure}[h!]
+\begin{figure}[t]
     \centering
     \includegraphics[width=5in]{ch2-modularity-reading}
     \caption[Modularity metrics at rest predict reading skill.] {Global modularity, the degree to which a whole-brain network separates into RSNs, was positively related to reading skill across all subjects ($N = 65$). Modularity for individual nodes was also positive overall ($r_{avg} = 0.134$), but was significantly higher for nodes in the visual, default mode and cingulo-opercular RSNs ($p < 0.01$). RSN colors correspond to the dominant Yeo RSN displayed in Fig. 1.}
