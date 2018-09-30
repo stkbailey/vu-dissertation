@@ -71,40 +71,40 @@ The metrics of interest were network \textit{modularity}, \textit{participation 
     \label{fig:ch2-global-graph-theory-descriptions}
 \end{figure}
 
-First, we establish the validity of the parcellation for evaluting network properties in this sample. At rest, we expect to see high modularity (greater than 0.1), low participation (less than 0.9), and a lower path length within RSNs than between them.  in our sample by showing that the properties we expect to see -- modularity, participation coefficient, and path length -- are  and we show the relationship between global participation coefficients, modularity and path length. 
+First, we establish the validity of the parcellation for evaluting network properties in this sample. At rest, we expect to see high modularity (greater than 0.1), low participation (less than 0.9), and a lower path length within RSNs than between them. We also expect to see moderate-sized correlations between measures, since each is measuring an aspect of network architecture related to distance between nodes.  
 
-Next, we break each global measure down by RSN to determine how sub-systems differ in their network roles. For modularity, we report the total modularity contribution for each network. For participation coefficient and path length, we report the mean value within each network. We also present the measures obtained across the whole range of network-forming thresholds (retaining the top 2 to 10 percent of connections). 
+Next, we break each global measure down by RSN to determine how sub-systems differ in their network roles. For modularity, we report the total modularity contribution for each network. For participation coefficient and path length, we report the mean value within each network. We also investigate the measures obtained across the whole range of network-forming thresholds (retaining the top 2 to 10 percent of connections). We expect to see changes in the measures across thresholds, but a relatively stable rank order among the different RSNs. 
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=6.1in]{ch2-network-graph-theory-descriptions}
-    \caption[Relationships between network-level graph theory measures.]{Each RSN plays a unique role in bridging areas of the brain. Shown above are the network-level distributions of the graph theory measures when it is thresholded for the top 10 percent of connections (top row), and the network means as the network-forming thresholds are swept from 2 percent to 10 percent (bottom row).}
+    \caption[Relationships between network-level graph theory measures.]{Relationships between network-level graph theory measures. Each RSN plays a unique role in bridging areas of the brain. Shown above are the network-level distributions of the graph theory measures when graphs are thresholded for the top 10 percent of connections (top row), and the network means as the network-forming thresholds are swept from 2 percent to 10 percent (bottom row).}
     \label{fig:ch2-network-graph-theory-descriptions}
 \end{figure}
 
-To determine the relationship between network measures and individual performance on the TOWRE (total word efficiency, standard score), we input each global metric into a general linear model. Supplementary analyses were also completed to ensure that effects were not driven by motion confounds by including a measure of subject motion (mean global signal change). We also examined whether there were differences in the modularity relationship between TOWRE subtests (sight word efficiency (SWE) and phonemic decoding efficiency (PDE)).
-
-To test whether there was an RSN-level trend in the modularity-to-reading relationship, network-level modularity values were also investigated. For each node, a correlation was calculated between its modularity contribution and TOWRE scores. For the set of nodes comprising each RSN, a one-sample $t$-test was performed to see whether the RSN average was significantly greater than the global node average. 
+To determine the relationship between network measures and individual performance on cognitive assessments, we input each global metric into a general linear model with the Test of Word Reading Efficiency (TOWRE, total word efficiency standard score). Models containing measures of mean framewise-displacement (motion) and the WASI Vocabulary measure were also assesed to ensure that effects were not driven by motion confounds or global measures of cognitive skill. We also examined whether there were differences in the modularity relationship between TOWRE subtests (sight word efficiency (SWE) and phonemic decoding efficiency (PDE)).
 
 \begin{table}
-	\renewcommand{\tabcolsep}{0.09cm}
-	\centering
-	\input{tables/ch2-global-glm-results.tex}
-	\caption{Results for analyses comparing global graph theory metrics to reading skill.}
-	\label{table:ch2-global-glm-results}
+    \renewcommand{\tabcolsep}{0.09cm}
+    \centering
+    \input{tables/ch2-global-glm-results.tex}
+    \caption{Results for analyses comparing global graph theory metrics to reading skill.}
+    \label{table:ch2-global-glm-results}
 \end{table}
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=5.5in]{ch2-global-glm-covariates-thresholds}
-    \caption[Modularity metrics at rest are the best predictors of cognitive skills.] {Global modularity, the degree to which a whole-brain network separates into RSNs, was positively related to reading skill across all subjects ($N = 65$). Modularity for individual nodes was also positive overall ($r_{avg} = 0.134$), but was significantly higher for nodes in the visual, default mode and cingulo-opercular RSNs ($p < 0.01$). RSN colors correspond to the dominant Yeo RSN displayed in Fig. 1.}
+    \caption[Modularity metrics at rest are the best predictors of cognitive skills.] {Global modularity, the degree to which a whole-brain network separates into RSNs, was positively related to reading skill across all subjects ($N = 44$). Modularity for individual nodes was also positive overall ($r_{avg} = 0.134$), but was significantly higher for nodes in the visual, default mode and cingulo-opercular RSNs ($p < 0.01$). RSN colors correspond to the dominant Yeo RSN displayed in Fig. 1.}
     \label{fig:ch2-global-glm-covariates-thresh}
 \end{figure}
+
+To assess whether there was an RSN-level trend in the modularity-to-reading relationship, post-hoc analyses comparing network-level modularity values to TOWRE scores were also investigated. For each RSN, a regression Z-statistic was calculated between its modularity contribution and TOWRE scores. This was then compared to a bootstrapped distribution of modularity values for networks of equal size (n = 5000). 
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=5in]{ch2-modularity-reading}
-    \caption[Modularity metrics at rest predict reading skill.] {Global modularity, the degree to which a whole-brain network separates into RSNs, was positively related to reading skill across all subjects ($N = 65$). Modularity for individual nodes was also positive overall ($r_{avg} = 0.134$), but was significantly higher for nodes in the visual, default mode and cingulo-opercular RSNs ($p < 0.01$). RSN colors correspond to the dominant Yeo RSN displayed in Fig. 1.}
+    \caption[Modularity metrics at rest predict reading skill.] {Global modularity, the degree to which a whole-brain network separates into RSNs, was positively related to reading skill across all subjects ($N = 44$). Modularity for individual nodes was also positive overall ($r_{avg} = 0.134$), but was significantly higher for nodes in the visual, default mode and cingulo-opercular RSNs ($p < 0.01$). RSN colors correspond to the dominant Yeo RSN displayed in Fig. 1.}
     \label{fig:ch2-modularity-reading}
 \end{figure}
 
