@@ -37,6 +37,13 @@ In addition to having an MRI scan, participants completed cognitive tests, inclu
 
 Imaging was performed on a Philips Achieva 3T MR scanner with a 32-channel head coil. Functional images were acquired using a gradient echo planar imaging sequence with 40 (3 mm thick) slices with no gap. Resting-state fMRI scans consisted of 150 dynamic volumes. Slices were parallel to the anterior-posterior commissure plane. Imaging parameters for functional images included: TE = 30 ms; FOV = 240 x 240 x 120 mm\textsuperscript{3}; flip angle = 75\degree; TR = 2200 ms; and 3 mm\textsuperscript{3} isotropic voxels.
 
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=6in]{ch2-connectome-methods}
+    \caption[Schematic for connectome construction.]{Connectomes are constructed from resting-state fMRI in the following steps: slice-timing correction, rigid-body motion correction, boundary-based registration to a T1-weighted anatomical image, and normalization to MNI 152 template. The timseries for 264 nodes are then extracted and denoised using signal from non-neural tissue, continuous motion parameters and outliers. A pair-wise connectivity matrix is then calculated and thresholded at multiple different thresholds, then analyzed. Figure adapted from \citep{Yang2018}.}
+    \label{fig:ch2-connectome-methods}
+\end{figure}
+
 Whole-brain fMRI analyses were performed using tools from the FMRIB Software Library (version 5.0.9). For each session, the following pre-processing steps were performed:  slice-time correction, motion correction to the initial fMRI volume, high-pass filtering at 0.08 Hz, boundary-based registration to the subject's structural image, and normalization to 2 mm MNI 152 standard space. To mitigate the effects of motion on our analyses, we regressed out 6 continuous motion parameters and scrubbed out outlier volumes. We defined an outlier volume as any in which the root-mean-square framewise displacement exceeded 0.7 mm. Because head motion can be a major confound for connectivity analyses, we removed scan runs where more than 10 percent of the fMRI volumes were outliers.
 
 \subsection{Connectome construction}
@@ -55,12 +62,7 @@ Connectivity analysis was performed in the CONN toolbox \citep{WhitfieldGabrieli
 
 For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{WhitfieldGabrieli2012}. For each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included and all outlier timepoints. The timeseries was then high-pass filtered at 0.01 Hz. fMRI timeseries correlations were calculated between each of the the 264 nodes, resulting in a single connectivity array for each subject at each time point. Matrices were then thresholded into binary maps by keeping the top 5 percent of connections. (To confirm that this particular threshold did not unduly influence results, we swept results between thresholds at the top 2 percent to the top 10 percent of connections. No significant effect on the results was found.)
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=6.5in]{ch2-connectome-methods}
-    \caption[Schematic for connectome construction.]{Connectomes are constructed from resting-state fMRI in the following steps: slice-timing correction, rigid-body motion correction, boundary-based registration to a T1-weighted anatomical image, and normalization to MNI 152 template. The timseries for 264 nodes are then extracted and denoised using signal from non-neural tissue, continuous motion parameters and outliers. A pair-wise connectivity matrix is then calculated and thresholded at multiple different thresholds, then analyzed. Figure adapted from \citep{Yang2018}.}
-    \label{fig:ch2-connectome-methods}
-\end{figure}
+
 
 \subsection{Connectome analyses}
 
