@@ -4,7 +4,7 @@
 
 First, we would like to establish what, if any, relationship intrinsic network architecture has with individual differences in reading. There is clear support for this idea in the literature: whole-brain measures of architecture have correlated with intelligence and psychiatric disorders. However, reading presents a unique opportunity to focus on a variety of skills. 
 
-In particular, we are interested in whether this might be apparent through resting-state fMRI, which can be performed before children even start reading. As shown in the literature, we expect to see increases in "intrinsic" connectivity between secondary visual processing areas and language areas; however, the ``parasitic'' model would suggest that there would also be increased connectivity between the visual network and other systems throughout development and in better readers. 
+In particular, we are interested in whether this might be apparent through resting-state fMRI, which can be performed before children even start reading. As shown in the literature, we expect to see increases in ``intrinsic'' connectivity between secondary visual processing areas and language areas; however, the ``parasitic'' model would suggest that there would also be increased connectivity between the visual network and other systems throughout development and in better readers. 
 
 \begin{itemize}
     \item First, we validate the existence of a small-world architecture in these subjects, and that the network parcellation is appropriate for them.
@@ -19,7 +19,7 @@ The following methods detail the current study's protocol and analytic approach.
 
 \subsection{Participants}
 
-Participants were drawn from the fourth wave of a larger, longitudinal study investigating the neurobiological bases of reading comprehension. 52 children completed scans and a subset of these met the motion and attention thresholds described below. See Table \ref{table:ch2-participants} for a breakdown of demographic information. 
+Participants were drawn from the fourth wave of a larger, longitudinal study investigating the neurobiological bases of reading comprehension. 52 children completed scans and a subset of these met the motion and attention thresholds described below.
 
 All participants were native English speakers with normal hearing and normal or corrected vision, and no history of major psychiatric illness or traumatic brain injury/epilepsy. Subjects had no history of a developmental disability or contra-indication to MRI.  Each participant gave written consent at the beginning of the study, with procedures carried out in accordance with Vanderbilt University’s Institutional Review Board.
 
@@ -27,11 +27,11 @@ All participants were native English speakers with normal hearing and normal or 
     \renewcommand{\tabcolsep}{0.09cm}
     \centering
     \input{tables/ch2-participants.tex}
-    \caption{Participant demographics.}
+    \caption[Participant demographics]{Demographics and mean test scores for Study 1 participants are described here. For continuous data, the standard deviation is enclosed in parentheses.}
     \label{table:ch2-participants}
 \end{table}
 
-In addition to having an MRI scan, participants completed cognitive tests, including the Wechsler Abbreviated Scale of Intelligence (WASI) \citep{Kaplan1999} and the Test of Word Reading Efficiency (TOWRE) \citep{Torgesen2012}. Demographics and selected test data are summarized in Table \ref{table:ch2-participants}. 
+In addition to having an MRI scan, participants completed cognitive tests, including the Wechsler Abbreviated Scale of Intelligence (WASI) \citep{Kaplan1999}, the Test of Word Reading Efficiency (TOWRE) \citep{Torgesen2012}, the Woodcock Reading Master Tests (WRMT) \citep{Woodcock1998}, and the Gates-MacGinitie Reading Comprehension test \citep{MacGinitie2000}. Demographics and selected test data are summarized in Table \ref{table:ch2-participants}.
 
 \subsection{MRI acquisition and preprocessing}
 
@@ -44,40 +44,37 @@ Imaging was performed on a Philips Achieva 3T MR scanner with a 32-channel head 
     \label{fig:ch2-connectome-methods}
 \end{figure}
 
-Whole-brain fMRI analyses were performed using tools from the FMRIB Software Library (version 5.0.9). For each session, the following pre-processing steps were performed:  slice-time correction, motion correction to the initial fMRI volume, high-pass filtering at 0.08 Hz, boundary-based registration to the subject's structural image, and normalization to 2 mm MNI 152 standard space. To mitigate the effects of motion on our analyses, we regressed out 6 continuous motion parameters and scrubbed out outlier volumes. We defined an outlier volume as any in which the root-mean-square framewise displacement exceeded 0.7 mm. Because head motion can be a major confound for connectivity analyses, we removed scan runs where more than 10 percent of the fMRI volumes were outliers.
+Whole-brain fMRI analyses were performed using tools from the FMRIB Software Library (version 5.0.9). For each session, the following pre-processing steps were performed:  slice-time correction, motion correction to the initial fMRI volume, boundary-based registration to the subject's structural image, and normalization to 2 mm MNI 152 standard space. To mitigate the effects of motion on our analyses, we regressed out 6 continuous motion parameters and scrubbed out outlier volumes. We defined an outlier volume as any in which the root-mean-square framewise displacement exceeded 0.7 mm. Because head motion can be a major confound for connectivity analyses, we removed scan runs where more than 20 percent of the fMRI volumes were outliers.
 
 \subsection{Connectome construction}
 
-To investigate whole-brain patterns of connectivity without biasing our results towards our task, we selected 264 nodes \textit{a priori} whose connectivity properties have been extensively analyzed \citep{Power2011}. This node set samples the entire brain and are involved in a diversity of cognitive tasks. Each node was assigned to one of 13 RSNs based on previous literature \citep{Power2013}. Approximately 10 percent of the nodes did not have a stable assignment in the original paper; for the present analyses, these nodes were excluded from graph theory calculations. A description of the 13 networks and their size is provided in \ref{table:ch2-power-nodes}. 
+To investigate whole-brain patterns of connectivity with minimal investigator bias, we selected 264 nodes \textit{a priori} whose connectivity properties have been extensively analyzed in previous works \citep{Power2011}. The node set samples the entire brain, and nodes were selected based on their involvement in a diversity of cognitive tasks. Each node was assigned to one of 13 RSNs based on previous literature \citep{Power2013}. Approximately 10 percent of the nodes did not have a stable assignment in the original paper; for the present analyses, these nodes were excluded from graph theory calculations. A description of the 13 networks and their sizes is provided in \ref{table:ch2-power-nodes}. 
 
 \begin{table}
 	\renewcommand{\tabcolsep}{0.09cm}
 	\centering
 	\input{tables/ch2-power-nodes.tex}
-	\caption{Networks used in connectivity analyses.}
+	\caption[List of networks.]{List of networks used in connectivity analyses and the number of nodes affiliated with each. Although alternative parcellations of the node set are possible, we elected to use those network assignments suggested in \citep{Power2013}.}
 	\label{table:ch2-power-nodes}
 \end{table}
 
-Connectivity analysis was performed in the CONN toolbox \citep{WhitfieldGabrieli2012}. fMRI data were high-pass filtered at 0.008 Hz, motion-corrected, co-registered to a structural image, normalized to MNI space and smoothed by a 5 mm FWHM spherical kernel. Outlier volumes were identified as individual fMRI volumes in which the RMS framewise-displacement exceeded 0.7. fMRI timeseries were corrected using anatCompCorr methods, which uses signal from white matter tissue and cerebrospinal fluid areas to reduce noise not related to brain activity \citep{Chai2012}. Other covariates of no interest included six rigid motion parameters, six derivative motion parameters, and outlier volumes. 
-
-For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{WhitfieldGabrieli2012}. For each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included and all outlier timepoints. The timeseries was then high-pass filtered at 0.01 Hz. fMRI timeseries correlations were calculated between each of the the 264 nodes, resulting in a single connectivity array for each subject at each time point. Matrices were then thresholded into binary maps by keeping the top 5 percent of connections. (To confirm that this particular threshold did not unduly influence results, we swept results between thresholds at the top 2 percent to the top 10 percent of connections. No significant effect on the results was found.)
-
+Connectivity analysis was performed in the CONN toolbox \citep{WhitfieldGabrieli2012}. fMRI data were high-pass filtered at 0.008 Hz, motion-corrected, co-registered to a structural image, normalized to MNI space and smoothed by a 5 mm FWHM spherical kernel. Outlier volumes were identified as individual fMRI volumes in which the RMS framewise-displacement exceeded 0.7. fMRI timeseries were corrected using anatCompCorr methods, which uses signal from white matter tissue and cerebrospinal fluid areas to reduce noise not related to brain activity \citep{Chai2012}. We also regressed out 12 continuous measures of motion were also included and all outlier timepoints. The timeseries was then high-pass filtered at 0.01 Hz. fMRI timeseries correlations were calculated between each of the the 264 nodes, resulting in a single connectivity array for each subject at each time point. Matrices were then thresholded into binary maps by keeping the top 5 percent of connections. (To confirm that this particular threshold did not unduly influence results, we swept results between thresholds at the top 2 percent to the top 10 percent of connections. No significant effect on the results was found.)
 
 
 \subsection{Connectome analyses}
 
-The metrics of interest were network \textit{modularity}, \textit{participation coefficient} and \textit{path length}. Modularity is high in networks where nodes within the same RSN are highly connected to each other but not elsewhere. The participation coefficient, on the other hand, is high when many nodes are connected to several different RSNs. Both of these metrics relate to the integration of information between RSNs. Path length, on the other hand, describes the distance between any two nodes on the graph. This was calculated between every node, then summed up by RSN to create a measure of network distance. These properties, and their changes within our task, were investigated at the level of connectomes, RSNs and nodes. 
+The metrics of interest were network \textit{modularity}, \textit{participation coefficient} and \textit{path length}. Modularity is high in networks where nodes within the same RSN are highly connected to each other but not elsewhere. The participation coefficient, on the other hand, is high when many nodes are connected to several different RSNs. Both of these metrics relate to the integration of information between RSNs. Path length describes the distance between any two nodes on the graph. This was calculated between every node, then summed up by RSN to create a measure of network distance. These properties, and their changes within our task, were investigated at the level of connectomes, RSNs and nodes. 
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=5in]{ch2-global-graph-theory-descriptions}
-    \caption[Distribution and correlations between global graph theory measures.]{Modularity, participation coefficient and path length all reflect the efficiency of information transfer between regions of the connectome, but each contains independent information.}
+    \caption[Distribution and correlations between global graph theory measures.]{Distribution and correlations between the global modularity, participation coefficient and path length. Each attribute may be interpreted as a measure of connectedness between RSNs, but there is significant variability between them.}
     \label{fig:ch2-global-graph-theory-descriptions}
 \end{figure}
 
-First, we establish the validity of the parcellation in our sample by showing that the properties we expect to see - modularity, participation coefficient and we show the relationship between global participation coefficients, modularity and path length. Then, we describe the distribution of these measures across our sample at a threshold retaining the top 10 percent of connections, and across multiple thresholds. 
+First, we establish the validity of the parcellation for evaluting network properties in this sample. At rest, we expect to see high modularity (greater than 0.1), low participation (less than 0.9), and a lower path length within RSNs than between them.  in our sample by showing that the properties we expect to see -- modularity, participation coefficient, and path length -- are  and we show the relationship between global participation coefficients, modularity and path length. 
 
-To determine the relationship between network measures and individual performance on the TOWRE (total word efficiency, standard score), we input each global metric into a general linear model. Supplementary analyses were also completed to ensure that effects were not driven by motion confounds by including a measure of subject motion (mean global signal change). We also examined whether there were differences in the modularity relationship between TOWRE subtests (sight word efficiency (SWE) and phonemic decoding efficiency (PDE)).
+Next, we break each global measure down by RSN to determine how sub-systems differ in their network roles. For modularity, we report the total modularity contribution for each network. For participation coefficient and path length, we report the mean value within each network. We also present the measures obtained across the whole range of network-forming thresholds (retaining the top 2 to 10 percent of connections). 
 
 \begin{figure}[t]
     \centering
@@ -85,6 +82,8 @@ To determine the relationship between network measures and individual performanc
     \caption[Relationships between network-level graph theory measures.]{Each RSN plays a unique role in bridging areas of the brain. Shown above are the network-level distributions of the graph theory measures when it is thresholded for the top 10 percent of connections (top row), and the network means as the network-forming thresholds are swept from 2 percent to 10 percent (bottom row).}
     \label{fig:ch2-network-graph-theory-descriptions}
 \end{figure}
+
+To determine the relationship between network measures and individual performance on the TOWRE (total word efficiency, standard score), we input each global metric into a general linear model. Supplementary analyses were also completed to ensure that effects were not driven by motion confounds by including a measure of subject motion (mean global signal change). We also examined whether there were differences in the modularity relationship between TOWRE subtests (sight word efficiency (SWE) and phonemic decoding efficiency (PDE)).
 
 To test whether there was an RSN-level trend in the modularity-to-reading relationship, network-level modularity values were also investigated. For each node, a correlation was calculated between its modularity contribution and TOWRE scores. For the set of nodes comprising each RSN, a one-sample $t$-test was performed to see whether the RSN average was significantly greater than the global node average. 
 
@@ -113,6 +112,8 @@ To test whether there was an RSN-level trend in the modularity-to-reading relati
 \section{Results} 
 
 Of the 52 scans collected, 44 met the motion quality criteria for inclusion. 
+
+We demonstrate that the relative position of each each these distribution of these measures across our sample at a threshold retaining the top 10 percent of connections, and across multiple thresholds. 
 
 Individual differences in global modularity were predictive of TOWRE - Total Word Efficiency standard scores. Modularity had a significant positive relationship with out-of-scanner reading metrics (for all subjects: $r = 0.299$, $p = 0.013$). This effect was also significant when data was analyzed separately by grade ($r_{G3} = 0.333$, $p = 0.014$; $r_{G4} = 0.359$, $p = 0.012$). The two subtests that constitute the TOWRE both showed a positive relationship with global modularity, as well ($r_{PDE} = 0.314$, $p = 0.009$; $r_{SWE} = 0.251$, $p = 0.039$). 
 
