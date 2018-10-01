@@ -84,20 +84,16 @@ Of the 52 subjects who completed resting-state fMRI scans, 44 met the scan quali
     \label{fig:ch2-global-graph-theory-descriptions}
 \end{figure}
 
-Comparing the contributions of each RSN to these global metrics highlights important differences between them.
-- Visual, somatomotor, default mode and front-porietal networks were highest in modularity. 
-- the FPN was interesting in theat it had higher modularity, moderate participation coefficient and lower path length
-- loosening the threshold decreased modularity, increased participation coefficient and decreased path length.
-- 5 percent is optimal for differences.
-% try tsplot on bottom
-
+Figure \ref{fig:ch2-network-graph-theory-descriptions} highlights the contributions of each RSN to the graph theory measures. The visual, somatomotor, and default mode were the most modular RSNs, in part reflecting their larger size relative to others. The dorsal attention, auditory and cingulo-opercular networks were the most participatory RSNs at rest. The fronto-parietal RSN occupied an interesting place, possessing relatively high modularity but also one of the higher participation coefficients and lower global path lengths. The effect of changing thresholds had consistent effects on each measure: as more connections were included, the modularity decreased, participation coefficient increased, and path length decreased (Fig.  \ref{fig:ch2-network-graph-theory-descriptions}, bottom). 
 
 \begin{figure}[t]
     \centering
     \includegraphics[width=6.1in]{ch2-network-graph-theory-descriptions}
-    \caption[Relationships between network-level graph theory measures.]{Relationships between network-level graph theory measures. Each RSN plays a unique role in bridging areas of the brain. Shown above are the network-level distributions of the graph theory measures when graphs are thresholded for the top 10 percent of connections (top row), and the network means as the network-forming thresholds are swept from 2 percent to 10 percent (bottom row).}
+    \caption[Relationships between network-level graph theory measures.]{Relationships between network-level graph theory measures. Shown above are the network-level distributions of the graph theory measures when graphs are thresholded for the top 10 percent of connections (top row), and the network means as the network-forming thresholds are swept from 2 percent to 10 percent (bottom row).}
     \label{fig:ch2-network-graph-theory-descriptions}
 \end{figure}
+
+The relationships between each graph theory metric to TOWRE are summarized in Table \ref{table:ch2-global-glm-results}. Global modularity, but not participation coefficient or path length, was predictive of reading skill even after controlling for mean framewise displacement (motion) and verbal intelligence ($Z_{TWE} = 2.536$). The direction of the relationship was positive, and it was higher for the ``sight word efficiency'' subtest than for ``phonemic decoding efficiency'' ($Z_{SWE} = 2.779$, $Z_{PDE} = 2.138$), which did not reach significance when confounds were controlled. 
 
 \begin{table}[t]
     \renewcommand{\tabcolsep}{0.09cm}
@@ -107,24 +103,23 @@ Comparing the contributions of each RSN to these global metrics highlights impor
     \label{table:ch2-global-glm-results}
 \end{table}
 
+The relationship between modularity and TOWRE is stable across multiple thresholds (Fig. \ref{fig:ch2-global-glm-covariates-thresh}). In fact, when graph theory measures were compared to other language-related assessments, there was a trend towards a significant positive relationship between modularity and cognitive performance that was more stable than those of either the participation coefficient or global path length. 
+
 \begin{figure}[t]
     \centering
     \includegraphics[width=5.5in]{ch2-global-glm-covariates-thresholds}
-    \caption[Modularity metrics at rest are the best predictors of cognitive skills.] {Global modularity, the degree to which a whole-brain network separates into RSNs, was positively related to reading skill across all subjects ($N = 44$). Modularity for individual nodes was also positive overall ($r_{avg} = 0.134$), but was significantly higher for nodes in the visual, default mode and cingulo-opercular RSNs ($p < 0.01$). RSN colors correspond to the dominant Yeo RSN displayed in Fig. 1.}
+    \caption[Modularity metrics at rest are the best predictors of cognitive skills.] {Global modularity was the most stable and predictive network measure for predicting language-related skills, although it only reached significance thresholds for the TOWRE.}
     \label{fig:ch2-global-glm-covariates-thresh}
 \end{figure}
+
+Finally, we investigated the correlation between each individual RSN's modularity contribution and TOWRE scores (Fig. \ref{fig:ch2-rsn-node-modularity-corr}. Overall, no RSN reached the level of significance that the global modularity measure (i.e., $r = 0.378$). The default mode RSN had the highest correlation with the TOWRE ($r_{DMN} = 0.350$), with the memory retrieval ($r_{MEM} = 0.303$) and attention ($r_{DAN} = 0.236$, $r_{VAN} = 0.248$) RSNs ranking next. Although not significant, the relationship was inverted in the auditory RSN: lower modularity was associated with better reading skill ($r = -0.178$).
 
 \begin{figure}[t]
     \centering
     \includegraphics[height=3in]{ch2-rsn-node-modularity-corr}
-    \caption[Modularity metrics at rest predict reading skill.] {Global modularity, the degree to which a whole-brain network separates into RSNs, was positively related to reading skill across all subjects ($N = 44$). Modularity for individual nodes was also positive overall ($r_{avg} = 0.134$), but was significantly higher for nodes in the visual, default mode and cingulo-opercular RSNs ($p < 0.01$). RSN colors correspond to the dominant Yeo RSN displayed in Fig. 1.}
+    \caption[Modularity relationship with TOWRE varies by RSN.] {Modularity relationship with TOWRE varies by RSN. Although no RSN reached the level of significance that the global modularity measure, the default mode and memory retrieval RSNs had significant positive correlations with the TOWRE.}
     \label{fig:ch2-rsn-node-modularity-corr}
 \end{figure}
-
-
-Individual differences in global modularity were predictive of TOWRE - Total Word Efficiency standard scores. Modularity had a significant positive relationship with out-of-scanner reading metrics (for all subjects: $r = 0.299$, $p = 0.013$). This effect was also significant when data was analyzed separately by grade ($r_{G3} = 0.333$, $p = 0.014$; $r_{G4} = 0.359$, $p = 0.012$). The two subtests that constitute the TOWRE both showed a positive relationship with global modularity, as well ($r_{PDE} = 0.314$, $p = 0.009$; $r_{SWE} = 0.251$, $p = 0.039$). 
-
-When examined at the individual node level, the average correlation between modularity and TOWRE scores was 0.134. Three RSNs had average node correlations that were significantly higher than this global network mean: the default mode ($r = 0.183$, $p$ \textless $0.001$), visual ($r = 0.183$, $p = 0.004$) and cingulo-opercular networks ($r = 0.224$, $p$ \textless $0.001$) (Fig. 2B). 
 
 \section{Discussion}
 
