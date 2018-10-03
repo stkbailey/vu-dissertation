@@ -24,22 +24,34 @@ First, we validate modularity and participation coefficient metrics using univar
 
 \subsection{Participants}
 
-Participants were a subset of the Study 1 cohort who met the inclusion criteria described below.  
+Participants were drawn from the same cohort of subjects included in Study 1, and identical inclusion criteria for both demographic and scan motion were applied. However, additional measures related to the performance of the task were levied as described below. A total of 47 unique subjects and 88 scan sessions were included in the analysis. Their demographics are described in Table \ref{table:ch3-participants}.
+
+\begin{table}
+	\renewcommand{\tabcolsep}{0.09cm}
+	\centering
+	\input{tables/ch3-participants.tex}
+	\caption[Participant demographics for Study 2.]{Participant demographics for Study 2. Subjects include all of those from Study 1.}
+	\label{table:ch3-participants}
+\end{table}
 
 
-\subsection{MRI acquisition}
-
-Imaging was performed on a Philips Achieva 3T MR scanner with a 32-channel head coil. Functional images were acquired using a gradient echo planar imaging sequence with 40 (3 mm thick) slices with no gap. Each run of the task (up to four) consisted of 250 volumes. Slices were parallel to the anterior-posterior commissure plane. Imaging parameters for functional images included: TE = 30 ms; FOV = 240 x 240 x 120 mm\textsuperscript{3}; flip angle = 75\degree; TR = 2200 ms; and 3 mm\textsuperscript{3} isotropic voxels.
-
-\subsection{Functional MRI Task}
-
-% In the MRI scanner, participants performed up to four runs of a language comprehension task, which was crossed on two conditions: the modality of presentation (listening or reading) and the passage genre (expository or narrative).  Each fMRI run had two baseline conditions: a modality-specific baseline task and a resting-state block with a fixation cross. The order and duration for each block varied slightly across runs but was approximately: paragraph 1 (70 s), baseline 1 (70 s), paragraph 2 (70 s), baseline 2 (70 s), and resting-state (270 s). Total scan time was 550 s for all runs, and the average amount of resting-state baseline was 272 s (4 m, 32 s) per run.
-
-% A scan run was included in the analysis only if a participant had both listening and reading scans in the same genre (e.g. auditory-expository and reading-expository). Therefore, for each year, a participant had data from either 2 or 4 scan runs (about 9 or 18 minutes of resting-state scan time, respectively). A scan session was excluded based on the following parameters: high-motion volumes exceeding 20 percent; poor task performance; and absence of a paired modality scan. In total, resting-state data from 50 children in the third wave (152 scans) and 45 children in the fourth wave (162 scans) met inclusion criteria. 
-
-We designed an fMRI task in which participants either read or listened to a passage of text. The passage was split into two paragraphs and interspersed with a simple attention task. At the end of the task, there was an approximately three minute long resting-state block. Across runs, conditions were presented in the same order, although durations varied slightly. Condition order was: comprehension block (paragraph 1), sensory baseline (set 1), comprehension block (paragraph 2), sensory baseline, and resting baseline. See Fig. \ref{fig:ch3-task-design} for a schematic.
+}
 
 
+\subsection{MRI acquisition and task design}
+
+Functional MRI acquisition parameters were identical to Study 1 with the exception of duration: a total of 250 dynamic volumes were collected for each scan session. During the MRI scan session, participants performed up to four runs of a language comprehension task, which was crossed on two conditions: the modality of presentation (listening or reading) and the passage genre (expository or narrative).  
+
+For the present analysis, only the ``reading'' scans are considered, and the effects of genre on brain activation are ignored, as they are mostly balanced out within subject. In the following paragraphs, however, we will describe the experiment design in its entirety, as it will be relevant to subsequent analyses.
+
+Each fMRI run had two baseline conditions: a modality-specific baseline task and a resting-state block with a fixation cross. At the conclusion of the comprehension portion of each experiment, two images were presented and subjects were asked to decide if the image was related to the passage. (e.g., Is a picture of a cake with candles related to a story about a birthday party?) The order and duration for each block varied slightly across runs but was approximately: paragraph 1 (60 s), baseline 1 (60 s), paragraph 2 (60 s), baseline 2 (60 s), and resting-state (270 s). Total scan time was 550 s for each run. See Fig. \ref{fig:ch3-task-design} for a schematic describing one of the tasks.
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=6in]{ch3-task-design}
+	\caption[Schematic of the reading comprehension task.]{Schematic of the reading comprehension task. }
+	\label{fig:ch3-task-design}
+\end{figure
 
 To create a more naturalistic reading experience than single word presentation \citep{Rayner1998}, passages were presented in syntactic phrases ranging from 1-7 words in length. The interval between each stimulus was jittered to allow for event-related analyses (range: 275 – 4000 ms), although these effects were not examined here.
 
@@ -56,66 +68,92 @@ In total, there were 4 passages (2 listening, 2 reading), each leveled to a 3\te
 
 Whole-brain fMRI analyses were performed using tools from the FMRIB Software Library (version 5.0.9). For each session, the following pre-processing steps were performed:  slice-time correction, motion correction to the initial fMRI volume, high-pass filtering at 0.08 Hz, boundary-based registration to the subject's structural image, and normalization to 2 mm MNI 152 standard space. To mitigate the effects of motion on our analyses, we regressed out 6 continuous motion parameters and scrubbed out outlier volumes. We defined an outlier volume as any in which the root-mean-square framewise displacement exceeded 0.7 mm. Because head motion can be a major confound for connectivity analyses, we removed scan runs where more than 10 percent of the fMRI volumes were outliers.
 
-All task conditions were convolved with the double-gamma hemodynamic response function to generate design matrices for each fMRI run. Two first-level contrasts were of interest: the main effect of passage comprehension (“pass vs. rest), and the contrast of passage comprehension vs. the sensory baseline ("pass vs. attn."). Repeated stimuli and the picture comprehension task were modelled out.
+All task conditions were convolved with the double-gamma hemodynamic response function to generate design matrices for each fMRI run. Two first-level contrasts were of interest: the main effect of passage comprehension (``Reading vs. Rest''), and the contrast of passage comprehension vs. the sensory baseline (``Reading vs. Attention''). Repeated stimuli and the picture comprehension task were modelled out.
 
-Modality effects (Shared Effect of Listening and Reading, Contrast of Listening and Reading) were estimated at the subject-level using fixed effects analysis. These were carried over into group-level analyses using non-parametric methods implemented in FSL’s \textit{randomise} tool with threshold-free cluster enhancement. For each group-level analysis, we performed 10,000 permutations and report results with \textit{p} \textless 0.05. 
+Reading effects were estimated at the subject-level using fixed effects analysis. These were carried over into group-level analyses using non-parametric methods implemented in FSL’s \textit{randomise} tool with threshold-free cluster enhancement. For each group-level analysis, we performed 5000 permutations and report results with \textit{p} \textless 0.05. 
+
+To understand our univariate results as a function of system-level activation, we also extracted activation values from each of the 264 connectome nodes, and summarized the activity of each ``intrinsic'' RSN.
 
 \subsection{Connectome analyses}
 
-To understand our univariate results as a function of RSN activation, we cast the activations into connectome space and reviewed each contrast according to the network affiliation of the corresponding nodes.
+For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{WhitfieldGabrieli2012}. As before, for each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions (``Reading'', ``Attention'', ``Rest''). The timeseries was then high-pass filtered at 0.01 Hz.
 
-For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{WhitfieldGabrieli2012}. For each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions ("pass", "attn", "rest"). The timeseries was then high-pass filtered at 0.01 Hz.
-
-Whole-brain connectomes for each condition were created by estimating the functional connectivity between each node using a weighted general linear model. For connection-level analyses, these values were compared directly across subjects and conditions. For graph theory analyses, the array of all node connections was thresholded to keep the top 5 percent of connections, resulting in a much sparser representation. This threshold was also tested at ranges from 2 percent to 10 percent, and all reported results were significant at the reported level in at least 7 of the 9 tested thresholds.
-
-
+Whole-brain connectomes for each condition were created by estimating the functional connectivity between each node using a weighted general linear model. For connection-level analyses, these values were compared directly across subjects and conditions. For graph theory analyses, the array of all node connections was thresholded to keep the top 5 percent of connections, resulting in a much sparser representation. This threshold was also tested at ranges from 2 percent to 10 percent. These arrays were then characterized using the previously described graph theory measures: modularity, participation coefficient, and path length.
 
 
 \section{Results}
 
-\subsection{Behavioral results}
+47 subjects (88 scan runs) met the attention and motion criteria for inclusion in the analysis. (5 subjects and 15 scan runs were excluded.) The distribution of performance and motion criteria are illustrated in Figure \ref{fig:ch3-task-performance}. 
 
-42 subjects (142 scan runs) met the attention and motion criteria to be included in the analysis. (10 subjects and 61 individual scan runs were filtered out.) Attention and comprehension measures were not related to modality of stimulus presentation (see Fig. \ref{fig:ch3-task-performance}). There was a trend towards difference in median FDRMS between scan modalities (paired t-test, $t = 1.94$, $p = 0.059$), so we also replicated analyses with a stricter motion threshold (no more than 10 percent outliers in a scan run). The main results from analysis of this 35 subject (116 scan runs) cohort were broadly consistent.
-
-
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch3-task-performance}
+    \caption[Behavioral metrics of passage performance were unrelated to modality.]{Both the in-scanner comprehension question and out-of-scanner recall questionnaire were unrelated to the modality of presentation.}
+	\label{fig:ch3-task-performance}
+\end{figure}
 
 \subsection{Activation results}
 
-A range of language-related areas were activated for both reading and listening comprehension (Fig. \ref{fig:ch3-passages-activation-attn}). Compared to the corresponding sensory baselines, activation spanned the inferior frontal gyrus, angular gyrus, premotor cortex, middle temporal gyrus and the superior frontal gyrus. Activation patterns were robustly present on both hemispheres, but had greater intensity and extent on the left hemisphere. 
+A range of language-related areas were activated during reading comprehension (Fig. \ref{fig:ch3-passages-activation-attn}). Compared to the corresponding sensory baselines, activation spanned the inferior frontal gyrus, angular gyrus, premotor cortex, middle temporal gyrus and the superior frontal gyrus. Activation patterns were robustly present on both hemispheres, but had greater intensity and extent on the left hemisphere. 
 
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch3-reading-brain-activations}
+    \caption[A range of language-related areas were activated during reading comprehension.]{A range of language-related areas were activated during reading comprehension. A widespread set of brain areas are utilized during listening and reading, including auditory, default mode and attention areas.}
+	\label{fig:ch3-reading-brain-activations}
+\end{figure}
 
-Differences related to modality fell into three categories: sensory processing areas, including the insula, superior temporal gyrus, and secondary visual processing areas; and hetero-modal association areas, most notably the inferior frontal gyrus and angular gyrus; and somato-motor regions, including the premotor cortex and lateral geniculate nucleus of the thalamus (Fig. \ref{fig:ch3-modality-differences-attn}). Areas showing greater activation in listening were focused on primary auditory cortex and the dorsal attention network.
+We also examined these contrast results when projected onto the 264 nodes in the connectome parcellation. Copmared to the resting baseline, the ventral attention, visual and default mode networks had the greatest number of ``activated'' nodes. It is also notable that the ``uncertain'' nodes were highly engaged, possibly reflecting the important role of functionally diverse regions in the execution of reading comprehension. On the other end, the memory retrieval, salience and cingulo-opercular networks exhibited decreased activity compared to rest. See Fig. \ref{ch3-reading-connectome-activations} for a diagram of these activations by RSN. 
 
-
-We also examined these contrast results when projected onto the 264-node connectome. 
-
-
-
-Comparing the modality difference statistics within each network revealed that the visual RSN is much more active during reading than listening, but that some, but that the dorsal attention network was more active during listening.
-
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch3-reading-connectome-activations}
+    \caption[Distribution of reading-related activity among RSN nodes.]{A widespread set of brain areas are utilized during listening and reading, including auditory, default mode and attention areas. Dashed lines represent an uncorrected $p$-value \textless 0.05.}
+	\label{fig:ch3-reading-connectome-activations}
+\end{figure}
 
 
 \subsection{Graph theory results}
 
-Next, we examined changes to the global graph theory measures. Figure \ref{fig:ch3-comprehension-graph-theory} displays the changes in modularity and participation coefficient at the subject-level. Relative to rest, both listening and reading reduced the global modularity and increased the participation coefficient. Compared to the baseline attention task, there was  a trend towards an increased participation coefficient, but it was not significant. 
+Next, we examined changes to the global graph theory measures. Figure \ref{fig:ch3-comprehension-graph-theory-all} summarizes the subject-level changes in modularity, participation coefficient, and path length. Overall, the effect was one of increased integration across RSNs during reading comprehension. Relative to rest, both reading comprehension and the sensory baseline reduced the global modularity and increased the participation coefficient, and the magnitude of the effect in reading comprehension was also greater than that of the sensory condition. The path length within each RSN did not significantly change across condition, suggesting that the modular organization of the brain was not disrupted; the RSN parcellation used was still a good fit. However, there were significant increases in the between-RSN path length corresponding to greater efficiency of transferring information between these disparate systems.
 
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch3-comprehension-graph-theory-all}
+    \caption[Reading induces more integrated global network architecture.]{Compared to rest and baseline attention tasks, reading comprehension increased measures related to RSN integration.}
+	\label{fig:ch3-comprehension-graph-theory-all}
+\end{figure}
 
+In general, there was a correlation between greater activity and a greater diversity of connections
 
-A direct comparison of listening to reading showed that reading induced a more integrated network architecture than listening, both in terms of reduced modularity and increased participation coefficient (Fig. \ref{fig:ch3-modality-graph-theory}).
+% Table summarzing mean activation + GT by RSN ?... 
 
+To investigate interactions between networks, rather than simply general behavior of the networks, we summarized the average shortest path length between each network. This provides a gross measure of how close any two networks are. A node-level diagram of these changes between rest and comprehension is presented in Figure \ref{ch3-comprehension-graph-pathlength}. 
 
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch3-comprehension-graph-pathlength}
+    \caption[Language induces more integrated global network architecture.]{Compared to rest and baseline attention tasks, reading and listening increase measures related to global RSN integration.}
+	\label{fig:ch3-comprehension-graph-pathlength}
+\end{figure}
 
-Investigating these graph theory measures at the level of RSN provides  insight as to which networks are driving the changes in integration. When comparing comprehension differences to rest, for example, we can see that globally connectivity increases (Fig. \ref{fig:ch3-comprehension-reorganization}. During rest, however, there is increased connectivity within default mode network and visual networks.
+Investigating these graph theory measures at the level of RSN provides  insight as to which networks are driving the changes in integration. When comparing comprehension differences to rest, for example, we can see that globally connectivity increases (Fig. \ref{fig:ch3-comprehension-reorganization}. During rest, however, there is increased connectivity within default mode network and visual networks. As would be expected, the visual network undergoes large changes in reading: specifically, there is a large decrease in visual-visual connectivity. 
 
-As would be expected, the visual network undergoes large changes in reading: specifically, there is a large decrease in visual-visual connectivity. 
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=5in]{ch3-comprehension-reorganization}
+    \caption[Changes in number of connections within and between networks.]{Changes in number of connections within and between networks.}
+	\label{fig:ch3-comprehension-reorganization}
+\end{figure}
 
-To investigate interactions between networks, rather than simply general behavior of the networks, we summarized the average shortest path length between each network. This provides a gross measure of how close any two networks are. 
+Finally, we sought to address the question of whether better readers more likely to have decreased modularity during reading. As before 
 
-In the case of comprehension, we found that there was lower path length within modules during rest, while there were decreases in between-network connectivity during language.
-
-For the modality contrast, One of the main takeaways is that there is greater access between auditory and other areas during reading -- this runs counter to our hypothesis that there would be less access to these areas. Visual areas, on the other hand, show less internal connectivity, reflecting the de-clustering of these areas during reading. 
-
-
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=5in]{ch3-modularity-reading-by-condition}
+    \caption[Higher modularity in any condition is related to reading skill.]{Higher modularity in any condition is related to reading skill. Greater integration between}
+	\label{fig:ch3-modularity-reading-by-condition}
+\end{figure}
 
 
 \section{Discussion}
@@ -134,56 +172,9 @@ The last set of differences is particularly interesting because knowing how the 
 This interaction between reading activation and individual differences in maturity and reading skill will be the subject of the next chapter.
 
 
-\begin{table}
-	\renewcommand{\tabcolsep}{0.09cm}
-	\centering
-	\input{tables/ch3-participants.tex}
-	\caption[Participant demographics for Study 2.]{Participant demographics for Study 2. Subjects include all of those from Study 1.}
-	\label{table:ch3-participants}
-\end{table}
 
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=6in]{ch3-task-design}
-	\caption[Schematic of the reading comprehension task.]{Schematic of the reading comprehension task. }
-	\label{fig:ch3-task-design}
-\end{figure}
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch3-task-performance}
-    \caption[Behavioral metrics of passage performance were unrelated to modality.]{Both the in-scanner comprehension question and out-of-scanner recall questionnaire were unrelated to the modality of presentation.}
-	\label{fig:ch3-task-performance}
-\end{figure}
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch3-reading-brain-activations}
-    \caption[There is significant overlap between the areas used in listening and reading.]{A widespread set of brain areas are utilized during listening and reading, including auditory, default mode and attention areas.}
-	\label{fig:ch3-reading-brain-activations}
-\end{figure}
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch3-reading-connectome-activations}
-    \caption[There is significant overlap between the areas used in listening and reading.]{A widespread set of brain areas are utilized during listening and reading, including auditory, default mode and attention areas.}
-	\label{fig:ch3-reading-connectome-activations}
-\end{figure}
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch3-comprehension-graph-theory}
-    \caption[Language induces more integrated global network architecture.]{Compared to rest and baseline attention tasks, reading and listening increase measures related to global RSN integration.}
-	\label{fig:ch3-comprehension-graph-theory}
-\end{figure}
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch3-comprehension-graph-pathlength}
-    \caption[Language induces more integrated global network architecture.]{Compared to rest and baseline attention tasks, reading and listening increase measures related to global RSN integration.}
-	\label{fig:ch3-comprehension-graph-pathlength}
-\end{figure}
 
 \begin{figure}[t]
 	\centering
@@ -192,19 +183,4 @@ This interaction between reading activation and individual differences in maturi
 	\label{fig:ch3-modality-node-distance}
 \end{figure}
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=5in]{ch3-comprehension-reorganization}
-    \caption[Language increases between-network connectivity.]{}
-	\label{fig:ch3-comprehension-reorganization}
-\end{figure}
-
-
-\begin{table}
-	\renewcommand{\tabcolsep}{0.09cm}
-	\centering
-	\input{tables/ch3-results.tex}
-	\caption[Summary of findings for Study 1.]{}
-	\label{table:ch3-results}
-\end{table}
 
