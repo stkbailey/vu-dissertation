@@ -1,43 +1,20 @@
-\chapter{Reading network interactions throughout development}
+\chapter{Network architecture reorganization across multiple tasks}
 
 \epigraph{Development...}{Stanislas Dahaene}
 
 \section{Motivation}
 
+To get more at this idea of 
 
-
-In the previous chapter, we established that reading does not appear to be "simply" a change in sensory systems. There are also more global changes in the degree of integration of different RSNs, especially those related to attention and executive control. However, this analysis was conducted in emerging readers: the participants were approximately 10 years old and were at a point in their education where basic skills were in place, but they were still relatively inexperienced readers.
-
-It could be that the differences between the modalities were due to active support processes that were occuring between executive and attention regions, as the participants performed reading, a relatively novel task. On the one hand, advocates of a "parallel" model might assert that additional cognitive processes are used to "bootstrap" reading skill at early ages, so that differences between the two systems should decrease with maturity and reading experience as the two systems merge. On the other hand, the "parasitic" model of reading would predict that differences would persist, or even become exaggerated, as the two systems become more efficient for their respective tasks. In this chapter, then, we seek to replicate these results in a new cohort of subjects with a different set of passages, and then to investigate the effects of developmental maturity on the reorganizaton of brain networks during reading and listening.
-
-There were two primary motivations in this study:
-
-\begin{itemize}
-	\item Which areas "converge" and "diverge" throughout development?
-	\item What shifts in connectivity patterns do we see?
-\end{itemize} 
 
 \section{Methods}
 
 \subsection{Participants}
 
-To collect subjects at different stages in development, participants in this study were drawn from multiple study and age groups. They fell into three categories:
+Our situation thus far is this: modularity, i.e. an efficient architecture at rest, is associated with reading skill. 
 
-\begin{itemize}
-	\item A group of children (ages 8 to 10) were selected from the third wave of the longitudinal study described in chapter 2. 
-	\item A group of adolescents (ages 11 to 14) were selected. These participants were part of a large, cross-sectional study on the cognitive components of reading.
-	\item A group of adults (ages 18 to 30) were selected, largely from a population of university research assistants and graduate students.
-\end{itemize}
 
-All subjects provided approval and were compensated according to our IRB.
 
-\begin{table}[t]
-	\renewcommand{\tabcolsep}{0.09cm}
-	\centering
-	\input{tables/ch4-participants.tex}
-	\caption{Participant demographics for study 2.}
-	\label{table:ch4-participants}
-\end{table}
 
 \subsection{Functional MRI task design}
 
@@ -56,49 +33,26 @@ We calculated subject-level contrast maps as described previously ("listening + 
 As before, we also investigated these effects in the connectome space as well 
 
 
-\subsection{Connectivity analyses}
-There was a high degree of similarity between the areas that were activated in reading and in listening, reflecting the common language core. Fig. \ref{fig:ch3-reading-connectome-activations} shows the activation statistics for each node, relative to rest, plotted against each other. There was a very high correlation coefficient ($r = 0.00$), reflecting the high degree of shared activity patterns between listening and reading.
 
-
-% A scan run was included in the analysis only if a participant had both listening and reading scans in the same genre (e.g. auditory-expository and reading-expository). Therefore, for each year, a participant had data from either 2 or 4 scan runs (about 9 or 18 minutes of resting-state scan time, respectively). A scan session was excluded based on the following parameters: high-motion volumes exceeding 20 percent; poor task performance; and absence of a paired modality scan. In total, resting-state data from 50 children in the third wave (152 scans) and 45 children in the fourth wave (162 scans) met inclusion criteria. 
+A scan run was included in the analysis only if a participant had both listening and reading scans in the same genre (e.g. auditory-expository and reading-expository). Therefore, a participant had data from either 2 or 4 scan runs. A scan session was excluded based on the following parameters: high-motion volumes exceeding 20 percent; poor task performance; and absence of a paired modality scan. In total, 42 children in the fourth wave (162 scans) met inclusion criteria. 
 
 Attention and comprehension measures were not related to modality of stimulus presentation (see Fig. \ref{fig:ch3-task-performance}). There was a trend towards difference in median FDRMS between scan modalities (paired t-test, $t = 1.94$, $p = 0.059$), so we also replicated analyses with a stricter motion threshold (no more than 10 percent outliers in a scan run). The main results from analysis of this 35 subject (116 scan runs) cohort were broadly consistent.
+
+
 \section{Results}
 
-% \begin{figure}[t]
-% 	\centering
-%     \caption[Relationship between activation in visual word form area and age.]{}
-% \end{figure}
+
 
 Differences related to modality fell into three categories: sensory processing areas, including the insula, superior temporal gyrus, and secondary visual processing areas; and hetero-modal association areas, most notably the inferior frontal gyrus and angular gyrus; and somato-motor regions, including the premotor cortex and lateral geniculate nucleus of the thalamus (Fig. \ref{fig:ch3-modality-differences-attn}). Areas showing greater activation in listening were focused on primary auditory cortex and the dorsal attention network.
 
-% \begin{figure}[t]
-% 	\centering
-%     \caption[Global participation coefficient as a function of age.]{}
-% \end{figure}
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch3-task-performance}
-    \caption[Behavioral metrics of passage performance were unrelated to modality.]{Both the in-scanner comprehension question and out-of-scanner recall questionnaire were unrelated to the modality of presentation.}
-	\label{fig:ch3-task-performance}
-\end{figure}
 
 In the case of comprehension, we found that there was lower path length within modules during rest, while there were decreases in between-network connectivity during language.
 
 For the modality contrast, One of the main takeaways is that there is greater access between auditory and other areas during reading -- this runs counter to our hypothesis that there would be less access to these areas. Visual areas, on the other hand, show less internal connectivity, reflecting the de-clustering of these areas during reading. 
 
+\subsection{Connectivity analyses}
+There was a high degree of similarity between the areas that were activated in reading and in listening, reflecting the common language core. Fig. \ref{fig:ch3-reading-connectome-activations} shows the activation statistics for each node, relative to rest, plotted against each other. There was a very high correlation coefficient ($r = 0.00$), reflecting the high degree of shared activity patterns between listening and reading.
 
-% \begin{figure}[t]
-% 	\centering
-%     \caption[Similarity between reading and listening networks as a function of age.]{}
-% \end{figure}
-
-
-% \begin{figure}[t]
-% 	\centering
-%     \caption[]{}
-% \end{figure}
 
 \section{Discussion}
 
@@ -110,3 +64,40 @@ For the modality contrast, One of the main takeaways is that there is greater ac
 
 % Ventral attention network
 % While we found an expansion of the left frontoparietal RSN to regions of the ventral attention RSN in good readers, we did not find an association between variation in the ventral attention RSN itself and individual differences in reading ability. The ventral attention network detects salient or unexpected stimuli in the environment \citep{Vossel2014}. In this way the ventral attention network can act as a ‘circuit breaker’ for the dorsal system to help reorient attention \citep{Corbetta2002}. It may thus help orient individuals to new information from the visual environment (i.e. text) and, by coupling stimulus-driven attentional areas with the frontoparietal network, it may help construct updated mental representations of linguistic material. The leftward aspects of the ventral attention network underlie crucial reading-related areas, including occipito-temporal cortex, which performs orthographic processing, and temporo-parietal cortex, important for semantic binding \citep{Taylor2013}. The absence of reading-related variance associated with the entire bilateral RSN may reflect the diversity of functions that these areas serve in basic visual and auditory processing, as well as language and reading. 
+
+
+
+
+\begin{table}[t]
+	\renewcommand{\tabcolsep}{0.09cm}
+	\centering
+	\input{tables/ch4-participants.tex}
+	\caption[Participant demographics for Study 3.]{Participant demographics for Study 3.}
+	\label{table:ch4-participants}
+\end{table}
+
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch4-task-performance}
+    \caption[Behavioral metrics of passage performance were unrelated to modality.]{Both the in-scanner comprehension question and out-of-scanner recall questionnaire were unrelated to the modality of presentation.}
+	\label{fig:ch4-task-performance}
+\end{figure}
+
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch4-task-performance}
+    \caption[Behavioral metrics of passage performance were unrelated to modality.]{Both the in-scanner comprehension question and out-of-scanner recall questionnaire were unrelated to the modality of presentation.}
+	\label{fig:ch4-task-performance}
+\end{figure}
+
+\begin{figure}[t]
+	\centering
+    \caption[Similarity between reading and listening networks as a function of age.]{}
+\end{figure}
+
+% \begin{figure}[t]
+% 	\centering
+%     \caption[]{}
+% \end{figure}
