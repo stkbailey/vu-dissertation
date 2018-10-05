@@ -4,14 +4,6 @@
 
 \section{Motivation}
 
-
-\item What aspects of network architecture are sensitive to individual differences in reading?
-\begin{itmeize}
-    \item Global metrics related to integration such as modularity, participation coefficient and path length will be predictive of reading skill. 
-    \item Reading-related networks will have a higher predictive power than general RSNs.
-\end{itemize}
-
-
 % Resting-state network background and individual differences
 The organization of the brain into modular networks (RSNs) is central to its efficient small-world organization. RSNs are distinct over time and composed of brain regions that tend to function as a unit \citep{DeLuca2006, Smith2009, Yeo2011}. This functional subdivision of the whole-brain network is hypothesized to provide a neural substrate for the diversity of cognitive functions in which people engage \citep{Yeo2014}. While these networks generally are thought to be highly similar across people \citep{Damoiseaux2006}, individual variations in the intensity or spatial extent of RSNs have been noted. For example, differences have been observed in individuals who exhibit variation in cognitive ability \citep{Reineberg2015, Tian2013} and in individuals with genetic susceptibility to Alzheimer’s disease \citep{Filippini2009}. Moreover, the patterns of RSN activity within an individual is consistent over periods of time in excess of three years \citep{Choe2015}. It is thought that this stability may reflect a history of co-activation among brain regions that occurs over time \citep{Power2010}. Consequently, variation in RSNs are likely to be stable measures of individual differences. To date, however, their relationship to other cognitive domains, and in particular reading, is not well understood.  Given that we know broad scale networks underlie a variety of cognitive functions, it follows that individual variation within certain reading-related networks and the interaction among RSNs could be linked to varying reading abilities. The existence of these associations can be used to not only predict cognitive and academic functioning at the level of the individual, but also aid treatment allocation or prediction of developmental trajectory \citep{Mattfeld2014} or response-to-intervention \citep{Crowther2015, Whitfield-Gabrieli2015}. 
 
@@ -61,7 +53,7 @@ Imaging was performed on a Philips Achieva 3T MR scanner with a 32-channel head 
 
 Whole-brain fMRI analyses were performed using tools from the FMRIB Software Library (version 5.0.9). For each session, the following pre-processing steps were performed:  slice-time correction, motion correction to the initial fMRI volume, boundary-based registration to the subject's structural image, and normalization to 2 mm MNI 152 standard space. To mitigate the effects of motion on our analyses, we regressed out 6 continuous motion parameters and scrubbed out outlier volumes. We defined an outlier volume as any in which the root-mean-square framewise displacement exceeded 0.7 mm. Because head motion can be a major confound for connectivity analyses, we removed scan runs where more than 20 percent of the fMRI volumes were outliers.
 
-\subsection{Connectome construction}
+\subsection{Network construction}
 
 To investigate whole-brain patterns of connectivity with minimal investigator bias, we selected 264 nodes \textit{a priori} whose connectivity properties have been extensively analyzed in previous works \citep{Power2011}. The node set samples the entire brain, and nodes were selected based on their involvement in a diversity of cognitive tasks. Each node was assigned to one of 13 RSNs based on previous literature \citep{Power2013}. Approximately 10 percent of the nodes did not have a stable assignment in the original paper; for the present analyses, these nodes were excluded from graph theory calculations. A description of the 13 networks and their sizes is provided in \ref{table:ch2-power-nodes}. 
 
@@ -75,7 +67,7 @@ To investigate whole-brain patterns of connectivity with minimal investigator bi
 
 Connectivity analysis was performed in the CONN toolbox \citep{WhitfieldGabrieli2012}. fMRI data were high-pass filtered at 0.008 Hz, motion-corrected, co-registered to a structural image, normalized to MNI space and smoothed by a 5 mm FWHM spherical kernel. Outlier volumes were identified as individual fMRI volumes in which the RMS framewise-displacement exceeded 0.7. fMRI timeseries were corrected using anatCompCorr methods, which uses signal from white matter tissue and cerebrospinal fluid areas to reduce noise not related to brain activity \citep{Chai2012}. We also regressed out 12 continuous measures of motion were also included and all outlier timepoints. The timeseries was then high-pass filtered at 0.01 Hz. fMRI timeseries correlations were calculated between each of the the 264 nodes, resulting in a single connectivity array for each subject at each time point. Matrices were then thresholded into binary maps by keeping the top 5 percent of connections. (To confirm that this particular threshold did not unduly influence results, we swept results between thresholds at the top 2 percent to the top 10 percent of connections. No significant effect on the results was found.)
 
-\subsection{Connectome analyses}
+\subsection{Network analyses}
 
 The metrics of interest were network \textit{modularity}, \textit{participation coefficient} and \textit{path length}. Modularity is high in networks where nodes within the same RSN are highly connected to each other but not elsewhere. The participation coefficient, on the other hand, is high when many nodes are connected to several different RSNs. Both of these metrics relate to the integration of information between RSNs. Path length describes the distance between any two nodes on the graph. This was calculated between every node, then summed up by RSN to create a measure of network distance. These properties, and their changes within our task, were investigated at the level of connectomes, RSNs and nodes. 
 

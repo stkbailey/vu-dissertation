@@ -1,7 +1,5 @@
 \chapter{Reorganization of network architecture during reading}
 
-
-
 \section{Motivation}
 
 \begin{itemize}
@@ -11,14 +9,26 @@
 	\item Are individual differences sensitive to re-organization? Are better readers combining networks more? (No)
 	\item What network relationships are changing during reading, compared to rest? Are better readers showing more or less difference? Are there patterns in this change (within-network vs. between-network relationships?)
 
+	\item Across a variety of tasks, is it advantageous to have high ``flexibility'' of global network states? 
+	\begin{itemize}
+		\item Similarity between listening and reading network architecture will correspond to higher reading skill.
+		\item Dissimilarity between language comprehension tasks and other tasks will correspond to higher reading skill.
+	\end{itemize}
+
 \end{itemize}
 
-% \subsection{How the brain reconfigures (Cohen + Esposito)}
-% A critical feature of the human brain that gives rise to complex cognition is its ability to reconfigure its network structure dynamically and adaptively in response to the environment. Existing research probing task-related reconfiguration of brain network structure has con-cluded that, although there are many similarities in network structure during an intrinsic, resting state and during the performance of a variety of cognitive tasks, there are meaningful differences as well. In this study, we related intrinsic, resting state network organization to reconfigured network organization during the performance of two tasks: a sequence tapping task, which is thought to probe motor execution and likely engages a single brain network, and an n-back task, which is thought to probe working memory and likely requires coordination across multiple networks. We implemented graph theoretical analyses using functional connectivity data from fMRI scans to calculate whole-brain measures of network organization in healthy young adults. We focused on quantifying measures of network segregation (modularity, system segregation, local efficiency, number of provincial hub nodes) and measures of network integration (global efficiency, number of connector hub nodes). Using these measures, we found converging evidence that local, within-network communication is critical for motor execution, whereas integrative, between-network communication is critical for working memory. These results confirm that the human brain has the remarkable ability to reconfigure its large-scale organization dynamically in response to current cognitive demands and that interpreting reconfiguration in terms of network segregation and integration may shed light on the optimal network structures underlying successful cognition.
+Resting-state functional connectivity is thought to provide insights into a relatively stable, ``intrinsic'' architecture. This is related to some degree to other aspects of brain structure, including structural connectivity via white matter tracts and cortical thickeness and folding \citep{}. In Study 1, we found that global modularity is positively related to reading skill, even when controlling for verbal intelligence and motion. The inference is that global modularity is indicative of a brain organization that is more ``tuned'' to pass the information between the disparate systems needed for reading. 
+
+% Reorganization during tasks is importpant
+However, it is also known that the brain can reconfigure to address new challegnes in the environment, including those of reading. It has previously been seen that, although there are many similarities within the network connectivity during rest, there also differences that arise due to task activity. 
+
+According to one line of reasoning, the ``small-world'' architecture should provide a relatively stable platform for integrating multiple different areas. 
+% In this study, we related intrinsic, resting state network organization to reconfigured network organization during the performance of two tasks: a sequence tapping task, which is thought to probe motor execution and likely engages a single brain network, and an n-back task, which is thought to probe working memory and likely requires coordination across multiple networks. We implemented graph theoretical analyses using functional connectivity data from fMRI scans to calculate whole-brain measures of network organization in healthy young adults. We focused on quantifying measures of network segregation (modularity, system segregation, local efficiency, number of provincial hub nodes) and measures of network integration (global efficiency, number of connector hub nodes). Using these measures, we found converging evidence that local, within-network communication is critical for motor execution, whereas integrative, between-network communication is critical for working memory. These results confirm that the human brain has the remarkable ability to reconfigure its large-scale organization dynamically in response to current cognitive demands and that interpreting reconfiguration in terms of network segregation and integration may shed light on the optimal network structures underlying successful cognition. \citep{CohenEsposito}. 
 
 
 
 First, we validate modularity and participation coefficient metrics using univariate data, and test that language induces greater global integration, especially in higher-order networks (executive and attention) compared to resting and attention baselines. Second, we test three hypotheses about how interactions between brain networks might differ from speech.
+
 
 \section{Methods}
 
@@ -71,7 +81,7 @@ Reading effects were estimated at the subject-level using fixed effects analysis
 
 To understand our univariate results as a function of system-level activation, we also extracted activation values from each of the 264 connectome nodes, and summarized the activity of each ``intrinsic'' RSN.
 
-\subsection{Connectome analyses}
+\subsection{Network analyses}
 
 For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{WhitfieldGabrieli2012}. As before, for each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions (``Reading'', ``Attention'', ``Rest''). The timeseries was then high-pass filtered at 0.01 Hz.
 
@@ -110,7 +120,7 @@ We also examined these contrast results when projected onto the 264 nodes in the
 \end{figure}
 
 
-\subsection{Graph theory results}
+\subsection{Network results}
 
 Next, we examined changes to the global graph theory measures. Figure \ref{fig:ch3-comprehension-graph-theory-all} summarizes the subject-level changes in modularity, participation coefficient, and path length. Overall, the effect was one of increased integration across RSNs during reading comprehension. Relative to rest, both reading comprehension and the sensory baseline reduced the global modularity and increased the participation coefficient, and the magnitude of the effect in reading comprehension was also greater than that of the sensory condition. The path length within each RSN did not significantly change across condition, suggesting that the modular organization of the brain was not disrupted; the RSN parcellation used was still a good fit. However, there were significant increases in the between-RSN path length corresponding to greater efficiency of transferring information between these disparate systems.
 
