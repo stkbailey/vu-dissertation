@@ -12,27 +12,36 @@ Given that reading is a skill that we know requires a very high degree of cross-
 
 Despite the clear overlap between reading and listening, there is also evidence that the two skills are not directly equivalent. There is a subset of students who, despite adequate word decoding skills and vocabulary skills, struggle with reading comprehension\citep{Pimperton2010, Spencer2014}. From a neurobiological perspective, expected differences in primary visual (for reading) and primary auditory (for listening) represent the different input systems, with ventral occipito-temporal systems also activating \citep{Jobard2007}. However, differences in core language systems are also observed: additional activation in left posterior temporal and parietal areas in reading modality \citep{Constable2004}, as well increased bi-laterality especially in children \citep{Berl2011}. 
 
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch4-price-language-models}
+    \caption[Common core architecture for reading and listening.]{There exists a common core architecture for reading and listening. The models presented here contend that reading and listening share the same core processes, with the major differences being in the sensory processing functions. Figure adapted from \citep{Price2012}.}
+	\label{fig:ch4-price-language-models}
+\end{figure}
+
 Most current cognitive models suggest that language comprehension requires the construction of a mental representation includes textual information and associated background knowledge, connected by some conscious and some unconscious executive processes \citep{Kendeou2014}. The parallel model shown in Fig. \ref{fig:ch4-price-language-models} is linear: it moves from sensation to action. During comprehension, however, the relationship between areas is dynamic and constantly being re-evaluated. The roles of attention and executive systems are likely to play an important role. Thus, while there may be a core set of systems for manipulating and extracting meaning from language, it is likely that differences in modality would modulate these processes. 
 
 The pioneering researcher Alvin Liberman suggested that reading, instead of being parallel to listening, is actually parasitic: it requires an textit{awareness} of the linguistic act that is not required in listening. Brain activation studies may not capture these differences: it could very well be the interactions of different functional systems that are changed, rather than the overall ``engagement'' of an individual brain area. Additionally, the fact that reading integrates in an additinoal modality could be a source of difference, especially in emerging readers. 
 
 \subsection{Network architecture across a variety of tasks}
 
+We have seen previously that global and regional network architecture changes during task activation. But there are two important questions: how variable is the network overall, and what mechanisms allow it to maintain its modularity?
+
 \subsection{Study aims}
 
-The aims of the present study were to 
+The aims of the present study were to determine to what extent ``'flexibility'' across different tasks is predictive of differences. On the one hand, we have evidence that modularity within the global network, in any condition, is predictive of reading skill. On the other hand, we know that different skills rely on different brain areas and require radically different organizations. We test two hypotheses in this study. First, that \textit{similarity} between listening and reading network architecture will correspond to higher reading skill Second, that \textit{dissimilarity} among hub-like areas will correspond to higher reading skill, and that this dissimilarity will be present in hub-like areas. 
 
 \section{Methods}
 
 \subsection{Participants}
 
-Participants were drawn from the same cohort of subjects included in Studies 1 and 2, and identical inclusion criteria for both demographic and scan motion were applied. However, additional measures related to the performance of the task were levied as described below. A total of 42 unique subjects and 162 scan sessions were included in the analysis. The demographics for these subjects are described in Table \ref{table:ch4-participants}.
+Participants were drawn from the same cohort of subjects included in Studies 1 and 2, and identical inclusion criteria for both demographic and scan motion were applied. However, additional measures related to the performance of the task were levied as described below. A total of 42 unique subjects and 142 scan sessions were included in the analysis. The demographics for these subjects are described in Table \ref{table:ch4-participants}.
 
 \begin{table}[t]
 	\renewcommand{\tabcolsep}{0.09cm}
 	\centering
 	\input{tables/ch4-participants.tex}
-	\caption[Participant demographics for Study 3.]{Participant demographics for Study 3.}
+	\caption[Participant demographics for Study 3.]{Participant demographics for Study 3. Participants were a subset of those examined in Study 2, who had completed a listening comprehension task with sufficiently high quality.}
 	\label{table:ch4-participants}
 \end{table}
 
@@ -52,12 +61,9 @@ For the modality comparisons, we used a fixed-effects subject-level model to est
 
 We also investigated these effects in ``connectome space'' by extracting the values at each of the 264 nodes used for connectivity analysis, then comparing the activity profile of each RSN during reading and listening.
 
-
 \subsection{Network similarity estimation}
 
 Global modularity provides one estimate of network similarity, by comparing each network to a standard parcellation: two networks with high modularity using a given parcellation indicates that they share a high degree of commonality, especially within-RSNs. However, this has the drawback of being biased towards the provided RSN parcellation: two networks could receive the same low modularity scores, even if they deviated in totally different ways (i.e. were not similar). 
-
-A less biased similarity metric would be based off of the \textit{intersection} of the two metrics, or the number of shared connections. This is particularly appropriate in our case, where each connectivity array has been thresholded to keep an identical number of connections. In this case, all possible network comparisons will have the same number of possible shared connections, so the number of actual shared connections is a stable metric for comparing between individuals or conditions. (For example, when thresholding for the top 5 percent of connections of a $264 * 264$ array, there is an upper limit of 3484 shared connections between two arrays.) 
 
 \begin{figure}[t]
 	\centering
@@ -65,6 +71,8 @@ A less biased similarity metric would be based off of the \textit{intersection} 
     \caption[Method for comparing connectivity arrays.]{The network similarity measure provides a way of comparing connectivity arrays without reference to a pre-defined network parcellations.}
 	\label{fig:ch4-network-intersection-methods}
 \end{figure}
+
+A less biased similarity metric would be based off of the \textit{intersection} of the two metrics, or the number of shared connections. This is particularly appropriate in our case, where each connectivity array has been thresholded to keep an identical number of connections. In this case, all possible network comparisons will have the same number of possible shared connections, so the number of actual shared connections is a stable metric for comparing between individuals or conditions. (For example, when thresholding for the top 5 percent of connections of a $264 * 264$ array, there is an upper limit of 3484 shared connections between two arrays.) 
 
 We first compared the mean similarities of network arrays across individuals within the two linguistic conditions: listening to listening and reading to reading. We summarized the distributions of these similarites, with the expectation that there would be the most variability within the reading condition, since listening is more ``natural''. Next, we tested whether the similarity between an individual's reading and listening network arrays was related to reading skill. Finally, we RSN-level patterns of similarity and difference between reading and listening, to identify both a common ``backbone'' and a flexible ``periphery''. 
 
@@ -74,33 +82,26 @@ Next, we broadened the scope of analysis to include comparisons between all task
 
 \subsection{Behavioral results}
 
-Attention and comprehension measures were not related to modality of stimulus presentation (see Fig. \ref{fig:ch4-task-performance}). There was a trend towards difference in median FDRMS between scan modalities (paired t-test, $t = 1.94$, $p = 0.059$), so we also replicated analyses with a stricter motion threshold (no more than 10 percent outliers in a scan run). The main results from analysis of this 35 subject (116 scan runs) cohort were broadly consistent.
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[height=3in]{ch4-task-performance}
-    \caption[Behavioral metrics of passage performance were unrelated to modality.]{Both the in-scanner comprehension question and out-of-scanner recall questionnaire were unrelated to the modality of presentation.}
-	\label{fig:ch4-task-performance}
-\end{figure}
+Attention and comprehension measures were not related to modality of stimulus presentation. There was a trend towards difference in median FDRMS between scan modalities (paired t-test, $t = 1.94$, $p = 0.059$), so we also replicated analyses with a stricter motion threshold (no more than 10 percent outliers in a scan run). The main results from analysis of this 35 subject (116 scan runs) cohort were broadly consistent.
 
 \subsection{Activation results}
 
-As expected, reading and listening shared a common core of language-related activations. These included the bilateral middle temporal and inferior frontal gyri, as well as the  anterior temporal poles. The differences related to modality fell into three categories: sensory processing areas, including the insula, superior temporal gyrus, and secondary visual processing areas; and hetero-modal association areas, most notably the inferior frontal gyrus and angular gyrus; and somato-motor regions, including the premotor cortex and lateral geniculate nucleus of the thalamus (Fig. \ref{fig:ch4-modality-comparison-rest}). Areas showing greater activation in listening were focused on primary auditory cortex and the dorsal attention network.
+As expected, reading and listening shared a common core of language-related activations. These included the bilateral middle temporal and inferior frontal gyri, as well as the  anterior temporal poles. The differences related to modality fell into three categories: sensory processing areas, including the insula, superior temporal gyrus, and secondary visual processing areas; and hetero-modal association areas, most notably the inferior frontal gyrus and angular gyrus; and somato-motor regions, including the premotor cortex and lateral geniculate nucleus of the thalamus (Fig. \ref{fig:ch4-modality-comparison-attn}). Areas showing greater activation in listening were focused on primary auditory cortex and the dorsal attention network.
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[height=3in]{ch4-modality-comparison-rest}
-    \caption[Large overlap between listening and reading activation.]{Both the in-scanner comprehension question and out-of-scanner recall questionnaire were unrelated to the modality of presentation.}
-	\label{fig:ch4-modality-comparison-rest}
+	\includegraphics[height=3in]{ch4-modality-comparison-attn}
+    \caption[Large overlap between listening and reading activation.]{There was a large overlap in activations between the listening and reading comprehension tasks. Activation spanned a bilateral set of regions, especially around middle temporal, inferior frontal gyri. Activations shown for $p < 0.05$, threshold-free cluster enhancement (5000 permutations).}
+	\label{fig:ch4-modality-comparison-attn}
 \end{figure}
 
-This result is more easly visualized when viewing it in terms of the 264 nodes of the connectome (Fig. \ref{ch4-modality-comparison-rest-connectome}). There was a very high correlation coefficient ($r < 0.001$), reflecting the high degree of shared activity patterns between listening and reading. In general, areas that are active during listening are also active during reading, with the main differences falling into the sensory networks. 
+This result is more easily visualized when viewing it in terms of the 264 nodes of the connectome (Fig. \ref{ch4-listening-reading-connectome-activation-attn}). There was a very high correlation coefficient between activation during reading and listening ($p < 0.001$), reflecting the high degree of shared activity patterns between listening and reading. In general, areas that are active during listening are also active during reading, with the main differences falling into the sensory networks. 
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[height=3in]{ch4-modality-comparison-rest-connectome}
-    \caption[Large overlap between listening and reading activation in the connectome space.]{When projected into the node space, there was very strong correlation between activity in one and the other.}
-	\label{fig:ch4-modality-comparison-rest-connectome}
+	\includegraphics[height=3in]{ch4-listening-reading-connectome-activation-attn}
+    \caption[Large overlap between listening and reading activation in the connectome space.]{Large overlap between listening and reading activation in the connectome space. When projected into the node space, there was very strong correlation between activity in one and the other.}
+	\label{fig:ch4-listening-reading-connectome-activation-attn}
 \end{figure}
 
 \subsection{Network results}
@@ -110,8 +111,18 @@ In terms of graph theory measures, we found a significant decrease in modularity
 \begin{figure}[t]
 	\centering
 	\includegraphics[height=3in]{ch4-modality-graph-theory}
-    \caption[Large overlap between listening and reading activation in the connectome space.]{When projected into the node space, there was very strong correlation between activity in one and the other.}
+    \caption[Reading induces a more integrated network architecture than listening.]{Reading induces a more integrated network architecture than listening. In terms of modularity and participation coefficient, there is greater integration during reading than listening. }
 	\label{fig:ch4-modality-graph-theory}
+\end{figure}
+
+Investigating the differences in path length between the two modalities provides a stronger sense of key drivers of this increased integration. Figure \ref{fig:ch4-modality-node-distance} displays the node-level connections of nodes that get closer or further during the reorganization.
+
+% Need to make this better, sort by RSN add colorbars...
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch4-modality-node-distance}
+    \caption[Large overlap between listening and reading activation in the connectome space.]{When projected into the node space, there was very strong correlation between activity in one and the other.}
+	\label{fig:ch4-modality-node-distance}
 \end{figure}
 
 For the modality contrast, one of the main takeaways is that there is greater access between auditory and other areas during reading. this runs counter to our hypothesis that there would be less access to these areas. Visual areas, on the other hand, show less internal connectivity, reflecting the de-clustering of these areas during reading. This is presented in Figure \ref{fig:ch4-modality-reorganization}.
@@ -119,25 +130,26 @@ For the modality contrast, one of the main takeaways is that there is greater ac
 \begin{figure}[t]
 	\centering
 	\includegraphics[height=3in]{ch4-modality-reorganization}
-    \caption[Large overlap between listening and reading activation in the connectome space.]{When projected into the node space, there was very strong correlation between activity in one and the other.}
+    \caption[Network-level changes between listening and reading.]{Reading is characterized by changes to the dorsal and ventral attention networks.}
 	\label{fig:ch4-modality-reorganization}
 \end{figure}
 
 \subsection{Network similarity results}
 
-
+Our next question was how individual differences played into these changes. 
+\ref{fig:ch4-similarity-condition-histogram}. We found that 
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[height=3in]{ch4-similarity-matrix-all}
-    \caption[Auditory network organization is more similar for all subjects than it is for reading.]{}
-	\label{fig:ch4-modality-network-similarity}
+	\includegraphics[height=3in]{ch4-similarity-condition-histogram}
+    \caption[Auditory network organization is more similar for all subjects than it is for reading.]{Auditory network organization is more similar for all subjects than it is for reading.}
+	\label{fig:ch4-similarity-condition-histogram}
 \end{figure}
 
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[height=3in]{ch4-similarity-matrix-reading}
+	\includegraphics[height=3in]{ch4-modality-network-similarity}
     \caption[Network similarity between listening and reading predicts word efficiency.]{When projected into the node space, there was very strong correlation between activity in one and the other.}
 	\label{fig:ch4-modality-network-similarity}
 \end{figure}
