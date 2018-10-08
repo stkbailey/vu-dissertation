@@ -4,12 +4,10 @@
 
 \section{Motivation}
 
-While resting-state functional connectivity is thought to provide insights into a relatively stable ``intrinsic'' architecture, \textit{task-evoked} functional connectivity measures network properties after reorganization to a new, more useful organization for the task \citep{Cohen2016}. While there are constraints to the degree of reconfiguration which can be related to other aspects of brain structure, including structural connectivity via white matter tracts and cortical thickeness and folding \citep{Sui2014}, there is a great degree of flexibility as well \citep{Cole2013}. Understanding how the brain reconfigures during reading, and this relationship to the network architecture at rest, is critical for understanding how connectome-level properties set individuals up to be better readers. 
+While resting-state functional connectivity is thought to provide insights into a relatively stable ``intrinsic'' architecture, \textit{task-evoked} functional connectivity measures network properties after reorganization to a new, more useful organization for the task \citep{Cohen2016}. While there are constraints to the degree of reconfiguration which can be related to other aspects of brain structure, including structural connectivity via white matter tracts and cortical thickeness and folding \citep{Sui2014}, there is a great degree of flexibility as well \citep{Cole2013}. One study, for example, compared a finger-tapping to working memory task. Using measures of modularity and participation coefficient, they found that within-network communication was critical for the motor task, whereas between-network communication was important for working memory \citep{Cohen2016}. This supports a hypothesis that, for a given task, there is an optimal organization, and that individuals who can better rewire their intrinsic systems to fit this organization will be more effective. 
 
-In Study 1, we found that global modularity is positively related to reading skill, even when controlling for verbal intelligence and motion. The inference is that global modularity is indicative of a brain organization that is more tuned to pass the information between the disparate systems needed for reading. According to one line of reasoning, modularity is indicative of a relatively stable platform for integrating multiple different areas. 
-
-% Reorganization during tasks is important
-However, it is also known that the brain can reconfigure to address new challenges in the environment, including those of reading. It has previously been seen that, although there are many similarities within the network connectivity during rest, there also differences that arise due to task activity. One study, for example, compared a finger-tapping to working memory task. Using measures of modularity and participation coefficient, they found that within-network communication was critical for the motor task, whereas between-network communication was important for working memory \citep{Cohen2016}. This supports a hypothesis that, for a given task, there is an optimal organization, and that individuals who can better rewire their intrinsic systems to fit this organization will be more effective. 
+% Reorganization may also index reading skill
+Understanding how the brain reconfigures during reading, and its relationship to the network architecture at rest, is critical for understanding how connectome-level properties set individuals up to be better readers. In Study 1, we found that global modularity is positively related to reading skill, even when controlling for verbal intelligence and motion. The inference is that global modularity is indicative of a brain organization that is more tuned to pass the information between the disparate systems needed for reading. According to one line of reasoning, modularity is indicative of a relatively stable platform for integrating multiple different areas. 
 
 % Effects on network organization during reading
 Since reading, and especially reading comprehension, is a heavily integrative task, it must induce a much more integrated architeecture. Although global activity patterns have been described \citep{Rimrodt2009, Xu2006} global connectivity patterns, and how the measures of segregation and integration change during reading, have not. There have also been no accounts of how brain activity corresponds to measures of participation; that is, whether activation in the traditional sense corresponds to increased engagement with many areas, or if it reflects primarily local processing. This may be dependent on RSN: that is, visual areas may be more likely to perform local processing, whereas FPN areas may be more important for transferring information. 
@@ -47,7 +45,7 @@ Each fMRI run had two baseline conditions: a modality-specific baseline task and
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=6in]{ch3-task-design}
-	\caption[Schematic of the reading comprehension task.]{Schematic of the reading comprehension task. Subjects were presented two blocks of passage reading and a symbol comparison tasks, which were followed by a brief comprehension question and a resting block.}
+	\caption[Schematic of the reading comprehension task.]{Schematic of the reading comprehension task. Subjects were presented two blocks of passage reading and a symbol comparison tasks, which were followed by a brief comprehension question and a resting block. Starred stimuli in the reading and attention conditions represent ``repeat'' stimuli, and a participant is asked to click a button when they detect one. The total duration of each scan run was 550 seconds.}
 	\label{fig:ch3-task-design}
 \end{figure}
 
@@ -63,7 +61,7 @@ $$
 D^\prime = Z_{true\ positive} - Z_{false\ positive}
 $$
 
-The in-scanner comprehension measure was the number (0,1,2) of questions correclty answered. To assess recall, each child was asked to recite as much of the passage as they could remember, and their answers were mapped to actual phrases present in the chapter. Individual scan runs with a $D`$ value less than 2 were excluded from analysis.
+Individual scan runs with a $D`$ value less than 2 were excluded from analysis. The in-scanner comprehension measure was the number (either 0, 1, or 2) of questions correctly answered. To assess recall after the scan, each child was asked to recite as much of the passage as they could remember, and their answers were mapped to actual phrases present in the chapter. 
 
 In total, there were 4 passages (2 listening and 2 reading), each leveled to a third grade difficulty level and balanced on word measures such as concreteness and cohesiveness.  All subjects were trained on the task in a mock scanner prior to the actual scan. 
 
@@ -80,9 +78,11 @@ To understand our univariate results as a function of system-level activation, w
 
 \subsection{Network analyses}
 
-For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{WhitfieldGabrieli2012}. As before, for each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions (``Reading'', ``Attention'', ``Rest''). The timeseries was then high-pass filtered at 0.01 Hz.
+For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{WhitfieldGabrieli2012}. As in Study 1, for each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions (``Reading'', ``Attention'', ``Rest''). The timeseries was then high-pass filtered at 0.01 Hz.
 
 Whole-brain connectomes for each condition were created by estimating the functional connectivity between each node using a weighted general linear model. For connection-level analyses, these values were compared directly across subjects and conditions. For graph theory analyses, the array of all node connections was thresholded to keep the top 5 percent of connections, resulting in a much sparser representation. This threshold was also tested at ranges from 2 percent to 10 percent. These arrays were then characterized using the previously described graph theory measures: modularity, participation coefficient, and path length.
+
+To investigate the ``rewiring'' of the network at the RSN-level, we compared the number of connections across each RSN relationship at each condition. For each pair of networks, we computed a paired $t$-test between the total number of connections between the networks to determine whether there were more in one or the other condition. This resulted in a 13 by 13 RSN-level connectivity array. Connectivity changes were performed at eaech of the 9 thresholds, and relationships that showed significant changes ($p < 0.05$, uncorrected) in at least 7 of the 9 thresholds were included in the rewiring diagram.
 
 
 \section{Results}
@@ -92,13 +92,13 @@ Whole-brain connectomes for each condition were created by estimating the functi
 \begin{figure}[t]
 	\centering
 	\includegraphics[height=3in]{ch3-task-performance}
-    \caption[Description of scan motion quality and task performance.]{Scatterplot summarizing the relationship between scan motion quality and task performance. The $D^\prime$ score measures performance based on both active (correctly identifies repeats) and passive (few false alarm clicks) metrics. The frame-wise displacement measure also accoutns for outlier volumes, which are regressed out during analysis.}
+    \caption[Description of scan motion quality and task performance.]{Scatterplot summarizing the relationship between scan motion quality and task performance. The $D^\prime$ score measures performance based on both active (correctly identifies repeats) and passive (few false alarm clicks) metrics. The frame-wise displacement measure also accounts for outlier volumes which are regressed out during analysis.}
 	\label{fig:ch3-task-performance}
 \end{figure}
 
 \subsection{Activation results}
 
-A range of language-related areas were activated during reading comprehension (Fig. \ref{fig:ch3-reading-brain-activation}). Compared to the attention baseline, reading-related activation spanned the inferior frontal gyrus, angular gyrus, premotor cortex, middle temporal gyrus and the superior frontal gyrus. Activation patterns were robustly present on both hemispheres but extended further and with greater intensity on the left hemisphere. There were also a number of areas that were more active in the sensory and resting state, especially in the dorsal attention network and anterior dorsolateral prefrontal cortex.
+A range of language-related areas were activated during reading comprehension (Fig. \ref{fig:ch3-reading-brain-activation}). Compared to the attention baseline, reading-related activation spanned the inferior frontal gyrus, angular gyrus, premotor cortex, middle temporal gyrus and the superior frontal gyrus. Activation patterns were robustly present on both hemispheres but extended further and with greater intensity on the left hemisphere. There were also a number of areas that were more active in the sensory and resting state, particularly in the dorsal attention network and anterior dorsolateral prefrontal cortex.
 
 \begin{figure}[t]
 	\centering
@@ -107,7 +107,7 @@ A range of language-related areas were activated during reading comprehension (F
 	\label{fig:ch3-reading-brain-activations}
 \end{figure}
 
-To understand RSN-level trends in activation, We also examined the results when projected onto the 264 nodes in the connectome parcellation. Compared to the resting baseline, the ventral attention, visual and default mode networks had the greatest number of ``activated'' nodes. It is also notable that the ``uncertain'' nodes were highly engaged, possibly reflecting the important role of functionally diverse regions in the execution of reading comprehension. On the other end, the memory retrieval, salience and cingulo-opercular networks exhibited decreased activity compared to rest. See Fig. \ref{ch3-reading-connectome-activations} for a diagram of these activations by RSN. 
+To understand RSN-level trends in activation, we also examined the results when projected onto the 264 nodes in the connectome parcellation. Compared to the resting baseline, the ventral attention, visual and default mode networks had the greatest number of ``activated'' nodes. It is also notable that the ``uncertain'' nodes were highly engaged. `These nodes had variable activity that made them impossible to classify consistently in the original paper \citep{Power2011}. Their engagement may reflect the important role of functionally diverse regions in the execution of reading comprehension. On the other end, the memory retrieval, salience and cingulo-opercular networks exhibited decreased activity compared to rest. See Figure \ref{ch3-reading-connectome-activations} for a diagram of these activations by RSN. 
 
 \begin{figure}[t]
 	\centering
@@ -128,7 +128,7 @@ Next, we examined changes to global network architecture. Figure \ref{fig:ch3-co
 	\label{fig:ch3-comprehension-graph-theory-all}
 \end{figure}
 
-Network-level trends in task-evoked differences to graph theory measures were largely related to global trends, and they are presented in Figure   \ref{fig:ch3-rsn-condition-effects}. However, a few findings are worth noting: compared to rest, reading was marked by large decreases in modularity of the visual, dorsal attention and default mode netowrks; however, the increases to participation coefficient were global. Compared to the attention task, network-level changes were more modest, and the global differences were driven by reduced modularity in the default mode and fronto-parietal networks, an increased participation of memory retrieval and default mode networks.
+Network-level trends in task-evoked differences, presented in Figure   \ref{fig:ch3-rsn-condition-effects}, were largely consistent with global effects. However, a few findings are worth noting: compared to rest, reading was marked by large decreases in modularity of the visual, dorsal attention and default mode networks. However, the increases to participation coefficient were global. Compared to the attention task, network-level changes were modest, and the global differences were driven by reduced modularity in the default mode and fronto-parietal networks and increased participation of memory retrieval and default mode networks.
 
 % Need to add significance asterisks, thresholds, fix legend (attention, reading) and reduce white sapce
 \begin{figure}[t]
@@ -138,34 +138,28 @@ Network-level trends in task-evoked differences to graph theory measures were la
 	\label{fig:ch3-rsn-condition-effects}
 \end{figure}
 
-We also compared the two approaches to assess whether greater activity was connected to greater participation across the network. We found that nodes that were more activated in reading relative to rest tended to be those which were not hub-like ($r = -0.434$, $p < 0.001$). In fact, those areas that were most hub-like tended to show the least ``activity'' from a univariate standpoint (see Fig. \ref{fig:ch3-node-participation-to-activation}). 
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=4in]{ch3-node-participation-to-activation}
-    \caption[Activity is anti-correlated with participation coefficients.]{Compared to rest and baseline attention tasks, reading comprehension increased measures related to RSN integration.}
-	\label{fig:ch3-node-participation-to-activation}
-\end{figure}
-
-% To investigate interactions between networks, rather than simply general behavior of the networks, we summarized the average shortest path length between each network. This provides a gross measure of how close any two networks are. A node-level diagram of these changes between rest and comprehension is presented in Figure \ref{ch3-modality-node-distance}. 
-
-% \begin{figure}[t]
-% 	\centering
-% 	\includegraphics[height=3in]{ch3-modality-node-distance}
-%     \caption[Language induces more integrated global network architecture.]{Compared to rest and baseline attention tasks, reading and listening increase measures related to global RSN integration.}
-% 	\label{fig:ch3-modality-node-distance}
-% \end{figure}
-
-Investigating these graph theory measures at the level of RSN provides insight as to which networks are driving the changes in integration. When comparing comprehension differences to rest, for example, we can see that globally connectivity increases (Fig. \ref{fig:ch3-comprehension-reorganization}. During rest, however, there is increased connectivity within default mode network and visual networks. As would be expected, the visual network undergoes large changes in reading: specifically, there is a large decrease in visual-visual connectivity. 
+The relationships between global and RSN-level graph theory effects become more clear when examining the ``rewiring'' diagram comparing rest and reading (Fig. \ref{fig:ch3-comprehension-reorganization}). During rest, there are many more within-module connections in the sensory systems, dorsal attention and default mode networks. During reading, however, between-network connections increase across many between-network relationships and none within-network relationships. That is, the brain becomes more integrated. 
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[height=4in]{ch3-comprehension-reorganization}
-    \caption[Changes in number of connections within and between networks.]{Changes in number of connections within and between networks.}
+    \caption[Rewiring of RSNs during reading.]{Rewiring diagram showing the changes in connectivity between networks during reading. During rest, there are many more within-module connections in the sensory systems, dorsal attention and default mode networks. During reading, however, between-network connections increase across many between-network relationships and none within-network relationships. That is, the brain becomes more integrated.}
 	\label{fig:ch3-comprehension-reorganization}
 \end{figure}
 
-Finally, we sought to address the question of whether better readers more likely to have decreased modularity during reading. As before 
+Decreases in modularity are coupled by increases in the participation of specific nodes. To address whether the areas that are activated during reading (in the traditional univariate sense) are also the areas driving integration, we correlated the two variables at the node level. Interestingly, we found that nodes that were more activated in reading tended to be those with lower participation coefficients ($r = -0.434$, $p < 0.001$). Nodes with high participation coefficients tended to be deactivated relative to rest, although a few of these hub-like areas were also activated. This effect can be seen in Figure \ref{fig:ch3-node-participation-to-activation}). 
+
+% Color the nodes by "activated vs inactivated"
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=4in]{ch3-node-participation-to-activation}
+    \caption[Univariate activity is anti-correlated with participation coefficients.]{Univariate activity is anti-correlated with participation coefficients. Nodes with high participation coefficients tended to be deactivated relative to rest, although a few of these hub-like areas were also activated.}
+	\label{fig:ch3-node-participation-to-activation}
+\end{figure}
+
+
+Finally, we sought to replicate our previous finding relating resting-state modularity with reading, and to determine whether this relationship would change in the task-evoked network. For each task condition, we regressed the global modularity against the TOWRE Total Word Efficiency standard score. The results are found in Figure \ref{fig;ch3-modularity-reading-by-condition}. We replicated the results of Study 1 using the shorter rest condition from our task ($r_{rest} = 0.432$, $p < 0.01$), and also found that the same relationship  held in the other conditions ($r_{attention} = 0.447$, $p < 0.01$; $r_{reading} = 0.494$, $p < 0.01$). There was no relationship between reading skill and the change in modularity between reading and rest, however.  
 
 \begin{figure}[t]
 	\centering
@@ -177,22 +171,20 @@ Finally, we sought to address the question of whether better readers more likely
 
 \section{Discussion}
 
-The current study sought to determine to what extent important aspects of the brain's network architecture change during reading. The results suggest that the maintenance of an efficient network organization, i.e. one in which brain areas form clusters connected by hub regions, is important for skilled reading, even as between-network connectivity increases. To our knowledge, this is the first time the relationship between modularity and hubness to reading skill has been described, adding to a foundation of work built on other connectivity methods.
+% Restatement of purpose and results
+The current study sought to determine in what ways task-evoked functinoal network architecture during reading differs from that of rest and a simple attention task, and whether a less modular network while reading was predictive of better reading skill. As expected, we found that reading activated areas throughout the brain, and especially in the visual, ventral attention and default mode networks, and it increased measures of integration throughout the brain compared to rest and a simple visual task. We also found that the areas with high participation coefficients tended to be deactivated  and that decreases in modularity in the sensory, dorsal attention and default mode areas drove the global changes in modularity observed during reading. Finally, we found that the positive direction of the relationship between modularity and reading skill was unchanged at rest and in task.
+
+% Overall significance 
+Overall, the results suggest that the maintenance of an efficient network organization, i.e. one in which brain areas form clusters connected by hub regions, is important for skilled reading, even as between-network connectivity increases. To our knowledge, this is the first time the relationship between modularity and hubness to reading skill has been described during reading, adding to a foundation of work built on other connectivity methods, and it provides a secondary replication of the resting-state findings described in Study 1.
 
 % Distribution of activity among different RSNs
 One insight gained in this study is that much of the ``reading network'' falls in domain-general RSNs such as the attention and executive networks. While these areas perform a specific function in reading, they are also often involved in other processes. For example, the dorsal attention network encompasses the visual word form area, an area that has been the subject of much interest and debate in reading and dyslexia research \citep{McCandliss2003}. It is probable that this area is so important in reading not only because it is connected to language areas \citep{Bouhali2014}, but also because it is tightly tied to other areas that control goal-directed attention \citep{Vogel2014}. Koyama and colleagues found that children with a historical diagnosis of dyslexia had persistent de-coupling of the DAN compared to typical readers regardless of remediation status \citep{Koyama2013}. Vogel et al. found that reading ability in typical children and adults (including decoding and passage comprehension ability) predicted increased correlations between the visual word form area and the DAN \citep{Vogel2012a}. The nesting of this orthographic-processing area within the DAN is thus important to its role in reading.
 
-% Changes to global modularity, but no changes  to reading correlation
-In terms of global network effects, we found that tasks reduced global measures of modularity and increasd measures of between-RSN communication, including participation coefficient and path length. This was most apparent in the visual RSN, which was characterized by a major decrease in modularity compared to rest. Our findings support a model in which the brain adopts a modular architecture at rest then changes during tasks to better accommodate the structure. An efficient small-world organization in the resting brain requires a modular network architecture, which was tied here to better performance in reading. This relationship was particularly high in the visual, default mode, cingulo-opercular networks. 
-
-% Network level effects + correlation with reading
-It is not yet possible to say whether modularity within these specific RSNs correlates most highly with reading because of their functional roles in reading processes or whether they simply capture global trends better than other networks. There is some reason to suspect specificity, however. In studies of remediation-induced changes to connectivity, increased connectivity within the visual network \citep{Koyama2013} and cingulo-opercular network \citep{HorowitzKraus2015} have predicted reading improvement in dyslexic children. The default mode network, on the other hand, supports a wide range of cognitive processes important for comprehension, including theory of mind, narrative processing, and autobiographical recall \citep{Buckner2008, AbdulSabur2014}, and its cohesiveness during resting-state has been used to investigate other disorders \citep{Uddin2008}. Future work will need to examine not just the internal connectivity, but the relationships between these networks during reading and at rest. The default mode network, for example, is typically anti-correlated with "task-positive" networks such as the fronto-parietal network. A high degree of anti-correlation has been reported to be important for performance on a variety of cognitive processes \citep{Fox2005, Keller2015}, but recent work suggests that high modularity and connectivity of the default mode during higher-level cognition is fundamental to processes relying on self-referential and memory retrieval processes, such as those found in language \citep{Vatansever2015}. The dynamics behind these interactions will be important for further establishing a framwork for investigating the roles of specific networks during reading. 
+% Changes to global modularity, but no changes to reading correlation
+In terms of global network effects, we found that tasks reduced global measures of modularity and increasd measures of between-RSN communication, including participation coefficient and path length. Relative to rest, this was most apparent in the visual RSN, which was characterized by a massive decrease in modularity compared to rest. These findings support a model in which the modular architecture of the brain is highly maintained between tasks, and the maintenance of this modularity is important for cognitive skill. It is not yet possible to say whether modularity within these specific RSNs correlates most highly with reading because of their functional roles in reading processes or whether they simply capture global trends better than other networks. There is some reason to suspect specificity, however. In studies of remediation-induced changes to connectivity, increased connectivity within the visual network \citep{Koyama2013} and cingulo-opercular network \citep{HorowitzKraus2015} have predicted reading improvement in dyslexic children. 
 
 % Participation coefficient
 It is perhaps surprising to see primarily global effects of condition on the participation coefficient. Other work has found that certain networks, such as the fronto-parietal network are responsible for task-switching \citep{Cole2013}. Previous research have also noted that brain regions that have been found to be abnormal in dyslexia localize on high-hub regions \citep{Bailey2018}. However, the literature on dyslexia may be insightful here: several of these regions, including the inferior frontal gyrus and inferior parietal lobule have been found to be both active in some studies and inactive in others. It is perhaps, then, an abnormality in the system rather than underactivation. The anti-correlation between task activity and participation coefficient highlights the complementary nature of network analysis with activation analyses. What it suggests is that ``hub'' regions have a primary role as connectors, whereas only in some cases are regions active and highly participatory. 
-% Show picture of PC on x-axis and activity on y-axis
 
-
-% The additional findings that hubs areas are key in dyslexia are not surprising: dyslexia has often been thought to be a disorder of combining information across different functional systems, and in the context of connectomics, hub areas play a privileged role in mediating information flow between RSN’s. For example, the posterior temporal sulcus connects visual and auditory networks by binding letters to sounds \citep{Blau2010, VanAtteveldt2009} and the inferior frontal gyrus has many different subdivisions supporting language parsing and manipulation \citep{Hagoort2005}. However, casting dyslexia dysfunction into a connectomics perspective opens up new hypotheses and research avenues. For example, the brain areas of interest and neuroimaging metrics can be unified across other developmental disorders, including ADHD, specific language impairment and autism \citep{Stam2014}. Another benefit is that it opens up many more avenues for investigating dyslexia using functional and diffusion MRI, which can be performed in younger children and without administering a cognitive task. 
-
-Taken together, these results suggest that the network architecture of the brain is quite stable across task-evoked and resting states, lending further credence to assertions that it measures someting intrinsic and stable. However, between-netowkr connectivity does increase the connectivity between different RSNs, and the role of the network region (participation coefficient0 is importamy be related to its  role in the system. That is, task-negative areas, including those in the default mod network, were more likely to habe higher participation coefficients. )
+% Conclusions and next steps
+Taken together, these results suggest that the modular network architecture of the brain is relatively stable across task-evoked and resting states, lending further credence to assertions that it measures an intrinsic property. One major limitation of the present approach is that effects were measured at a global level using the resting-network parcellation. While this allows for reproducibility and an interpretable RSN ``rewiring'' framework, it cannot capture or describe the presence of new communities. It is also unable to compare individuals against each other; it assumes a reference framework. Other analytical methods, such as investigating the number of shared connection between two connectomes may provide a more detailed insight into variability in task-evoked connectomes \citep{Petersen2016}. We will address this question of to what degree individual connectomes change across a wider variety of tasks in the next chapter.
