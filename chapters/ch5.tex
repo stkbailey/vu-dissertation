@@ -1,13 +1,15 @@
 \chapter{Reorganization of brain networks throughout development}
 
-% Modularity
-One consequence of modularity is evolvability. That is, a modular system is more capable of adapting to environmental circumstances because new modules can be added to the system without drastically altering the other modules \citep{Kashton2005}. Each one can work in parallel, sharing information when necessary, but without being too dependent on the success or failure of another system. This makes modularity not only efficient but also robust to damage. Cognition, too, has traditionally been considered to a large degree modular, with the pseudo-science of phrenology being the most extreme example, but more recent efforts coming from a deeper understanding of visual and sensory systems \citep{Barrett2006}. However, some higher-order cognitive functions such as working memory, attention and planning have not been localized to a discrete cortical area and are more likely to depend on a global ``workspace'' \citep{Dahaene1998}.
+\section{Motivation}
+
+One purported benefit of brain modularity is ``evolvability'': the capacity for a system to easily adapt to environmental circumstances because new modules can be added without drastically altering the other modules \citep{Kashton2005}. Each one can work in parallel, sharing information when necessary, but without being too dependent on the success or failure of another system. This makes modularity not only efficient but also robust to damage. Cognition, too, has traditionally been considered to a large degree modular, with the pseudo-science of phrenology being the most extreme example, but more recent efforts coming from a deeper understanding of visual and sensory systems \citep{Barrett2006}. However, some higher-order cognitive functions such as working memory, attention and planning have not been localized to a discrete cortical area and are more likely to depend on a global ``workspace'' \citep{Dahaene1998}.
 
 The cognitive processes in reading are also thought of in a modular sense: visual, auditory, semantic and motor processes can each be taught or assessed separately \citep{Cutting2009a}. Phonics instruction spends a great deal of time making individuals better at merging, specifically, the auditory and visual modules. Neuroimaging evidence from the past two decades suggets that this binding process localizes onto the left temporo-parietal junction \citep{}. 
 
 Although it is still an area of investigation, one group investigated how modularity changed over the course of learning a novel task. Bassett and colleagues scanned participants at four timepoints while they were learning a new finger-tapping task: before training, early in training, midway through training and at the end of training \citep{Bassett2015}. The authors empirically defined a visual and motor module, and investigated changes to it throughout training. They found two important trends: first, the two modules became increasingly segegated throughout training and practice; and second, the involvement of non-module nodes such as those in subcortical systems was reduced over time. A separate study found that that modules are more likely to re-organize at early stages in the training process \citep{Bassett2011}. Taken together, the findings suggest a model in which the early stages of training require a high degree of cross-module communication, whereas later stages rely on more automated, modular processes (i.e. efficient and segregated processing). 
 
 
+% Age-related differences in structural / functional connectivity \citep{BetzelSporns2015}... 
 
 There were two primary motivations in this study:
 
@@ -15,11 +17,12 @@ In the previous chapter, we established that reading does not appear to be ``sim
 
 It could be that the differences between the modalities were due to active support processes that were occuring between executive and attention regions, as the participants performed reading, a relatively novel task. On the one hand, advocates of a ``parallel'' model might assert that additional cognitive processes are used to ``bootstrap'' reading skill at early ages, so that differences between the two systems should decrease with maturity and reading experience as the two systems merge. On the other hand, the ``parasitic'' model of reading would predict that differences would persist, or even become exaggerated, as the two systems become more efficient for their respective tasks. In this chapter, then, we seek to replicate these results in a new cohort of subjects with a different set of passages, and then to investigate the effects of developmental maturity on the reorganizaton of brain networks during reading and listening.
 
-
 \begin{itemize}
 	\item Which areas ``converge'' and ``diverge'' throughout development?
 	\item What shifts in connectivity patterns do we see?
 \end{itemize} 
+
+\section{Methods}
 
 \subsection{Participants}
 
@@ -31,15 +34,58 @@ To collect subjects at different stages in development, participants in this stu
 	\item A group of adults (ages 18 to 30) were selected, largely from a population of university research assistants and graduate students.
 \end{itemize}
 
-All subjects provided approval and were compensated according to our IRB.
+\begin{table}[t]
+	\renewcommand{\tabcolsep}{0.09cm}
+	\centering
+	\input{tables/ch5-participants.tex}
+	\caption{Participant demographics for study 2.}
+	\label{table:ch5-participants}
+\end{table}
+
+\section{Methods}
+
+\subsection{Participants}
+
+Participants were drawn from the same cohort of subjects included in Studies 1 and 2, and identical inclusion criteria for both demographic and scan motion were applied. However, additional measures related to the performance of the task were levied as described below. A total of 42 unique subjects and 142 scan sessions were included in the analysis. The demographics for these subjects are described in Table \ref{table:ch4-participants}.
 
 \begin{table}[t]
 	\renewcommand{\tabcolsep}{0.09cm}
 	\centering
 	\input{tables/ch4-participants.tex}
-	\caption{Participant demographics for study 2.}
+	\caption[Participant demographics for Study 3.]{Participant demographics for Study 3. Participants were a subset of those examined in Study 2, who had completed a listening comprehension task with sufficiently high quality.}
 	\label{table:ch4-participants}
 \end{table}
+
+\subsection{Functional MRI acquisition and processing}
+
+The task design for this study is described in detail in Chapters 3 and 4. Briefly, subjects were presented up to four separate runs of a language comprehension task. The task included two passage blocks (``Reading'' or ``Listening''), two sensory baseline blocks (``Attention'') and a trailing resting-state block ("Rest"). The four scan runs were crossed on two conditions: the modality of presentation (auditory or visual) and the genre of the passage (narrative or expository). 
+
+One difference, however, was that the contents of the passages presented to these participants differed from those previously described. While still balanced to a third-grade reading level using Coh-Metrix, the passages were novel. 
+
+A scan session was excluded based on the following parameters: the number of high-motion volumes exceeding 20 percent, mean frame-wise displacement greater than 0.4, or poor task performance ($D^\prime < 2$). To control for the effects of genre, we matched all scans that met inclusion criteria with their opposing-modality counterpart, so that each subject had either 2 scans (same genre in listening and reading) or 4 scans (both genres in listening and reading). 
+
+In total, 42 children (142 scans) met inclusion criteria.
+
+Functional MRI acquisition and preprocessing procedures were equivalent to those described for Studies 2 and 3. See the \textit{Methods} section of Chapter 3 for a detailed description of these processes and their parameters.
+
+
+\subsection{Activation and network analyses}
+
+We sought to address four questions:
+1. how does modality change over development?
+2. How does modularity / TOWRE correlation change in each time bin?
+3. How does listening-reading similarity, 
+4. How does overall task similarity increase across age?
+
+Our analysis was broken into two parts: first, comparing the similarities and differences in network organization for listening and reading, then across all available tasks. 
+
+For the modality comparisons, we used a fixed-effects subject-level model to estimate the shared activation for ``Listening and Reading'' and their differences ``Listening vs. Reading''. We then used FSL's \textit{randomise} utility to estimate the main effects of modality across all subjects in our sample (5000 permutations, threshold-free cluster enhancement, $p < 0.05$).  We also investigated these effects in ``connectome space'' by extracting the values at each of the 264 nodes used for connectivity analysis, then comparing the activity profile of each RSN during reading and listening.
+
+\subsection{Results}
+
+\subsection{Discussion}
+
+
 
 % \begin{figure}[t]
 % 	\centering
@@ -50,19 +96,3 @@ All subjects provided approval and were compensated according to our IRB.
 % 	\centering
 %     \caption[Global participation coefficient as a function of age.]{}
 % \end{figure}
-
-\subsection{Functional MRI task design}
-
-The task design for this study paralleled that of Chapter 2. Subjects were presented up to four separate runs of a passage comprehension task. The task included two passage blocks ("PASS"), two baseline attention blocks ("ATTN") and a trailing resting-state block ("REST"). Each task was performed in either the visual or auditory modality.
-
-The contents of the passages differed from those of the tasks discussed in chapter 2, although they were also balanced to the same third-grade reading level using Coh-Metrix. 
-
-\subsection{Data acquisition and processing}
-
-Functional MRI data were acquired on a Philips Achieva 3T MR scanner under the previously described parameters. Data were pre-processed in FSL and the CONN Toolbox before being analyzed. See the Methods section of Chapter 2 for a detailed description of preprocessing routines and their parameters.
-
-\subsection{Activation analyses}
-
-We calculated subject-level contrast maps as described previously ("listening + reading vs. rest", "listening vs. reading"). At the group-level, we used age at scan as a continuous variable to estimate the effect of age on comprehensino-related activation and modality differences.
-
-As before, we also investigated these effects in the connectome space as well 
