@@ -27,7 +27,7 @@ In this dissertation, I will flesh out a description of the network-level proces
 
 \section{Characterization of brain network architecture}
 
-Although the composition and tract structure of the brain had been diagrammed by neuroanatomists for many years, the first hint that it might be describable with functional MRI cam in 1995, when it was discovered that portions of motor cortex that were active during tasks were correlated when participants were not doing anything in particular \citep{Biswal1995}. These ``resting-state'' findings suggested that there was an intrinsic relationship between these areas that would form the basis for an entirely new research paradigm. Over the next several years, researchers characterized the default mode network, a set of brain areas that was commonly seen anti-correlated during tasks, and showed that it exhibited higher activity at rest \citep{Greicius2003}. A seminal paper then characterized the entire brain in terms of its RSNs \citep{Yeo2011}, and since then, scientists have pushed the resolution of these parcallations to higher and higher resolutions. The major utility of characterizing these RSNs is that they generally correspond to bundles of cognitive functions, including language \citep{Cordes2000, Hampson2002}, visual perception \citep{Simmons2012}, motor functioning \citep{Biswal1995} and executive control \citep{Seeley2007}. 
+Although the composition and tract structure of the brain had been diagrammed by neuroanatomists for many years, the first hint that it might be described at rest with functional MRI came in 1995, when it was discovered that portions of motor cortex that were active during tasks were correlated when participants were not doing anything in particular \citep{Biswal1995}. These ``resting-state'' findings suggested that there was an intrinsic relationship between these areas that would form the basis for an entirely new research paradigm. Over the next several years, researchers characterized the default mode network, a set of brain areas that was commonly seen anti-correlated during tasks, and showed that it exhibited higher activity at rest \citep{Greicius2003}. A seminal paper then characterized the entire brain in terms of its RSNs \citep{Yeo2011}, and since then, scientists have pushed the resolution of these parcallations to higher and higher resolutions. The major utility of characterizing these RSNs is that they generally correspond to bundles of cognitive functions, including language \citep{Cordes2000, Hampson2002}, visual perception \citep{Simmons2012}, motor functioning \citep{Biswal1995} and executive control \citep{Seeley2007}. 
 
 \begin{figure}[t]
     \centering
@@ -42,6 +42,13 @@ In the graph model of the brain, the brain is modeled as a set of ``nodes'' conn
 
 The edges connecting each node can be binary or weighted, in which case areas that are more highly correlated carry a greater connectivity value. The decision of how many and what type of edges to include is crucial because many of most interesting characteristics, including modularity and small-worldness, only emerge when the graph has been thresholded to a certain level of sparsity \citep{Moussa2012}. It is now common to sweep analyses across a number of edge-forming thresholds in order to ensure that arbitrary selection of edges is not unduly influencing analytical results.
 
+\begin{figure}[t]
+    \centering
+    \includegraphics[height=3in]{ch1-graph-schema}
+    \caption[Schematic for a network with two modules.]{Schematic for a network with two modules, or resting-state networks. A high proportion of within-module edges leads to high modularity; a large proportion of between-module edges leads to high participation coefficient. Figure credit to Godwin et al. \citep{Godwin2016}}
+    \label{fig:ch1-graph-schema}
+\end{figure}
+
 Graph theory measures abound, and there is currently no consensus as to which measures are most appropriate in a general sense. In the following studies, we focus on three: 
 
 \begin{itemize}
@@ -50,13 +57,6 @@ Graph theory measures abound, and there is currently no consensus as to which me
     \item \textit{Shortest path length}, or simply ``path length'', is the minimum number of edges that must be traversed to connect one node to any other. Small-world networks like the brain utilize ``hubs'' to maintain a relatively short path length from any one node to another. 
 \end{itemize}
 
-
-\begin{figure}[t]
-    \centering
-    \includegraphics[height=3in]{images/ch1-graph-schema}
-    \caption[Schematic for a network with two modules.]{Schematic for a network with two modules, or resting-state networks. A high proportion of within-module edges leads to high modularity; a large proportion of between-module edges leads to high participation coefficient. Figure credit to Godwin et al. \citep{Godwin2016}}
-    \label{fig:ch1-graph-schema}
-\end{figure}
 
 While hundreds of studies have been published utilizing graph theory, the neurobiological basis of these metrics is still under investigation. While these connections do appear to be plastic and mediated by experience, they are not necessarily caused by new synapses. Several studies using diffusion-weighted MRI (DW-MRI) suggest that functional connectivity represents more than simply direct synaptic connections. DW-MRI uses water movement to model the white matter tracts within the brain. At high resolutions, it provides a coarse approximation of the human connectome, i.e. the total connections in the human brain \citep{Sporns2005}. Honey et al. investigated whether functional connectivity can be predicted from structural connectivity and found that, while structurally connected areas are typically functionally connected as well, the inverse is not true \citep{Honey2009}. Areas that were closer together were also more highly functionally connected, possibly due to structural cortico-cortical projections. 
 
