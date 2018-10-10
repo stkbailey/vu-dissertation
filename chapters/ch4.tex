@@ -86,9 +86,9 @@ Global modularity provides one estimate of network similarity, by comparing each
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[height=3in]{ch4-network-intersection-methods}
+	\includegraphics[height=3in]{ch4-network-similarity-methods}
     \caption[Method for comparing connectivity arrays.]{The network similarity measure provides a way of comparing connectivity arrays without reference to a pre-defined network parcellations.}
-	\label{fig:ch4-network-intersection-methods}
+	\label{fig:ch4-network-similarity-methods}
 \end{figure}
 
 A less biased similarity metric would be based off of the \textit{intersection} of the two metrics, or the number of shared connections. This is particularly appropriate in our case, where each connectivity array has been thresholded to keep an identical number of connections. In this case, all possible network comparisons will have the same number of possible shared connections, so the number of actual shared connections is a stable metric for comparing between individuals or conditions. (For example, when thresholding for the top 5 percent of connections of a $264 * 264$ array, there is an upper limit of 3484 shared connections between two arrays.) 
