@@ -20,56 +20,41 @@ There were two primary motivations in this study:
 	\item What shifts in connectivity patterns do we see?
 \end{itemize} 
 
+We sought to address four questions:
+1. How does modularity (at rest) change over development?
+2. Is the modularity / TOWRE correlation consistent in Grades 3 and adolescence?
+3. Were there changes in the re-wiring diagram?
+4. How does similarity across the many different task states change across age?
+
+
+
 To address this, 
 
 \section{Methods}
 
 \subsection{Participants}
 
-To observe changes at multiple points in development, participants in this study were drawn from several study populations and age groups. They fell into three categories: first, a group of children (ages 8 to 10) were selected from the third wave of the longitudinal study described in Study 1. Second, a group of adolescents (ages 11 to 14) were selected. These participants were part of a large, cross-sectional study on the cognitive components of reading. Third, a group of adults (ages 18 to 30) were selected, largely from a population of university research assistants and graduate students. Particularly in this last group, behavioral data was sparse. 
+To observe changes at multiple points in development, participants in this study were drawn from several study populations and age groups. They fell into three categories: a group of children (ages 8 to 10) were selected from the third wave of the longitudinal study described in Study 1;  a group of adolescents (ages 11 to 14) from a large, cross-sectional study on the cognitive components of reading; and a group of adults (ages 18 to 40), largely from a population of university research assistants and graduate students. In this final group, behavioral data was sparsely collected, so no analyses of reading-related skill are possible. Demographics for these subjects are described in Table \ref{table:ch5-participants}.
 
 \begin{table}[t]
 	\renewcommand{\tabcolsep}{0.09cm}
 	\centering
 	\input{tables/ch5-participants.tex}
-	\caption{Participant demographics for study 2.}
+	\caption[Participant demographics for Study 4.]{Participant demographics for Study 4. Participants were drawn from three samples: children from the third wave of the longitudinal study described in Studies 1 to 3; adolescents in a cross-sectional study of reading comprehension skill; and adult volunteers. Scan sessions followed the same task design as in Study 3 but stimuli were novel.}
 	\label{table:ch5-participants}
-\end{table}
-
-\subsection{Participants}
-
-Participants were drawn from the same cohort of subjects included in Studies 1 and 2, and identical inclusion criteria for both demographic and scan motion were applied. However, additional measures related to the performance of the task were levied as described below. A total of 42 unique subjects and 142 scan sessions were included in the analysis. The demographics for these subjects are described in Table \ref{table:ch4-participants}.
-
-\begin{table}[t]
-	\renewcommand{\tabcolsep}{0.09cm}
-	\centering
-	\input{tables/ch4-participants.tex}
-	\caption[Participant demographics for Study 3.]{Participant demographics for Study 3. Participants were a subset of those examined in Study 2, who had completed a listening comprehension task with sufficiently high quality.}
-	\label{table:ch4-participants}
 \end{table}
 
 \subsection{Functional MRI acquisition and processing}
 
-The task design for this study is described in detail in Chapters 3 and 4. Briefly, subjects were presented up to four separate runs of a language comprehension task. The task included two passage blocks (``Reading'' or ``Listening''), two sensory baseline blocks (``Attention'') and a trailing resting-state block ("Rest"). The four scan runs were crossed on two conditions: the modality of presentation (auditory or visual) and the genre of the passage (narrative or expository). 
+The task design for this study is described in detail in Chapters 3 and 4. Briefly, subjects were presented up to four separate runs of a language comprehension task. The task included two passage blocks (``Reading'' or ``Listening''), two sensory baseline blocks (``Attention'') and a trailing resting-state block ("Rest"). The four scan runs were crossed on two conditions: the modality of presentation (auditory or visual) and the genre of the passage (narrative or expository). One difference, however, was that the contents of the passages presented to these participants differed from those previously described. While still balanced to a third-grade reading level using Coh-Metrix, the passages were novel. 
 
-One difference, however, was that the contents of the passages presented to these participants differed from those previously described. While still balanced to a third-grade reading level using Coh-Metrix, the passages were novel. 
-
-A scan session was excluded based on the following parameters: the number of high-motion volumes exceeding 20 percent, mean frame-wise displacement greater than 0.4, or poor task performance ($D^\prime < 2$). To control for the effects of genre, we matched all scans that met inclusion criteria with their opposing-modality counterpart, so that each subject had either 2 scans (same genre in listening and reading) or 4 scans (both genres in listening and reading). 
-
-In total, 42 children (142 scans) met inclusion criteria.
+Motion is a major confound in age-related connectivity analyses since, on average, children move much more during a given scan session than their older counterparts. To combat this, we applied a stricter motion criteria for inclusion than previously: subjects needed to have a mean framewise-displacement of less than 0.2 and no more than 6 percent outlier volumes. A total of XXXX unique subjects and XXXX scan sessions met this criteria. 
 
 Functional MRI acquisition and preprocessing procedures were equivalent to those described for Studies 2 and 3. See the \textit{Methods} section of Chapter 3 for a detailed description of these processes and their parameters.
 
-
 \subsection{Activation and network analyses}
 
-We sought to address four questions:
-1. how does modality change over development?
-2. How does modularity / TOWRE correlation change in each time bin?
-3. How does listening-reading similarity, 
-4. How does overall task similarity increase across age?
-
-Our analysis was broken into two parts: first, comparing the similarities and differences in network organization for listening and reading, then across all available tasks. 
+Our main questions  was broken into two parts: first, comparing the similarities and differences in network organization for listening and reading, then across all available tasks. 
 
 For the modality comparisons, we used a fixed-effects subject-level model to estimate the shared activation for ``Listening and Reading'' and their differences ``Listening vs. Reading''. We then used FSL's \textit{randomise} utility to estimate the main effects of modality across all subjects in our sample (5000 permutations, threshold-free cluster enhancement, $p < 0.05$).  We also investigated these effects in ``connectome space'' by extracting the values at each of the 264 nodes used for connectivity analysis, then comparing the activity profile of each RSN during reading and listening.
 
