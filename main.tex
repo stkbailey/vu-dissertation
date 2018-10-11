@@ -59,7 +59,7 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 %\usepackage{apacite}
 \usepackage{appendix}
 %\usepackage{tocbibind}
-%
+\usepackage{tabularx}
 \usepackage[nottoc]{tocbibind}
 
 % Default counter is 7, change to 1 for only sections
@@ -104,7 +104,10 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
   \markboth{\MakeUppercase{%
       \chaptername}\ \thechapter.%
     \ #1}{}}
-    
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
     
 \interfootnotelinepenalty=10000 %prevents the splitting of long footnotes across multiple pages. Use with caution. 
 

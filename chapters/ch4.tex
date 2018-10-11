@@ -86,16 +86,16 @@ Global modularity provides one estimate of network similarity, by comparing each
 
 \begin{figure}[t]
 	\centering
-	\includegraphics[height=3in]{ch4-network-similarity-methods}
-    \caption[Method for comparing connectivity arrays.]{The network similarity measure provides a way of comparing connectivity arrays without reference to a pre-defined network parcellations.}
+	\includegraphics[width=6in]{ch4-network-similarity-methods}
+    \caption[Methods for measuring similarity between whole-brain connectomes.]{The network similarity measure provides a way of comparing connectivity arrays without reference to a pre-defined network parcellations.}
 	\label{fig:ch4-network-similarity-methods}
 \end{figure}
 
-A less biased similarity metric would be based off of the \textit{intersection} of the two metrics, or the number of shared connections. This is particularly appropriate in our case, where each connectivity array has been thresholded to keep an identical number of connections. In this case, all possible network comparisons will have the same number of possible shared connections, so the number of actual shared connections is a stable metric for comparing between individuals or conditions. (For example, when thresholding for the top 5 percent of connections of a $264 * 264$ array, there is an upper limit of 3484 shared connections between two arrays.) 
+One similarity metric that is not biased towards a reference is the \textit{intersection of the union} (IOU). To calculate the IOU of two binary matrices, one sums the total number of shared connections (intersection) and divides it by the total number of connections in either array (union), resulting in a value between 0 to 1, with 1 representing identical arrays. IOU provides two advantages compared to simply calculating the number of shared connections: it converts all comparisons to a common range (0 to 1), and it can compare arrays with different numbers of connections without being biased towards dense arrays (e.g. comparing an array with many connections to one with few connections). The IOU approach provides a complementary perspective to estimates of modularity.
 
-We first compared the mean similarities of network arrays across individuals within the two linguistic conditions: listening to listening and reading to reading. We summarized the distributions of these similarites, with the expectation that there would be the most variability within the reading condition, since listening is more ``natural''. Next, we tested whether the similarity between an individual's reading and listening network arrays was related to reading skill. Finally, we RSN-level patterns of similarity and difference between reading and listening, to identify both a common ``backbone'' and a flexible ``periphery''. 
+We first compared the IOU of network arrays across individuals within the two linguistic conditions: listening to listening and reading to reading. We summarized the distributions of the IOU, with the expectation that there would be the most variability within the reading condition, since listening is more ``natural''. Next, we tested whether the similarity between an individual's reading and listening network arrays was related to reading skill. Finally, we analyzed RSN-level patterns of similarity and difference between reading and listening. 
 
-Next, we broadened the scope of analysis to include comparisons between all task conditions: rest, attention, and passage (across both conditions). For each subject, we created a similarity matrix describing the shared connections between each of these conditions. Then, we extracted the mean and standard devation of the shared connections. The question we were interested in was whether, within-subject, individuals who had fewer changes in state were also better cognitive performers. We then sought to determine whether changes within a single RSN (e.g. the fronto-parietal network) were the key drivers of this. 
+Next, we broadened the scope of analysis to include comparisons between all task conditions: rest, attention, and passage (across both conditions). For each subject we calculated the IOU between each evoked network in the following conditions: resting (for each modality), sensory attention task (in each modality), listening and reading. This resulted, for each subject, in 15 network comparison values, for each set of nodes examined. The question we were interested in was whether, within-subject, individuals who had fewer changes in state were also better cognitive performers. We then sought to determine whether changes within a single RSN (e.g. the fronto-parietal network) were the key drivers of this. 
 
 \section{Results}
 
@@ -134,7 +134,6 @@ Investigating the differences in path length between the two modalities provides
 
 We next investigated whether different individuals evoked language-architectures that were similar to each other. For each pair of participants and modality of presentation, we totalled the number of shared connections between the two thresholded connectomes. We found that subject connectomes were much more similar when comparing ``listening'' connectomes than when comparing ``reading'' connectomes ($t = ...$, $p = ...$). Additionally, we found that subjects with the highest mean similarity overall were also more similar to other high-similarity subjects, suggesting that they are each approximating a common architecture during the comprehension process (see top panel of Figure \ref{ch4-modality-network-similarity}).
 
-% Remove the l-t-r matrix and histogram... move to scatterplot below
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=5.5in]{ch4-modality-network-similarity}
@@ -152,17 +151,24 @@ As readers become more experienced, the expectation is that the task-evoked netw
 	\label{fig:ch4-modality-similarity-to-reading}
 \end{figure}
 
-Finally, we sought to determine whether there was greater variability across all tasks, and whether this was indicative of subject-level differences...
-% Look at nodes that show increased participation coefficient across each different task. 
-% Look at the fronto-parietal network, and determine whether DISSIMILARITY among the different parcellations is predictive of reading skill
+We extended this question to encompass multiple task conditions: would individuals who are better readers have higher similarity between multiple tasks? For each subject, we created a similarity matrix describing the shared connections between each of these conditions. Then, we extracted the mean and standard devation of the shared connections. Figure \ref{fig:ch4-rsn-mean-similarity} shows the mean IOU values across all condition for each RSN. The highest similarity was among the visual, dorsal attention and memory retrieval conditions; the lowest was in the auditory, ventral attention, subcortical and somatomotor (mouth) regions.
 
-% \begin{figure}[t]
-% 	\centering
-% 	\includegraphics[height=3in]{ch4-modality-similarity-to-reading}
-%     \caption[Network similarity between listening and reading predicts word efficiency.]{When projected into the node space, there was very strong correlation between activity in one and the other.}
-% 	\label{fig:ch4-modality-similarity-to-reading}
-% \end{figure}
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch4-rsn-mean-similarity}
+    \caption[RSNs share a large degree of similarity.]{RSNs share a large degree of similarity. }
+	\label{fig:ch4-rsn-mean-similarity}
+\end{figure}
 
+We next correlated these measures with TOWRE scores. The mean within-subject IOU for the entire connectome (264 nodes) was significantly correlated with the TOWRE Total Word Efficiency standard score. Individual RSNs generally followed this trend, although a few had higher correlations: the ventral attention ($r=0.384$), fronto-parietal ($r=0.370$), salience ($r=0.352$) and default mode ($r=0.346$) networks all had higher correlations with reading than the whole-brain IOU. To test whether this was specific to reading skill or more general, we performed the same correlation using the Vocabulary scores from the WASI intelligence test. We found an even stronger correlation between similarity measures and vocabulary scores ($r = 0.481$, $p < 0.001$), with the trend continuing for the other RSNs. Notably, the two RSNs that had no correlation with either measure were the ``Uncertain'' nodes -- nodes whose connectivity profiles were too variable to assign to an RSN -- and the somatomotor (hand) RSN, whose connectivity may have been strongly influenced by the tapping task throughout the scans.
+
+\begin{table}[t]
+	\renewcommand{\tabcolsep}{0.09cm}
+	\centering
+	\input{tables/ch4-rsn-similarity-to-reading.tex}
+	\caption[Correlation values between shared connectivity and cognitive skill.]{Correlation values between shared connectivity and cognitive skills. }
+	\label{table:ch4-rsn-similarity-to-reading}
+\end{table}
 
 \section{Discussion}
 
@@ -181,7 +187,7 @@ The last set of differences is particularly interesting because knowing how the 
 % Significance of hub / vairability measures in fronto-parietal network
 
 % Attention networks
-% While we found an expansion of the left frontoparietal RSN to regions of the ventral attention RSN in good readers, we did not find an association between variation in the ventral attention RSN itself and individual differences in reading ability. The ventral attention network detects salient or unexpected stimuli in the environment \citep{Vossel2014}. In this way the ventral attention network can act as a ‘circuit breaker’ for the dorsal system to help reorient attention \citep{Corbetta2002}. It may thus help orient individuals to new information from the visual environment (i.e. text) and, by coupling stimulus-driven attentional areas with the frontoparietal network, it may help construct updated mental representations of linguistic material. The leftward aspects of the ventral attention network underlie crucial reading-related areas, including occipito-temporal cortex, which performs orthographic processing, and temporo-parietal cortex, important for semantic binding \citep{Taylor2013}. The absence of reading-related variance associated with the entire bilateral RSN may reflect the diversity of functions that these areas serve in basic visual and auditory processing, as well as language and reading. 
+% While we found an expansion of the left frontoparietal RSN to regions of the ventral attention RSN in good readers, we did not find an association between variation in the ventral attention RSN itself and individual differences in reading ability. The ventral attention network detects salient or unexpected stimuli in the environment \citep{Vossel2014}. In this way the ventral attention network can act as a ``circuit breaker''   for the dorsal system to help reorient attention \citep{Corbetta2002}. It may thus help orient individuals to new information from the visual environment (i.e. text) and, by coupling stimulus-driven attentional areas with the frontoparietal network, it may help construct updated mental representations of linguistic material. The leftward aspects of the ventral attention network underlie crucial reading-related areas, including occipito-temporal cortex, which performs orthographic processing, and temporo-parietal cortex, important for semantic binding \citep{Taylor2013}. The absence of reading-related variance associated with the entire bilateral RSN may reflect the diversity of functions that these areas serve in basic visual and auditory processing, as well as language and reading. 
 
 
 % Conclusions... development
