@@ -36,12 +36,19 @@ One way to address this is to partition each subject's network individually
 
 In this dissertation, we have dealt exclusively with functional connectivity networks. These represent only a narrow window of the possible methods for undersanding the network architecture of the brain, and how it differs between individuals. Structural connectivity and covariance... 
 
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=4in]{ch6-multi-scale-connectivity-analysis}
+	\caption[Network architecture at multiple scales.]{Network architecture at multiple scales of inquiry. Developing a tight understanding of how measures from the whole-brain network are represented at finer scales is an important future direction. Figure from \citep{Petersen2015}.}
+	\label{fig:ch6-multi-scale-connectivity-analysis}
+\end{figure}
+
 
  (See \citep{Sui2012} for a review of methods connecting different modalities.)
 
 \section{Dynamic modeling of network architecture}
 
-Brain networks are not static, even though they are often modelled as such. Connectivity patterns are constantly shifting, and changes in the configuration of networks across time (so-called dynamic connectivity) have become an increasingly important domain of research in the past several years. Work using sliding time windows have illustrated that during rest modules alternate between time periods of higher and lower levels of integration (e.g. global efficiency) over time \citep{Zalesky2014}. These changes are periodic and can be consistent throughout different parts of the brain \citep{Handwerker2012}. (See Figure \ref{fig:ch6-dynamic-connectivity} for an example.) Modelling this variability across subjects can be a challenge, since subjects states tend not to be locked in time with each other outside of tasks; however, many advances have been had by using wavelets and other techniques \citep{...}. 
+Brain networks are not static, even though they are often modelled as such. Connectivity patterns are constantly shifting, and changes in the configuration of networks across time (so-called dynamic connectivity) have become an increasingly important domain of research in the past several years. Work using sliding time windows have illustrated that during rest modules alternate between time periods of higher and lower levels of integration (e.g. global efficiency) over time \citep{Zalesky2014}. These changes are periodic and can be consistent throughout different parts of the brain \citep{Handwerker2012}. (See Figure \ref{fig:ch6-dynamic-connectivity} for an example.) Modelling this variability across subjects can be a challenge, since subjects states tend not to be locked in time with each other outside of tasks; however, many advances have been had by using wavelets and other techniques \citep{Zalesky2014}. 
 
 \begin{figure}[t]
 	\centering
@@ -68,7 +75,7 @@ One tension present in network analysis is that of resolution: using too coarse 
 
 One of the more influential parcellations has been one developed by Glasser and colleagues using Human Connectome Project data \citep{Glasser2016}. This parcellation utilizes changes in cortical architecture, function, structural connectivity, and topography to delineate 180 cortical areas on each hemisphere of the brain. This large number of areas, and the amount of data it is built on, stands in stark contrast to the 52 Brodmann areas which have long formed the standard schema for analysis. 
 
-The challenges limiting the adoption of these advanced methods is the amount and quality of data required (multiple modalities, little-to-no subject motion), as well as the steep learning curve associated with implementing them in practice (many pieces of software, advanced programming techniques, many different file types). However, as more tutorials become available and software becomes more accessible, future research is likely to reap incredible benefit from these more detailed methods \citep{PoldrackFarah2015}.
+The challenges limiting the adoption of these advanced methods is the amount and quality of data required (multiple modalities, little-to-no subject motion), as well as the steep learning curve associated with implementing them in practice (many pieces of software, advanced programming techniques, many different file types). However, as more tutorials become available and software becomes more accessible, future research is likely to reap incredible benefit from these more detailed methods \citep{Poldrack2015}.
 
 \section{Final word}
 
