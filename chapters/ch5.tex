@@ -52,7 +52,7 @@ To observe changes at multiple points in development, participants in this study
 
 The task design for this study is described in detail in Chapters 3 and 4. Briefly, subjects were presented up to four separate runs of a language comprehension task. The task included two passage blocks (``Reading'' or ``Listening''), two sensory baseline blocks (``Attention'') and a trailing resting-state block ("Rest"). The four scan runs were crossed on two conditions: the modality of presentation (auditory or visual) and the genre of the passage (narrative or expository). One difference, however, was that the contents of the passages presented to these participants differed from those previously described. While still balanced to a third-grade reading level using Coh-Metrix, the passages were novel. 
 
-Motion is a major confound in age-related connectivity analyses since, on average, children move much more during a given scan session than their older counterparts. To combat this, we applied a stricter motion criteria for inclusion than previously: subjects needed to have a mean framewise-displacement of less than 0.2 and no more than 6 percent outlier volumes. A total of XXXX unique subjects and XXXX scan sessions met this criteria. 
+Motion is a major confound in age-related connectivity analyses since, on average, children move much more during a given scan session than their older counterparts. To combat this, we applied a stricter motion criteria for inclusion than previously: subjects needed to have no more than 10 percent outlier volumes. A total of 72 unique subjects and 256 scan sessions met this criteria. 
 
 Functional MRI acquisition and preprocessing procedures were equivalent to those described for Studies 2 and 3. See the \textit{Methods} section of Chapter 3 for a detailed description of these processes and their parameters.
 
@@ -63,6 +63,66 @@ Our main questions  was broken into two parts: first, comparing the similarities
 For the modality comparisons, we used a fixed-effects subject-level model to estimate the shared activation for ``Listening and Reading'' and their differences ``Listening vs. Reading''. We then used FSL's \textit{randomise} utility to estimate the main effects of modality across all subjects in our sample (5000 permutations, threshold-free cluster enhancement, $p < 0.05$).  We also investigated these effects in ``connectome space'' by extracting the values at each of the 264 nodes used for connectivity analysis, then comparing the activity profile of each RSN during reading and listening.
 
 \section{Results}
+
+% Scan inclusion
+
+% Modularity across time and modality age
+We first tested the effects of task condition and age on estimates of modularity on the reading comprehension task. We set up a two-way ANOVA with the three groups (young readers, adolescents, adults) as one facto and the three experimental conditions (rest, attention, reading) as the other factor. Figure \ref{fig:ch5-modularity-by-condition-3groups} displays the distribution of these data. 
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch5-modularity-by-condition-3groups}
+    \caption[]{}
+	\label{fig:ch5-modularity-by-condition-3groups}
+\end{figure}
+
+We found significant effects for both group ($F=11.376$, $p < 0.001$ and condition ($F = 60.4$, $p < 0.001$), but not their interaction ($F=0.470$, $p = 0.758$). We then conducted post-hoc $t$-tests on the comparisons within each factor. For group, adults ('Group 3') had a lower modularity than the younger participants, but Groups 1 and 2 were not significant different. For experimental conditions, resting state had a higher modularity than both task conditions, which did not differ significantly. See Table \ref{table:ch5-modularity-age-condition} for specific statistical results.
+
+\begin{table}[t]
+	\renewcommand{\tabcolsep}{0.09cm}
+	\centering
+	\input{tables/ch5-modularity-age-condition.tex}
+	\caption[Statistical results for the effects of condition and group on modularity.]{Two-way ANOVA table for the main effects of condition and group on modularity. Below are results for post-hoc $t$-tests conducted within each factor.}
+	\label{table:ch5-modularity-age-condition}
+\end{table}
+
+% Modularity to reading
+Next, we attempted to replicate our findings that higher modularity at rest was associated with higher reading skill. We were unable to test the comparison in the oldest readers (ages 15 and older), but we did have TOWRE scores from an older sample of children and the adolescents in Group 2. When all subjects were included in the analysis (n = 56), there was a positive correlation that trended toward significance but did not reach it ($r = 0.256$, $p = 0.057$). When analyzed separately, the correlation was higher in younger readers ($r=0.280$, $p=0.089$) than older readers ($r=0.198$, $p=0.432$). 
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch5-modularity-reading-corr-2groups}
+    \caption[]{}
+	\label{fig:ch5-modularity-reading-corr-2groups}
+\end{figure}
+
+% Excluding the lowest subjects
+We noticed that some of the poorest readers had more variability in their modularity values. We re-ran the correlations excluding the readers with standard scores of 85 or less (one standard deviation below average, or the bottom 16 percent). This significantly improved the correlation across the entire group ($r = 0.404$, $p = 0.003$) and the younger group ($r = 0.459$, $p = 0.006$). Although the correlation increased for the older group, it did not reach significance either ($r = 0.292$, $p = 0.273$).
+
+% Similarity betwen listening and reading over time
+Finally, we investigated how subject ``flexibility'' changed over time. We first compared the degree of subject similarity between ``developing readers'' (Group 1) and ``mature readers'' (Groups 2 and 3) during reading and rest. Consistent with our findings of decreased modularity, we found that older readers had, on average, lower similarity to their peers than children did ($t=...$). 
+
+Within each individual subject, however, there was no change in the degree of ``flexibility'' -- the amount of variance seen between different conditions ($t = ...$... ). This suggests that   Despite the findings of decreased modularity, we found that no evidence that the mean IOU across all conditions was actually no different across any of the groups.
+This pattern of results suggests that, as you grow, you develop a more unique pattern
+
+% Similarity across all conditions over time
+To investigate whether this could be explained in terms of mean trends, we ...
+
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch5-group-difference-connections}
+    \caption[]{}
+	\label{fig:ch5-group-difference-connections}
+\end{figure}
+
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch5-group-difference-rsn-connectivity}
+    \caption[]{}
+	\label{fig:ch5-group-difference-rsn-connectivity}
+\end{figure}
 
 \section{Discussion}
 
