@@ -62,12 +62,14 @@ Our main questions  was broken into two parts: first, comparing the similarities
 
 For the modality comparisons, we used a fixed-effects subject-level model to estimate the shared activation for ``Listening and Reading'' and their differences ``Listening vs. Reading''. We then used FSL's \textit{randomise} utility to estimate the main effects of modality across all subjects in our sample (5000 permutations, threshold-free cluster enhancement, $p < 0.05$).  We also investigated these effects in ``connectome space'' by extracting the values at each of the 264 nodes used for connectivity analysis, then comparing the activity profile of each RSN during reading and listening.
 
+
 \section{Results}
 
 % Scan inclusion
+In total, 76 subjects (254 scan runs) were analyzed. Despite our stricter criteria, motion does represent a potentially confounding variable for between-group comparisons, as there was significantly less motion in Group 3 (adults). As discussed in Study 1, however, we have attempted to address these differences through preprocessing techniques.
 
 % Modularity across time and modality age
-We first tested the effects of task condition and age on estimates of modularity on the reading comprehension task. We set up a two-way ANOVA with the three groups (young readers, adolescents, adults) as one facto and the three experimental conditions (rest, attention, reading) as the other factor. Figure \ref{fig:ch5-modularity-by-condition-3groups} displays the distribution of these data. 
+We first tested the effects of task condition and age on estimates of modularity on the reading comprehension task. We set up a two-way ANOVA with the three groups (young readers, adolescents, adults) as one factor and the three experimental conditions (rest, attention, reading) as the other factor. Figure \ref{fig:ch5-modularity-by-condition-3groups} displays the distribution of these data. 
 
 \begin{figure}[t]
 	\centering
@@ -76,7 +78,7 @@ We first tested the effects of task condition and age on estimates of modularity
 	\label{fig:ch5-modularity-by-condition-3groups}
 \end{figure}
 
-We found significant effects for both group ($F=11.376$, $p < 0.001$ and condition ($F = 60.4$, $p < 0.001$), but not their interaction ($F=0.470$, $p = 0.758$). We then conducted post-hoc $t$-tests on the comparisons within each factor. For group, adults ('Group 3') had a lower modularity than the younger participants, but Groups 1 and 2 were not significant different. For experimental conditions, resting state had a higher modularity than both task conditions, which did not differ significantly. See Table \ref{table:ch5-modularity-age-condition} for specific statistical results.
+We found significant effects for both group ($F = 11.376$, $p < 0.001$) and condition ($F = 60.4$, $p < 0.001$), but not their interaction ($F=0.470$, $p = 0.758$). We then conducted post-hoc $t$-tests on the comparisons within each factor. For group, adults ('Group 3') had a lower modularity than the younger participants, but Groups 1 and 2 were not significant different. For experimental conditions, resting state had a higher modularity than both task conditions, which did not differ significantly. See Table \ref{table:ch5-modularity-age-condition} for complete results. 
 
 \begin{table}[t]
 	\renewcommand{\tabcolsep}{0.09cm}
@@ -87,7 +89,7 @@ We found significant effects for both group ($F=11.376$, $p < 0.001$ and conditi
 \end{table}
 
 % Modularity to reading
-Next, we attempted to replicate our findings that higher modularity at rest was associated with higher reading skill. We were unable to test the comparison in the oldest readers (ages 15 and older), but we did have TOWRE scores from an older sample of children and the adolescents in Group 2. When all subjects were included in the analysis (n = 56), there was a positive correlation that trended toward significance but did not reach it ($r = 0.256$, $p = 0.057$). When analyzed separately, the correlation was higher in younger readers ($r=0.280$, $p=0.089$) than older readers ($r=0.198$, $p=0.432$). 
+Next, we attempted to replicate our findings that higher modularity at rest was associated with higher reading skill. We were unable to test the relationship in the oldest readers (ages 15 and older), but did have access to TOWRE scores from participants in Group 2. When all subjects were included in the analysis ($n$ = 56), there was a positive correlation that trended toward significance but did not quite reach it ($r = 0.256$, $p = 0.057$). When analyzed separately, we found that the correlation was higher in younger readers ($r=0.280$, $p=0.089$) than older readers ($r=0.198$, $p=0.432$). 
 
 \begin{figure}[t]
 	\centering
@@ -97,17 +99,22 @@ Next, we attempted to replicate our findings that higher modularity at rest was 
 \end{figure}
 
 % Excluding the lowest subjects
-We noticed that some of the poorest readers had more variability in their modularity values. We re-ran the correlations excluding the readers with standard scores of 85 or less (one standard deviation below average, or the bottom 16 percent). This significantly improved the correlation across the entire group ($r = 0.404$, $p = 0.003$) and the younger group ($r = 0.459$, $p = 0.006$). Although the correlation increased for the older group, it did not reach significance either ($r = 0.292$, $p = 0.273$).
+We noticed that some of the poorest readers had more variability in their modularity values. We re-ran the correlations excluding the readers with standard scores of 85 or less (one standard deviation below average, or the bottom 16 percent). This adjustment made the correlation across the entire group ($r = 0.404$, $p = 0.003$) and the younger group ($r = 0.459$, $p = 0.006$). Although the correlation increased for the adolescent group, it did not reach significance either ($r = 0.292$, $p = 0.273$).
 
 % Similarity betwen listening and reading over time
-Finally, we investigated how subject ``flexibility'' changed over time. We first compared the degree of subject similarity between ``developing readers'' (Group 1) and ``mature readers'' (Groups 2 and 3) during reading and rest. Consistent with our findings of decreased modularity, we found that older readers had, on average, lower similarity to their peers than children did ($t=...$). 
+We then investigated how subject ``flexibility'' changed over time. We first compared the degree of subject similarity between ``developing readers'' (Group 1) and ``mature readers'' (Groups 2 and 3) during reading and rest. Consistent with our findings of decreased modularity, we found that older participants had, on average, lower similarity to their peers than children did. This was true both during language comprehension ($t = 13.829$, $p < 0.001$) and at rest ($t = 9.087$, $p < 0.001$).
 
-Within each individual subject, however, there was no change in the degree of ``flexibility'' -- the amount of variance seen between different conditions ($t = ...$... ). This suggests that   Despite the findings of decreased modularity, we found that no evidence that the mean IOU across all conditions was actually no different across any of the groups.
-This pattern of results suggests that, as you grow, you develop a more unique pattern
+\begin{figure}[t]
+	\centering
+	\includegraphics[height=3in]{ch5-pairwise-iou-reading}
+    \caption[]{}
+	\label{fig:ch5-pairwise-iou-reading}
+\end{figure}
+
+Despite the findings of decreased modularity, we found no evidence that the the within-subject IOU across conditions changed ($t = 0.239$, $p = 0.811$). This degree of ``flexibility'' was similar across all subjects and had a mean of 0.345 (standard deviation of 0.047). 
 
 % Similarity across all conditions over time
-To investigate whether this could be explained in terms of mean trends, we ...
-
+Finally, we turned to individual trends in RSN connectivity during reading to attempt to explain these differences. We first examined individual connections that showed patterns of change in intensity between the older and younger groups. The results for the connection-level strength analysis are shown in Figure \ref{fig:ch5-group-difference-connections} and show a shift in connectivity strength from posterior areas in younger subjects to more anterior and bilateral connections in older participants.
 
 \begin{figure}[t]
 	\centering
@@ -116,6 +123,8 @@ To investigate whether this could be explained in terms of mean trends, we ...
 	\label{fig:ch5-group-difference-connections}
 \end{figure}
 
+To summarize this at the RSN level, we grouped each ``significant'' connection by its originating and target RSN, then summed up the number of connections changed. The net results of this aggregated connectivity map are shown in Figure \ref{fig:ch5-group-difference-rsn-connectivity}. This map reveals a few important trends: when children read, there is a high degree of coordination between the dorsal attention, visual, somatomotor and fronto-parietal networks. In older readers, the concentration of connectivity shifts towards higher-order areas such as the default mode and salience network, as well as the auditory and ventral attention areas
+. 
 
 \begin{figure}[t]
 	\centering
