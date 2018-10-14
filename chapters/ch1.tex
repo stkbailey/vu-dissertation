@@ -1,5 +1,7 @@
 \chapter{Introduction}
 
+\epigraph{Learning to read is probably the most difficult and revolutionary thing that happens to the human brain, and if you don't believe that, watch an illiterate adult try to do it.}{John Steinbeck}
+
 \section{Cognitive flexibility and network architecture}
 
 The human brain is remarkable for its flexibility: a person can interpret physical sensations, coordinate complex movements, interpret subtle social cues, construct meaning from sounds, embolden a person with courage or freeze them with embarassment. And people perform all of these incredible calculations at the same time, without becoming confused or consternated. This arsenal of skills, which is rivaled by few if any other species in the animal kingdom, can only be possible through an efficient neural infrastructure. Neural areas responsible for snesory processing, executive decision-making, top-down attention and intrinsic motivation must all be able to interact quickly to react to changing environmental demands. 
@@ -48,16 +50,10 @@ The edges connecting each node can be binary or weighted, in which case areas th
     \label{fig:ch1-graph-schema}
 \end{figure}
 
-Graph theory measures abound, and there is currently no consensus as to which measures are most appropriate in a general sense. In the following studies, we focus on three: 
-
-\begin{itemize}
-    \item \textit{Modularity} is the number of connections a single node has \citep{Sporns2013}. Nodes with higher degrees are thought to communicate with a greater number of nodes than others; networks with a higher average degree are thought to be more densely connected.  
-    \item \textit{Participation coefficient} is the degree to which a node participates in networks other than its primary one.
-    \item \textit{Shortest path length}, or simply ``path length'', is the minimum number of edges that must be traversed to connect one node to any other. Small-world networks like the brain utilize ``hubs'' to maintain a relatively short path length from any one node to another. 
-\end{itemize}
-
+Graph theory measures abound, and there is currently no consensus as to which measures are most appropriate in a general sense. In the following studies, we focus on three. \textit{Modularity} is the number of connections a single node has \citep{Sporns2013}. Nodes with higher degrees are thought to communicate with a greater number of nodes than others; networks with a higher average degree are thought to be more densely connected. \textit{Participation coefficient} is the degree to which a node participates in networks other than its primary one. The \textit{shortest path length}, or simply ``path length'', is the minimum number of edges that must be traversed to connect one node to any other. Small-world networks like the brain utilize ``hubs'' to maintain a relatively short path length from any one node to another. 
 
 While hundreds of studies have been published utilizing graph theory, the neurobiological basis of these metrics is still under investigation. While these connections do appear to be plastic and mediated by experience, they are not necessarily caused by new synapses. Several studies using diffusion-weighted MRI (DW-MRI) suggest that functional connectivity represents more than simply direct synaptic connections. DW-MRI uses water movement to model the white matter tracts within the brain. At high resolutions, it provides a coarse approximation of the human connectome, i.e. the total connections in the human brain \citep{Sporns2005}. Honey et al. investigated whether functional connectivity can be predicted from structural connectivity and found that, while structurally connected areas are typically functionally connected as well, the inverse is not true \citep{Honey2009}. Areas that were closer together were also more highly functionally connected, possibly due to structural cortico-cortical projections. 
+
 
 \section{The role of network architecture in reading}
 While reading researchers in the past decade have begun to acknowledge the contributions of domain-general skills (e.g. attention, working memory, planning and organizing) to reading, it remains a secondary concern in much neuroimaging literature. (This is not the case for all language research but specifically reading.) To illustrate the widespread distribution of activity, we compared the meta-analytic activations maps from NeuroSynth with a popular resting-state network parcellation \citep{Bailey2018}. 
@@ -137,8 +133,8 @@ In this dissertation, we present four studies that investigate network propertie
 
     \item \textit{Study 3} moves beyond looking only at reading-evoked activity by first comparing reading to listening comprehension, then to several other activities. The key questions this study addresses are whether greater variability between task-evoked networks is a beneficial attribute, and whether any particular RSNs (such as the fronto-parietal network) are more responsible for the reconfiguration of the whole-brain network.
 
-    \item \textit{Study 4} follows up on the modality results by analyzing network topology during reading comprehension across development. These analyses serve as a replication and extension of each of the previous studies: we test whether the relationship between reading and network architecture changes in more mature individuals and how task-evoked activity differs along the lifespan. While there is strong evidence that learning to decode creates persistent changes to the neural systems utilized in language \citep{Schlaggar2007}, there have been no studies investigating the trajectory of reading's relationship to network properties over time.
+    \item \textit{Study 4} follows up on the modality results by analyzing network topology during reading comprehension across development. These analyses serve as a replication and extension of each of the previous studies: we test whether the relationship between reading and network architecture changes in more mature individuals and how task-evoked activity differs along the lifespan. While there is strong evidence that learning to decode creates persistent changes to the neural systems utilized in language \citep{Schlaggar2007}, there have been no studies investigating the trajectory of brain modularity and its changes to reading over time.
 
 \end{itemize}
 
-Overall, we brain activity during reading and behavioral measures of reading skill as a model for understanding how individual differences in network architecture form a basis for individual differences in cognitive processing. We combinee inferences from several different methodological approaches, including resting-state network analysis, task-based activation analyses, and the combination of the two. Through this systematic approach to describing these samples, we strive to make a meaningful contribution to our understanding brain modularity and its relationship to cognition.
+Overall, these studies will use reading-related brain activity and behavior as a model for understanding how individual differences in network architecture form a basis for individual differences in cognitive processing. We combine inferences from several different methodological approaches, including resting-state network analysis, task-based activation analyses, and the combination of the two. Through this systematic approach to describing these samples, we strive to make a meaningful contribution to our understanding brain modularity and its relationship to cognition.
