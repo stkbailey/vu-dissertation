@@ -43,7 +43,9 @@ The problem may be especially acute in the context of development. As we noted i
 
 \section{Multi-modal and multi-scale analysis}
 
-In this dissertation, we have dealt exclusively with whole-brain functional connectivity networks. MRI, however, represents only a narrow sliver of the possible methods for undersanding the network architecture of the brain, and how it differs between individuals. Structural connectivity and covariance... 
+In this dissertation, we have dealt exclusively with whole-brain functional connectivity networks. Functional MRI, however, represents only a narrow sliver of the possible methods for understanding the network architecture of the brain, and how it differs between individuals. Other whole-brain methods include structural MRI, diffusion-weighted MRI, Structural connectivity and covariance... 
+
+(See \citep{Sui2012} for a review of methods connecting different modalities.)
 
 \begin{figure}[t]
 	\centering
@@ -53,10 +55,6 @@ In this dissertation, we have dealt exclusively with whole-brain functional conn
 \end{figure}
 
 
- (See \citep{Sui2012} for a review of methods connecting different modalities.)
-
-
-
 \section{High-resolution parcellations}
 
 One tension present in network analysis is that of resolution: using too coarse of a sampling of the brain and one risks losing important detail; too fine and one risks introducing extra noise and unneeded complexity. In these analyses we used 264 nodes that have been used in a number of other studies (e.g. \citep{Power2013, Cole2014}). These nodes cover a large range of brain systems and functional subdivisions (defined by meta-analytic techniques), and each node is separated by at least 10 mm, meaning there is less redundant information being measured. However, many new methods for segmenting the brain into functional sub-divisions have been released in the intervening years, some of which combine information from multiple modalities and more than a thousand subjects to identify distinct patches of cortex. 
@@ -64,7 +62,7 @@ One tension present in network analysis is that of resolution: using too coarse 
 One of the more influential parcellations has been one developed by Glasser and colleagues using Human Connectome Project data \citep{Glasser2016}. This parcellation utilizes changes in cortical architecture, function, structural connectivity, and topography to delineate 180 cortical areas on each hemisphere of the brain. This large number of areas, and the amount of data it is built on, stands in stark contrast to the 52 Brodmann areas which have long formed the standard schema for analysis. 
 
 \begin{figure}[t]
-	\centering
+,	\centering
 	\includegraphics[height=4in]{ch6-multi-modal-parcellation}
 	\caption[Multi-modal parcellation of the human brain.]{This high-resolution parcellation of the human brain is based on cortical anatomy, structural tractography and functional covariance. Each hemisphere has 180 regions of interest which can be projected onto a surface map. In this picture, black outlines indicate areal borders and colours indicate the extent to which each area is associated with the corresponding sensorimotor system. Figure from \citep{Glasser2016}.}
 	\label{fig:ch6-multi-modal-parcellation}
