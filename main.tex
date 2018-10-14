@@ -121,7 +121,7 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 \begin{titlepage}
 \thispagestyle{empty}\enlargethispage{\the\footskip}%
 \begin{center}
-	{\setstretch{1.66} \textsc{The Connectome and Comprehension:\\Using Network Analysis to \\Understand Skilled Reading}\par }%
+	{\setstretch{1.66} The Connectome and Comprehension:\\Using Network Analysis to \\Understand Skilled Reading}\par%
 	\vskip.5in
 	By
 	\vskip .4in
@@ -139,7 +139,7 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 	\MakeUppercase{Doctor of Philosophy} \\[.1in]
 	in \\[.2in]
 	\MakeUppercase{Neuroscience} \\[.25in]
-	October 2018 \\[.45in]
+	December 15, 2018 \\[.45in]
 	Nashville, TN
 	\vskip .5in
 \end{center}
@@ -151,45 +151,45 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 \hspace*{1.0in} \rule{3.0in}{.5pt} \hskip 0.1in \rule{1in}{.5pt} %\\[.1in]
 %%%%%%%%%%%%%%
 %%%%%%Uncomment  for Approved Names%%%%%%
-%\begin{center}
-%\begin{doublespace}
-%Approved:\\
-%Professor Gavin Price  \\
-%Professor Adam Anderson \\
-%Professor Zhaohua Ding \\
-%Professor Laurie Cutting \\
-%\end{doublespace}
-%\end{center}
+% \begin{center}
+% \begin{doublespace}
+% Approved:\\
+% Professor Laurie Cutting \\
+% Professor Adam Anderson \\
+% Professor Zhaohua Ding \\
+% Professor Gavin Price  \\
+% \end{doublespace}
+% \end{center}
 \end{titlepage}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \doublespacing
-\pagenumbering{roman} \setcounter{page}{1}
+\pagenumbering{roman} \setcounter{page}{2}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter*{DEDICATION}
-\addcontentsline{toc}{chapter}{DEDICATION}
-\vspace{7mm}
+% \chapter*{DEDICATION}
+% \addcontentsline{toc}{chapter}{DEDICATION}
+% \vspace{7mm}
 
-This work is dedicated to my mother, Janine Bailey, who taught me to read and never turned me a way from a book. 
+% This work is dedicated to my mother, Janine Bailey, who taught me to read and never turned me a way from a book. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter*{ACKNOWLEDGMENTS}
-\addcontentsline{toc}{chapter}{ACKNOWLEDGMENTS}
-\vspace{7mm}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \chapter*{ACKNOWLEDGMENTS}
+% \addcontentsline{toc}{chapter}{ACKNOWLEDGMENTS}
+% \vspace{7mm}
 
 
-It is wrong for me to assign this work to a single author -- but these are the guidelines provided by the Graduate School. The works described in this dissertation are the result of the efforts of dozens of people, most notably my colleagues in Vanderbilt's Education and Brain Sciences Research Laboratory and the participants who lent their time, energy and brains in each of the described studies. Julie Delheimer, Lanier Sachs, Laura Barquero, Angela Sefcik, Hannah Rowland and Scott Burns worked relentlessly, year upon year, to keep the operations of our busy and growing lab humming along. Their extraordinary efforts insulated myself and the rest of the research team from the everyday demands of running a high-performing lab, and they made it possible for me to focus almost exclusively on research and my own training. 
+% It is wrong for me to assign this work to a single author -- but these are the guidelines provided by the Graduate School. The works described in this dissertation are the result of the efforts of dozens of people, most notably my colleagues in Vanderbilt's Education and Brain Sciences Research Laboratory and the participants who lent their time, energy and brains in each of the described studies. Julie Delheimer, Lanier Sachs, Laura Barquero, Angela Sefcik, Hannah Rowland and Scott Burns worked relentlessly, year upon year, to keep the operations of our busy and growing lab humming along. Their extraordinary efforts insulated myself and the rest of the research team from the everyday demands of running a high-performing lab, and they made it possible for me to focus almost exclusively on research and my own training. 
 
-In the same vein, the financial support of the National Institutes of Health enabled both my training and this research. The abundance of mechanisms employed illustrates the excellence of the environment in which I got to train -- Vanderbilt's training grant in neuroscience (T32...), my Ruth Kirchstein F31 NRSA, the Kennedy Center's U54, and the multiple R01s awarded to Dr. Cutting (HD044073, HD067254). I am particularly thankful for the Ruth Kirchstein F31 Predoctoral Fellowship (NICHD F31 HD090923), which has enabled me to pursue my own directions (although ``wander'' is probably a more appropriate term).
+% In the same vein, the financial support of the National Institutes of Health enabled both my training and this research. The abundance of mechanisms employed illustrates the excellence of the environment in which I got to train -- Vanderbilt's training grant in neuroscience (T32...), my Ruth Kirchstein F31 NRSA, the Kennedy Center's U54, and the multiple R01s awarded to Dr. Cutting (HD044073, HD067254). I am particularly thankful for the Ruth Kirchstein F31 Predoctoral Fellowship (NICHD F31 HD090923), which has enabled me to pursue my own directions (although ``wander'' is probably a more appropriate term).
 
-I am grateful for a supportive committee that gave me guidance at critical junctures and opened my eyes to a research domains I would not have otherwise seen. Dr. Gavin Price embodied the rigorous, theory-driven field of cognitive neuroscience, and our conversations helped to give specific, pointed form to many of the ideas explored herein. (Any deviation from that specificity is my own.) Dr. Adam Anderson gave me insight into the wider field of biomedical image analysis through his classes and lectures and played a key role in pushing my technical development from out-of-the-box software to command-line utilities. And Dr. Zhaohua Ding gave me a unique experience: I got to see the evolution of a scientific idea from its infancy to its impact, as we chased and teased out BOLD signal from white matter tissue.
+% I am grateful for a supportive committee that gave me guidance at critical junctures and opened my eyes to a research domains I would not have otherwise seen. Dr. Gavin Price embodied the rigorous, theory-driven field of cognitive neuroscience, and our conversations helped to give specific, pointed form to many of the ideas explored herein. (Any deviation from that specificity is my own.) Dr. Adam Anderson gave me insight into the wider field of biomedical image analysis through his classes and lectures and played a key role in pushing my technical development from out-of-the-box software to command-line utilities. And Dr. Zhaohua Ding gave me a unique experience: I got to see the evolution of a scientific idea from its infancy to its impact, as we chased and teased out BOLD signal from white matter tissue.
 
-To Dr. Laurie Cutting I owe a particular debt. She has created a world-class training environment for graduate students and researchers. And while it is true that the resources and research questions give the lab its cutting-edge nature, what is a more impressive testament to her leadership is that she has fostered a healthy, positive, and professional team culture that has persisted even as the team has turned over and grown. She also took a risk on me, a prospective student with no background in neuroscience, no experience with imaging, no knowledge of statistics or computing or special education. That I leave with all these things and more is a direct result of the guidance, opportunity and encouragement of Dr. Cutting, and I could not be more grateful.
+% To Dr. Laurie Cutting I owe a particular debt. She has created a world-class training environment for graduate students and researchers. And while it is true that the resources and research questions give the lab its cutting-edge nature, what is a more impressive testament to her leadership is that she has fostered a healthy, positive, and professional team culture that has persisted even as the team has turned over and grown. She also took a risk on me, a prospective student with no background in neuroscience, no experience with imaging, no knowledge of statistics or computing or special education. That I leave with all these things and more is a direct result of the guidance, opportunity and encouragement of Dr. Cutting, and I could not be more grateful.
 
-The friends I have made are too many to count. My cohort of graduate students -- Mackenzie Catron, Eric Wilkey, David Simon, Dylan Morrow-Jones -- were an incredible source of encouragement during our first years, as I was scrambling to recover the tiny amount of biochemistry I learned in college and perplexing over $t$-statistics and ANOVA designs. Later support came from my colleagues in the lab, especially Neena Hudson, Stephanie Del Tufo, Tin Nguyen, and Mercedes Spencer. Finally, Katherine Swett Aboud has been a partner and friend in all of my research endeavors -- and later, parenting efforts -- as she pushed me to remember the ``story'' in all of my ``process''. It has been a privilege to study, work and converse with these fine people, and I'll miss it greatly. 
+% The friends I have made are too many to count. My cohort of graduate students -- Mackenzie Catron, Eric Wilkey, David Simon, Dylan Morrow-Jones -- were an incredible source of encouragement during our first years, as I was scrambling to recover the tiny amount of biochemistry I learned in college and perplexing over $t$-statistics and ANOVA designs. Later support came from my colleagues in the lab, especially Neena Hudson, Stephanie Del Tufo, Tin Nguyen, and Mercedes Spencer. Finally, Katherine Swett Aboud has been a partner and friend in all of my research endeavors -- and later, parenting efforts -- as she pushed me to remember the ``story'' in all of my ``process''. It has been a privilege to study, work and converse with these fine people, and I'll miss it greatly. 
 
-Above all else, the PhD has been a journey. And while the destination was clear, the path was unknown and untraveled by anyone I knew closely. I could not have done it without my wife, partner and best friend, Danielle. Between having two children, completing internships and extra courses, and transitioning into a data science career, my particular journey was not in the guidebook. It has only been through the conversations, support, love, and constant reminding of the important things that our travels reached their wonderful destination.
+% Above all else, the PhD has been a journey. And while the destination was clear, the path was unknown and untraveled by anyone I knew closely. I could not have done it without my wife, partner and best friend, Danielle. Between having two children, completing internships and extra courses, and transitioning into a data science career, my particular journey was not in the guidebook. It has only been through the conversations, support, love, and constant reminding of the important things that our travels reached their wonderful destination.
 
 
 
