@@ -35,7 +35,7 @@ All participants were native English speakers with normal hearing and normal or 
     \renewcommand{\tabcolsep}{0.09cm}
     \centering
     \input{tables/ch2-participants.tex}
-    \caption[Participant demographics]{Demographics and mean test scores for Study 1 participants are described here. For continuous data, the standard deviation is enclosed in parentheses.}
+    \caption[Participant demographics for Study 1]{Demographics and mean test scores for Study 1 participants are described here. For continuous data, the standard deviation is enclosed in parentheses.}
     \label{table:ch2-participants}
 \end{table}
 
@@ -48,7 +48,7 @@ Imaging was performed on a Philips Achieva 3T MR scanner with a 32-channel head 
 \begin{figure}[t]
     \centering
     \includegraphics[width=6in]{ch2-connectome-methods}
-    \caption[Schematic for connectome construction.]{Connectomes are constructed from resting-state fMRI in the following steps: slice-timing correction, rigid-body motion correction, boundary-based registration to a T1-weighted anatomical image, and normalization to MNI 152 template. The timseries for 264 nodes are then extracted and denoised using signal from non-neural tissue, continuous motion parameters and outliers. A pair-wise connectivity matrix is then calculated and thresholded at multiple different thresholds, then analyzed at the global-, RSN-, or node-level. Figure adapted from \citep{Yang2018}.}
+    \caption[Schematic for connectome construction]{Connectomes are constructed from resting-state fMRI in the following steps: slice-timing correction, rigid-body motion correction, boundary-based registration to a T1-weighted anatomical image, and normalization to MNI 152 template. The timseries for 264 nodes are then extracted and denoised using signal from non-neural tissue, continuous motion parameters and outliers. A pair-wise connectivity matrix is then calculated and thresholded at multiple different thresholds, then analyzed at the global-, RSN-, or node-level. Figure adapted from \citep{Yang2018}.}
     \label{fig:ch2-connectome-methods}
 \end{figure}
 
@@ -62,7 +62,7 @@ To investigate whole-brain patterns of connectivity with minimal investigator bi
 	\renewcommand{\tabcolsep}{0.09cm}
 	\centering
 	\input{tables/ch2-power-nodes.tex}
-	\caption[List of networks.]{List of networks used in connectivity analyses and the number of nodes affiliated with each. Although alternative parcellations of the node set are possible, we elected to use those network assignments suggested in \citep{Power2013}.}
+	\caption[List of resting-state networks]{List of networks used in connectivity analyses and the number of nodes affiliated with each. Although alternative parcellations of the node set are possible, we elected to use those network assignments suggested in \citep{Power2013}.}
 	\label{table:ch2-power-nodes}
 \end{table}
 
@@ -76,7 +76,7 @@ The metrics of interest were network \textit{modularity}, \textit{participation 
 \begin{figure}[t]
     \centering
     \includegraphics[width=6in]{ch2-brain-measures-diagram}
-    \caption[Sampling of graph theory measures.]{Sampling of graph theory measures, including those of present interest. Modularity (left, circular regions) is high in networks where nodes within the same RSN are highly connected to each other but not elsewhere. Path length describes the distance between any two nodes on the graph (left, green line). The participation coefficient, on the other hand, is high when many nodes are connected to several different RSNs (right, center node). Figure is reprinted from \citep{Rubinov2010}.}
+    \caption[Sampling of graph theory measures]{Sampling of graph theory measures, including those of present interest. Modularity (left, circular regions) is high in networks where nodes within the same RSN are highly connected to each other but not elsewhere. Path length describes the distance between any two nodes on the graph (left, green line). The participation coefficient, on the other hand, is high when many nodes are connected to several different RSNs (right, center node). Figure is reprinted from \citep{Rubinov2010}.}
     \label{fig:ch2-brain-measures-diagram}
 \end{figure}
 
@@ -96,7 +96,7 @@ Of the 52 subjects who completed resting-state fMRI scans, 44 met the scan quali
 \begin{figure}[t]
     \centering
     \includegraphics[width=5in]{ch2-global-graph-theory-descriptions}
-    \caption[Distribution and correlations between global graph theory measures.]{Distribution and correlations between the global modularity, participation coefficient and path length. Each attribute may be interpreted as a measure of connectedness between RSNs, but there is significant variability between them.}
+    \caption[Distribution and correlations between global graph theory measures]{Distribution and correlations between the global modularity, participation coefficient and path length. Each attribute may be interpreted as a measure of connectedness between RSNs, but there is significant variability between them.}
     \label{fig:ch2-global-graph-theory-descriptions}
 \end{figure}
 
@@ -105,7 +105,7 @@ Figure \ref{fig:ch2-network-graph-theory-descriptions} highlights the contributi
 \begin{figure}[t]
     \centering
     \includegraphics[width=6in]{ch2-network-graph-theory-descriptions}
-    \caption[Relationships between network-level graph theory measures.]{Relationships between network-level graph theory measures. Shown above are the network-level distributions of the graph theory measures when graphs are thresholded for the top 10 percent of connections (top row), and the network means as the network-forming thresholds are swept from 2 percent to 10 percent (bottom row).}
+    \caption[Relationships between network-level graph theory measures]{Relationships between network-level graph theory measures. Shown above are the network-level distributions of the graph theory measures when graphs are thresholded for the top 10 percent of connections (top row), and the network means as the network-forming thresholds are swept from 2 percent to 10 percent (bottom row).}
     \label{fig:ch2-network-graph-theory-descriptions}
 \end{figure}
 
@@ -115,7 +115,7 @@ The relationships between each graph theory metric to TOWRE scores are summarize
     \renewcommand{\tabcolsep}{0.09cm}
     \centering
     \input{tables/ch2-global-glm-results.tex}
-    \caption[Comparison of global graph theory metrics to reading skill.]{Results for analyses comparing global graph theory metrics to reading skill.}
+    \caption[Comparison of global graph theory metrics to reading skill]{Results for analyses comparing global graph theory metrics to reading skill.}
     \label{table:ch2-global-glm-results}
 \end{table}
 
