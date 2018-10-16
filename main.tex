@@ -46,6 +46,10 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 \renewcommand{\nomname}{LIST OF ABBREVIATIONS}
 \makenomenclature
 
+% New command: caption for name
+\newcommand\tline[2]{$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
+
+
 \graphicspath{{images/}}
 \DeclareGraphicsExtensions{.pdf, .jpeg, .png, .PNG, .jpg, .eps, .tiff}
 
@@ -68,7 +72,7 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 
 \usepackage{hyperref}
 \hypersetup{
-	pdftitle={Attributes of Functional Network Architecture Supporting Skilled Reading},
+	pdftitle={Attributes of Brain Functional Network Architecture Supporting Skilled Reading},
 	pdfauthor={Stephen Bailey},
 	bookmarksnumbered, %Determined if chapter numbers are included in the bookmark list
 	pdfstartview={FitH},
@@ -121,7 +125,7 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 \begin{titlepage}
 \thispagestyle{empty}\enlargethispage{\the\footskip}%
 \begin{center}
-	{\setstretch{1.66} The Connectome and Comprehension:\\Using Network Analysis to \\ Understand Skilled Reading}\par%
+	{\setstretch{1.66} \textsc{Attributes of Brain Functional Network Architecture\\ Supporting Skilled Reading}}\par%
 	\vskip.5in
 	By
 	\vskip .4in
@@ -136,25 +140,32 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 		for the degree of \\ [.2in]
 	\end{doublespace}
 	
-	\MakeUppercase{Doctor of Philosophy} \\[.1in]
+	\textsc{Doctor of Philosophy} \\[.1in]
 	in \\[.2in]
-	\MakeUppercase{Neuroscience} \\[.25in]
+	\textsc{Neuroscience} \\[.25in]
 	December 15, 2018 \\[.45in]
 	Nashville, TN
 	\vskip .5in
 \end{center}
 %%%Uncomment for Signatures%%%
-\hspace*{1.0in} Approved: \hskip 2.5in Date:\\[1.2em]
-\hspace*{1.0in} \rule{3.0in}{.5pt} \hskip 0.1in \rule{1in}{.5pt} \\[.1in]
-\hspace*{1.0in} \rule{3.0in}{.5pt} \hskip 0.1in \rule{1in}{.5pt} \\[.1in]
-\hspace*{1.0in} \rule{3.0in}{.5pt} \hskip 0.1in \rule{1in}{.5pt} \\[.1in]
-\hspace*{1.0in} \rule{3.0in}{.5pt} \hskip 0.1in \rule{1in}{.5pt} %\\[.1in]
+\hspace*{1.0in} Approved: \hskip 2.4in Date:\\[1em]
+% \hspace*{1.0in} \rule{3.0in}{.5pt} \hskip 0.1in \rule{1in}{.5pt} \\[.1in]
+% \hspace*{1.0in} \rule{3.0in}{.5pt} \hskip 0.1in \rule{1in}{.5pt} \\[.1in]
+% \hspace*{1.0in} \rule{3.0in}{.5pt} \hskip 0.1in \rule{1in}{.5pt} \\[.1in]
+% \hspace*{1.0in} \rule{3.0in}{.5pt} \hskip 0.1in \rule{1in}{.5pt} %\\[.1in]
+
+\hspace*{0.75in} \tline{Professor Adam Anderson \hspace*{1.6in}}{3.0in} \hskip 0.1in  \tline{}{1.0in} \\[.25in]
+\hspace*{1.0in} \tline{Professor Laurie Cutting \hspace*{1.7in}}{3.0in} \hskip 0.1in  \tline{}{1.0in} \\[.25in]
+\hspace*{1.0in} \tline{Professor Zhaohua Ding \hspace*{1.71in}}{3.0in} \hskip 0.1in \tline{}{1.0in} \\[.25in]
+\hspace*{1.0in} \tline{Professor Gavin Price \hspace*{1.83in}}{3.0in} \hskip 0.1in \tline{}{1.0in} 
+
 %%%%%%%%%%%%%%
 %%%%%%Uncomment  for Approved Names%%%%%%
 % \begin{center}
 % \begin{doublespace}
 % Approved:\\
-% Professor Laurie Cutting \\
+% \hspace*{1.0in} Professor Laurie Cutting \\
+
 % Professor Adam Anderson \\
 % Professor Zhaohua Ding \\
 % Professor Gavin Price  \\

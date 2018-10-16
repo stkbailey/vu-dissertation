@@ -47,7 +47,7 @@ Each fMRI run had two baseline conditions: a modality-specific baseline task and
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=6in]{ch3-task-design}
-	\caption[Schematic of the reading comprehension task]{Schematic of the reading comprehension task. Subjects were presented two blocks of passage reading and a symbol comparison tasks, which were followed by a brief comprehension question and a resting block. Starred stimuli in the reading and attention conditions represent ``repeat'' stimuli, and a participant is asked to click a button when they detect one. The total duration of each scan run was 550 seconds.}
+	\caption[Schematic of the reading comprehension task]{Schematic of the reading comprehension task. Subjects were presented two blocks of passage reading and a symbol comparison tasks, which were followed by a brief comprehension question and a resting block. Starred stimuli in the reading and symbols conditions represent ``repeat'' stimuli, and a participant is asked to click a button when they detect one. The total duration of each scan run was 550 seconds.}
 	\label{fig:ch3-task-design}
 \end{figure}
 
@@ -55,7 +55,7 @@ To create a more naturalistic reading experience than single word presentation \
 
 The sensory baseline condition was altered according to modality. For the reading runs, three non-alphanumeric symbols were displayed horizontally (two types), and their presentation time was matched to the passage phrases. Spacing between symbols was randomly alternated to replicate the variable phrase lengths in the passage condition. For the listening runs, three tones (two frequencies) were played in sequence, with a new set of tones beginning at the same intervals as the corresponding passage presentation. 
 
-To monitor attention, 4 to 8 percent of the stimuli within each passage or attention block were randomly repeated on two consecutive screens.  Participants pressed a button with their right thumb when they detected a repeated phrase, symbol or tone configuration. Additionally, at the conclusion of each passage, a picture was presented on the screen, and subjects were asked to identify whether the picture had any relationship to the passage (e.g., a picture of a mushroom for a passage about fungi). 
+To monitor attention, 4 to 8 percent of the stimuli within each passage or symbols block were randomly repeated on two consecutive screens.  Participants pressed a button with their right thumb when they detected a repeated phrase, symbol or tone configuration. Additionally, at the conclusion of each passage, a picture was presented on the screen, and subjects were asked to identify whether the picture had any relationship to the passage (e.g., a picture of a mushroom for a passage about fungi). 
 
 To assess performance, we analyzed three measures: in-scanner attention, in-scanner comprehension, and post-scan recall. To assess attention for the ``repeated stimulus'' task, we used the $D`$ summary measure. It is calculated as:
 
@@ -72,7 +72,7 @@ In total, there were 4 passages (2 listening and 2 reading), each leveled to a t
 
 Whole-brain fMRI analyses were performed using tools from the FMRIB Software Library (version 5.0.9). For each session, the following pre-processing steps were performed:  slice-time correction, motion correction to the initial fMRI volume, high-pass filtering at 0.08 Hz, boundary-based registration to the subject's structural image, and normalization to 2 mm MNI 152 standard space. To mitigate the effects of motion on our analyses, we regressed out 6 continuous motion parameters and scrubbed out outlier volumes. We defined an outlier volume as any in which the root-mean-square framewise displacement exceeded 0.7 mm. We removed scan runs where more than 20 percent of the fMRI volumes were considered outliers.
 
-All task conditions were convolved with the double-gamma hemodynamic response function to generate design matrices for each fMRI run. Two first-level contrasts were of interest: the main effect of passage comprehension (``reading vs. rest''), and the contrast of passage comprehension vs. the sensory baseline (``reading vs. attention''). Repeated stimuli and the picture comprehension task were modelled out.
+All task conditions were convolved with the double-gamma hemodynamic response function to generate design matrices for each fMRI run. Two first-level contrasts were of interest: the main effect of passage comprehension (``reading vs. rest''), and the contrast of passage comprehension vs. the sensory baseline (``reading vs. symbols''). Repeated stimuli and the picture comprehension task were modelled out.
 
 Reading effects were estimated at the subject-level using fixed effects analysis. These were carried over into group-level analyses using non-parametric methods implemented in FSL’s \textit{randomise} tool with threshold-free cluster enhancement. For each group-level analysis, we performed 5000 permutations and report results with \textit{p} \textless 0.05. 
 
@@ -80,7 +80,7 @@ To understand our univariate results as a function of system-level activation, w
 
 \subsection{Network analyses}
 
-For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{WhitfieldGabrieli2012}. As in Study 1, for each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions (i.e., reading, attention, and rest). The timeseries was then high-pass filtered at 0.01 Hz.
+For graph theory analyses, network estimation was performed in the \textit{Conn: Functional Connectivity Toolbox} (version 17f) \citep{WhitfieldGabrieli2012}. As in Study 1, for each scan run, the BOLD activity at each node was denoised using the anatomical CompCorr method, which regresses out background noise from white matter and cerebrospinal fluid tissue. We also regressed out 12 continuous measures of motion were also included, all outlier timepoints, and the effect of all task conditions (i.e., reading, symbols, and rest). The timeseries was then high-pass filtered at 0.01 Hz.
 
 Whole-brain connectomes for each condition were created by estimating the functional connectivity between each node using a weighted general linear model. For connection-level analyses, these values were compared directly across subjects and conditions. For graph theory analyses, the array of all node connections was thresholded to keep the top 5 percent of connections, resulting in a much sparser representation. This threshold was also tested at ranges from 2 percent to 10 percent. These arrays were then characterized using the previously described graph theory measures: modularity, participation coefficient, and path length.
 
@@ -102,12 +102,12 @@ To investigate the rewiring of the network at the RSN-level, we compared the num
 
 \subsection{Activation results}
 
-Figure \ref{fig:ch3-reading-brain-activations} demonstrates the range of language-related areas were activated during reading comprehension. Compared to the attention baseline, reading-related activation spanned the inferior frontal gyrus, angular gyrus, premotor cortex, middle temporal gyrus and the superior frontal gyrus. Activation patterns were robustly present on both hemispheres but extended further and with greater intensity on the left hemisphere. There were also a number of areas that were more active in the sensory and resting state, particularly in the dorsal attention network and anterior dorsolateral prefrontal cortex.
+Figure \ref{fig:ch3-reading-brain-activations} demonstrates the range of language-related areas were activated during reading comprehension. Compared to the symbols baseline, reading-related activation spanned the inferior frontal gyrus, angular gyrus, premotor cortex, middle temporal gyrus and the superior frontal gyrus. Activation patterns were robustly present on both hemispheres but extended further and with greater intensity on the left hemisphere. There were also a number of areas that were more active in the sensory and resting state, particularly in the dorsal attention network and anterior dorsolateral prefrontal cortex.
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=6in]{ch3-reading-brain-activations}
-    \caption[A range of language-related areas were activated during reading comprehension]{A range of language-related areas were activated during reading compreh ension. The above figures show axial, coronal and sagittal views of the ``reading vs. attention'' activation contrast. Reading-related activations span expected areas, including left fusiform, middle temporal and inferior frontal gyri, but also extend into right hemisphere homologues and the cerebellum. Results are thresholded at $p < 0.05$ using threshold-free cluster enhancement (5000 permutations).}
+    \caption[A range of language-related areas were activated during reading comprehension]{A range of language-related areas were activated during reading compreh ension. The above figures show axial, coronal and sagittal views of the ``reading vs. symbols'' activation contrast. Reading-related activations span expected areas, including left fusiform, middle temporal and inferior frontal gyri, but also extend into right hemisphere homologues and the cerebellum. Results are thresholded at $p < 0.05$ using threshold-free cluster enhancement (5000 permutations).}
 	\label{fig:ch3-reading-brain-activations}
 \end{figure}
 
@@ -128,17 +128,17 @@ Next, we examined changes to global network architecture. Figure \ref{fig:ch3-co
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=5.3in]{ch3-comprehension-graph-theory-all}
-    \caption[Reading induces a more integrated global network architecture]{Reading induces a more integrated global network architecture. Each set of connected points represents a single subject. Compared to rest and the baseline attention task, reading comprehension increased global measures related to RSN integration. Notably, the only measure not significantly changed during task was the within-RSN path length.}
+    \caption[Reading induces a more integrated global network architecture]{Reading induces a more integrated global network architecture. Each set of connected points represents a single subject. Compared to rest and the baseline symbols task, reading comprehension increased global measures related to RSN integration. Notably, the only measure not significantly changed during task was the within-RSN path length.}
 	\label{fig:ch3-comprehension-graph-theory-all}
 \end{figure}
 
-Network-level trends in task-evoked differences, presented in Figure \ref{fig:ch3-rsn-condition-effects}, were largely consistent with global effects. However, a few findings are worth noting: compared to rest, reading was marked by large decreases in modularity of the visual, dorsal attention and default mode networks. However, the increases to participation coefficient were global. Compared to the attention task, network-level changes were modest, and the global differences were driven by reduced modularity in the default mode and fronto-parietal networks and increased participation of memory retrieval and default mode networks.
+Network-level trends in task-evoked differences, presented in Figure \ref{fig:ch3-rsn-condition-effects}, were largely consistent with global effects. However, a few findings are worth noting: compared to rest, reading was marked by large decreases in modularity of the visual, dorsal attention and default mode networks. However, the increases to participation coefficient were global. Compared to the symbols task, network-level changes were modest, and the global differences were driven by reduced modularity in the default mode and fronto-parietal networks and increased participation of memory retrieval and default mode networks.
 
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=6in]{ch3-rsn-condition-effects-rest}
 	\includegraphics[width=6in]{ch3-rsn-condition-effects-attn}
-    \caption[RSN-level trends in task-evoked networks]{RSN-level trends in task-evoked networks. Changes to modularity were driven by the de-clustering of the visual, dorsal attention and default mode networks. For the participation coefficient, network-level trends in task-evoked differences to graph theory measures were largely related to global trends. There were many fewer significant changes in the ``reading vs. attention'' contrast. Dashed lines represent uncorrected significance thresholds of $p < 0.05$.}
+    \caption[RSN-level trends in task-evoked networks]{RSN-level trends in task-evoked networks. Changes to modularity were driven by the de-clustering of the visual, dorsal attention and default mode networks. For the participation coefficient, network-level trends in task-evoked differences to graph theory measures were largely related to global trends. There were many fewer significant changes in the ``reading vs. symbols'' contrast. Dashed lines represent uncorrected significance thresholds of $p < 0.05$.}
 	\label{fig:ch3-rsn-condition-effects}
 \end{figure}
 
