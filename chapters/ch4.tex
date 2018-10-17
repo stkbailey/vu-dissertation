@@ -87,7 +87,7 @@ Next, we broadened the scope of analysis to include comparisons between all task
 
 \subsection{Behavioral results}
 
-Attention and comprehension measures were not related to modality of stimulus presentation. There was a trend towards difference in median FDRMS between scan modalities (paired t-test, $t = 1.904$, $p = 0.059$), so we also replicated analyses with a stricter motion threshold (no more than 10 percent outliers in a scan run). The main results from analysis of this 35 subject (116 scan runs) cohort were broadly consistent.
+In-scanner task performance measures were not related to modality of stimulus presentation. However, there was a trend towards difference in median FDRMS between scan modalities (paired t-test, $t = 1.904$, $p = 0.059$), so we also replicated analyses with a stricter motion threshold (no more than 10 percent outliers in a scan run). The main results from analysis of this 35 subject (116 scan runs) cohort were broadly consistent.
 
 \subsection{Activation results}
 
@@ -120,24 +120,24 @@ In terms of graph theory measures, we found a significant decrease in modularity
 	\centering
 	\includegraphics[height=3in]{ch4-modality-graph-theory}
 	\includegraphics[height=3in]{ch4-modality-node-distance}
-    \caption[Reading induces a more integrated network architecture than listening]{Reading induces a more integrated network architecture than listening. In terms of modularity and participation coefficient, there is greater integration during reading than listening. The bottom panel displays the changes to the number of steps connecting each node. The large amounts of red reflect the greater global integration seen in reading; the blue patches represent a reduction in modularity within visual networks especially.}
+    \caption[Reading induces a more integrated network architecture than listening]{Reading induces a more integrated network architecture than listening. In terms of modularity and participation coefficient, there is greater integration during reading than listening. The bottom panel displays the changes to the number of steps connecting each node. The large amounts of red reflect the greater global integration seen in reading; the blue patches represent a reduction in modularity, especially within visual networks.}
 	\label{fig:ch4-modality-graph-theory}
 \end{figure}
 
 
 \subsection{Network similarity results}
 
-We next investigated whether different individuals evoked language-architectures that were similar to each other. For each pair of participants and modality of presentation, we calculated the IOU between their whole-brain networks. We found that subject connectomes were much more similar when comparing ``listening'' connectomes than when comparing ``reading'' connectomes ($t = 53.190$, $p < 0.001$). Additionally, we found that subjects with the highest mean similarity overall were also more similar to other high-similarity subjects, suggesting that they are each approximating a common architecture during the comprehension process (see top panel of Figure \ref{fig:ch4-modality-network-similarity}).
+We next investigated whether there were individual differences in the task-evoked networks for listening and reading. For each pair of participants and modality of presentation, we calculated the IOU between their whole-brain networks (Fig. \ref{fig:ch4-network-similarity-methods}, left side). We found that listening-evoked networks had more overlap between subjects than reading-evoked networks ($t = 53.190$, $p < 0.001$). Additionally, we found a trend among subjects in which those with the highest mean similarity overall were also more similar to other high-similarity subjects. This suggests there is a common architecture that is approximated by each individual (see top panel of Figure \ref{fig:ch4-modality-network-similarity}).
 
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=5.5in]{ch4-modality-network-similarity}
 	\includegraphics[width=5in]{ch4-similarity-condition-histogram}
-    \caption[Network similarity across subjects in listening and reading.] {Distribution of subject similarity values in listening and reading. When comparing participant networks, there is greater similarity in listening than there is in reading (bottom). Furthermore, subjects with high mean similarity were also more similar to each other (top).}
+    \caption[Network similarity across subjects in listening and reading.] {Distribution of subject similarity values in listening and reading. Top panel: each matrix represents the subject-to-subject similarity of task-evoked networks in the listening or reading conditions. Subjects with high mean similarity (brighter) also tended to be more similar to each other, suggesting they approximated a common network configuration. Bottom: When comparing the distributions of similarity scores, there is greater similarity between listening-evoked networks than reading-evoked ones. Dashed lines represent the mean subject-to-subject IOU for each condition. }
 	\label{fig:ch4-modality-network-similarity}
 \end{figure}
 
-As readers become more experienced, the expectation is that the task-evoked network architecture for reading would become more similar to that of the ``natural'' listening comprehension system. To test this, we compared each subject's listening network with their reading network then correlated this measure with TOWRE scores (Fig. \ref{fig:ch4-modality-similarity-to-reading}). Better readers did have a higher degree of similarity between the listening and reading networks ($r = 0.408$, $p = 0.007$). Furthermore, we found that reading and listening networks within a subject than between any two subjects ($t = 26.123$, $p < 0.001$). 
+As readers become more experienced, the expectation is that the task-evoked network architecture for reading would converge onto the listening comprehension system. To test this, we compared each subject's listening network with their reading network then correlated this measure with TOWRE scores (Fig.  \ref{fig:ch4-modality-similarity-to-reading}). Better readers had a higher degree of similarity between the listening and reading networks ($r = 0.408$, $p = 0.007$). Furthermore, we found that reading and listening networks \textit{within} a subject were on average more similar than between subjects ($t = 26.123$, $p < 0.001$). 
 
 \begin{figure}[t!]
 	\centering
@@ -147,7 +147,7 @@ As readers become more experienced, the expectation is that the task-evoked netw
 \end{figure}
 
 % extended this question to encompass multiple task conditions: would individuals who are better readers have higher similarity between multiple tasks?
-We next compared the similarity across all network arrays to determine the degree of variability in architecture within each subject. For each person, we created a similarity matrix describing the shared connections between each of these conditions. Then, we calculated the mean of the shared connections. Figure \ref{fig:ch4-rsn-mean-similarity} shows the distribution of within-subject IOU values across all conditions for each RSN. The global similarity was 0.364, while the highest similarities were among the visual, dorsal attention and memory retrieval conditions; the lowest were in the auditory, ventral attention, subcortical and somatomotor (mouth) regions.
+We next extended this question to encompass multiple task conditions and examined connectome variability at the level of individual RSNs. For each person, we created a similarity matrix describing the shared connections between each of these conditions. Then, we calculated the mean of the shared connections (Fig. \ref{fig:ch4-network-similarity-methods}, right side). Figure \ref{fig:ch4-rsn-mean-similarity} shows the distribution of within-subject IOU values for each RSN. The global similarity was 0.364, meaning that within an individual subject, the evoked connectomes from the listening, reading, tone, symbol and resting conditions shared more than one third of connections on average. At the RSN-level, the highest similarities were among the visual, dorsal attention and memory retrieval conditions; the lowest were in the auditory, ventral attention, subcortical and somatomotor (mouth) regions.
 
 \begin{figure}[t!]
 	\centering
