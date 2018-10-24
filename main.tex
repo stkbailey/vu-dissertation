@@ -49,6 +49,9 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 % New command: caption for name
 \newcommand\tline[2]{$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
 
+% New command: change margin for dedication
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
 
 \graphicspath{{images/}}
 \DeclareGraphicsExtensions{.pdf, .jpeg, .png, .PNG, .jpg, .eps, .tiff}
@@ -140,24 +143,24 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 		for the degree of \\ [.2in]
 	\end{doublespace}
 	
-	\textsc{Doctor of Philosophy} \\[.1in]
-	in \\[.2in]
+	\textsc{Doctor of Philosophy} \\[.2in]
+	in \\[.15in]
 	\textsc{Neuroscience} \\[.25in]
-	December 15, 2018 \\[.45in]
-	Nashville, TN
+	December 15, 2018 \\[0.1in]
+	Nashville, Tennessee
 	\vskip .5in
 \end{center}
 %%%Uncomment for Signatures%%%
-\hspace*{1.0in} Approved: \hskip 2.4in Date:\\[1em]
+\hspace*{0.3in} Approved: \hskip 3.4in Date:\\[1em]
 % \hspace*{1.0in} \rule{3.0in}{.5pt} \hskip 0.1in \rule{1in}{.5pt} \\[.1in]
 % \hspace*{1.0in} \rule{3.0in}{.5pt} \hskip 0.1in \rule{1in}{.5pt} \\[.1in]
 % \hspace*{1.0in} \rule{3.0in}{.5pt} \hskip 0.1in \rule{1in}{.5pt} \\[.1in]
 % \hspace*{1.0in} \rule{3.0in}{.5pt} \hskip 0.1in \rule{1in}{.5pt} %\\[.1in]
 
-\hspace*{0.75in} \tline{Professor Adam Anderson \hspace*{1.6in}}{3.0in} \hskip 0.1in  \tline{}{1.0in} \\[.25in]
-\hspace*{1.0in} \tline{Professor Laurie Cutting \hspace*{1.7in}}{3.0in} \hskip 0.1in  \tline{}{1.0in} \\[.25in]
-\hspace*{1.0in} \tline{Professor Zhaohua Ding \hspace*{1.71in}}{3.0in} \hskip 0.1in \tline{}{1.0in} \\[.25in]
-\hspace*{1.0in} \tline{Professor Gavin Price \hspace*{1.83in}}{3.0in} \hskip 0.1in \tline{}{1.0in} 
+\hspace*{0.05in} \tline{Professor Adam Anderson \hspace*{2.6in}}{4.0in} \hskip 0.1in  \tline{}{1.0in} \\[.25in]
+\hspace*{.3in} \tline{Professor Laurie Cutting \hspace*{2.7in}}{4.0in} \hskip 0.1in  \tline{}{1.0in} \\[.25in]
+\hspace*{0.3in} \tline{Professor Zhaohua Ding \hspace*{2.71in}}{4.0in} \hskip 0.1in \tline{}{1.0in} \\[.25in]
+\hspace*{0.3in} \tline{Professor Gavin Price \hspace*{2.83in}}{4.0in} \hskip 0.1in \tline{}{1.0in} 
 
 %%%%%%%%%%%%%%
 %%%%%%Uncomment  for Approved Names%%%%%%
@@ -182,7 +185,9 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 \addcontentsline{toc}{chapter}{DEDICATION}
 \vspace{7mm}
 
-This work -- and especially the years of learning it is built upon -- is dedicated to my parents, Dan and Janine Bailey, who taught me to learn something at every encounter with the world: novels, newspapers, sermons, car rides, athletics, comics, trivia, movies, success and failure. Thank you for making the world a place full of meaning.
+\begin{changemargin}{1in}{1in} 
+    This work -- and especially the years of learning it is built upon -- is dedicated to my parents, Dan and Janine Bailey, who taught me to learn something from everything: novels,  newspapers, comics, classes, car rides, restaurants, sports,   sermons, trivia, movies, games, work, success and failure. Thank you for making the world a place full of meaning.
+\end{changemargin} 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter*{ACKNOWLEDGMENTS}
@@ -193,7 +198,7 @@ It is wrong for me to ascribe myself as the sole author of this dissertation. Th
 
 I have been privileged to train at an institution rich in resources and funding. The staff at the Imaging Institute, Brain Institute, Kennedy Center and ACCRE have been wonderful colleagues. They were patient with my questions and fumblings as I attempted to play with just about every toy I could get my hands on these past five years. The National Institutes of Health has largely underwritten these experiences, through a variety of mechanisms. These include training grants (T32 MH064913, F31 HD090923), center grants (U54 HD083211), and the many research awards granted to Dr. Cutting (R01 HD044073, R01 HD067254, among others).
 
-I am grateful for a supportive committee that gave me guidance at critical junctures and opened my eyes to a research domains I would not have otherwise seen. Dr. Gavin Price embodied for me the rigor and theoretical drive present in the best of cognitive psychology, and our conversations helped to give a pointed form to many of the ideas explored herein. (Any deviation from clarity is my own.) Dr. Adam Anderson gave me insight into the wider field of biomedical image analysis through his classes and lectures, and he also exposed me to a more programmatic approach to analysis. This move away from GUIs and toolboxes opened me up to new tools and techniques, and it has set me up to be a much more innovative scientist. Finally, my collaborations with Dr. Zhaohua Ding gave me the unique experience of watching a scientific idea evolve from its infancy to its impact, as he chased, teased out, and trumpeted the existence of the BOLD signal in white matter tissue.
+I am grateful for a supportive committee that gave me guidance at critical junctures and opened my eyes to a research domains I would not have otherwise seen. Dr. Gavin Price embodied for me the rigor and theoretical drive present in the best of cognitive psychology, and our conversations helped to give a pointed form to many of the ideas explored herein. (Any deviation from clarity is my own.) Dr. Adam Anderson gave me insight into the wider field of biomedical image analysis through his classes and lectures, and he also exposed me to a more programmatic approach to analysis. This move away from GUIs and toolboxes opened me up to new tools and techniques, and it has set me up to be a much more innovative scientist. Finally, my collaborations with Dr. Zhaohua Ding gave me the unique experience of watching a scientific idea evolve from its infancy to its impact, as he chased, teased out, and trumpeted the existence of the BOLD signal in white matter tissue. His tenacity impressed upon me the role grit and sheer hard work play in pushing science forward. 
 
 To Dr. Laurie Cutting I owe a special debt. My experience as a graduate student was unusual: I had all the resources I needed, all the data I could want, all the opportunity I could ask for, from my first day as a student. Dr. Cutting has built a world-class training environment, and she gave me five years of freedom to play in it. What is most impressive to me, though, is that she has fostered a healthy, positive, and professional team culture that has persisted even as the team has turned over and grown. It has been a joy to be a part of this team. I am grateful for the gamble that Dr. Cutting took on me, a prospective student with no background in neuroscience, no experience with imaging, no knowledge of statistics or computing or special education. That I leave with all these things and more is a direct result of the guidance, opportunity and encouragement provided by Dr. Cutting.
 
