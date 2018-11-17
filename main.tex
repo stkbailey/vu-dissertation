@@ -105,8 +105,8 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 \renewcommand{\contentsname}{TABLE OF CONTENTS}
 \renewcommand{\listfigurename}{LIST OF FIGURES}
 \renewcommand{\listtablename}{LIST OF TABLES}
-\renewcommand{\bibname}{ \texorpdfstring{{BIBLIOGRAPHY\vspace{10mm}}}{BIBLIOGRAPHY}   }
-%
+\renewcommand{\bibname}{ \texorpdfstring{{BIBLIOGRAPHY\vspace{10mm}}}{BIBLIOGRAPHY}}
+
 \renewcommand{\chaptermark}[1]{%
   \markboth{\MakeUppercase{%
       \chaptername}\ \thechapter.%
@@ -117,6 +117,7 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
     
 \interfootnotelinepenalty=10000 %prevents the splitting of long footnotes across multiple pages. Use with caution. 
+
 
 \begin{document}
 
@@ -143,8 +144,8 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 		for the degree of \\ [.2in]
 	\end{doublespace}
 	
-	\textsc{Doctor of Philosophy} \\[.2in]
-	in \\[.15in]
+	\textsc{Doctor of Philosophy} \\[.1in]
+	in \\[.1in]
 	\textsc{Neuroscience} \\[.25in]
 	December 15, 2018 \\[0.1in]
 	Nashville, Tennessee
@@ -198,7 +199,7 @@ It is wrong for me to ascribe myself as the sole author of this dissertation. Th
 
 I have been privileged to train at an institution rich in resources and funding. The staff at the Imaging Institute, Brain Institute, Kennedy Center and ACCRE have been wonderful colleagues. They were patient with my questions and fumblings as I attempted to play with just about every toy I could get my hands on these past five years. The National Institutes of Health has largely underwritten these experiences, through a variety of mechanisms. These include training grants (T32 MH064913, F31 HD090923), center grants (U54 HD083211), and the many research awards granted to Dr. Cutting (R01 HD044073, R01 HD067254, among others).
 
-I am grateful for a supportive committee that gave me guidance at critical junctures and opened my eyes to a research domains I would not have otherwise seen. Dr. Gavin Price embodied for me the rigor and theoretical drive present in the best of cognitive psychology, and our conversations helped to give a pointed form to many of the ideas explored herein. (Any deviation from clarity is my own.) Dr. Adam Anderson gave me insight into the wider field of biomedical image analysis through his classes and lectures, and he also exposed me to a more programmatic approach to analysis. This move away from GUIs and toolboxes opened me up to new tools and techniques, and it has set me up to be a much more innovative scientist. Finally, my collaborations with Dr. Zhaohua Ding gave me the unique experience of watching a scientific idea evolve from its infancy to its impact, as he chased, teased out, and trumpeted the existence of the BOLD signal in white matter tissue. His tenacity impressed upon me the role grit and sheer hard work play in pushing science forward. 
+I am grateful for a supportive committee that gave me guidance at critical junctures and opened my eyes to a research domains I would not have otherwise seen. Dr. Gavin Price embodied for me the rigor and theoretical drive present in the best of cognitive psychology, and our conversations helped to give a pointed form to many of the ideas explored herein. (Any deviation from clarity is my own.) Dr. Adam Anderson gave me insight into the wider field of biomedical image analysis through his classes and lectures, and he also exposed me to a more programmatic approach to analysis. This move away from GUIs and toolboxes opened me up to new tools and techniques, and it has set me up to be a much more innovative scientist. Finally, my collaborations with Dr. Zhaohua Ding gave me the unique experience of watching a scientific idea evolve from its infancy to its impact, as he chased, teased out, and trumpeted the existence of the BOLD signal in white matter tissue. 
 
 To Dr. Laurie Cutting I owe a special debt. My experience as a graduate student was unusual: I had all the resources I needed, all the data I could want, all the opportunity I could ask for, from my first day as a student. Dr. Cutting has built a world-class training environment, and she gave me five years of freedom to play in it. What is most impressive to me, though, is that she has fostered a healthy, positive, and professional team culture that has persisted even as the team has turned over and grown. It has been a joy to be a part of this team. I am grateful for the gamble that Dr. Cutting took on me, a prospective student with no background in neuroscience, no experience with imaging, no knowledge of statistics or computing or special education. That I leave with all these things and more is a direct result of the guidance, opportunity and encouragement provided by Dr. Cutting.
 
@@ -231,6 +232,11 @@ The best analogy for the PhD is that of an odyssey: the destination is clear but
 
 %% Input your chapter .tex files here.
 %% Each one should begin with a call to \chapter{TITLE}
+% \addtocontents{toc}{\protect\contentsline{part}{CHAPTERS}{}}
+% \addtocontents{toc}{\cftpagenumbersoff{chapter}}
+% \addcontentsline{toc}{chapter}{CHAPTERS}
+% \addtocontents{toc}{\cftpagenumberson{chapter}}
+\cftaddtitleline{toc}{chapter}{CHAPTERS}{}
 \input{chapters/ch1.tex}
 \input{chapters/ch2.tex}
 \input{chapters/ch3.tex}
